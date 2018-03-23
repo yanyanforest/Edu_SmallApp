@@ -1,0 +1,18 @@
+<view class='container'>
+  <view wx:for="{{dataSource}}" wx:key="item" wx:for-index="index" class="scrollview">
+	<!-- 遍历一级分类，分成几个组 -->
+	<!-- 一级分类的组名 -->
+
+    <view class='section'> {{item.name}}</view>
+
+    <view class='weui-grids'>
+      <view wx:for="{{item.children}}" wx:key="id" class='weui-grid' wx:for-item="cateItem" wx:for-index="cateIndex">
+				<!-- 二级分类的组名 -->
+        <view class='weui-grid__label {{selectedCategory.id == cateItem.id? "weui-grid__label__ischecked":"weui-grid__label__normal"}}' bindtap="categoryselectedClick" data-item="{{ cateItem }}">{{cateItem.name}} </view>
+					<!-- 二级分类的组名 -->
+      </view>
+    </view>
+  </view>
+		<!-- 遍历一级分类，分成几个组 -->
+
+</view>

@@ -1,0 +1,5 @@
+/* pages/location/locateMe.wxss */
+.page-body-button{
+  margin-top:20px;
+  line-height: 2;
+}

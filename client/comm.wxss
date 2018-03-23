@@ -1,0 +1,5 @@
+/** common.wxss **/
+
+.small-p {
+  padding: 5px;
+}

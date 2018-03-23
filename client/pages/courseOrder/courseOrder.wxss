@@ -1,0 +1,57 @@
+/* pages/courseOrder/courseOrder.wxss */
+.weui-cells{
+	margin-top: 0px;
+}
+.weui-cell__icon {
+    display: block;
+    width: 150rpx;
+    height: 150rpx;
+    margin: 0 auto;
+}
+.weui-grids{
+		height: 40px;
+
+}
+.weui-grid{
+	height: 40px;
+	color: black;
+  padding: 0px 0px;
+	/* border-bottom: 1px #000000; */
+	
+}
+.weui-grid__label{
+	background-color: white;
+	height: 39px;
+	width: 100%;
+	line-height: 39px;  /*行高标准行高110-120%*/
+	color: black;
+  display: flex;
+	margin: 0 auto; /* 水平居中 */
+	padding:0 auto; 
+	text-align: center;
+	justify-content: center; 
+	 /* text-overflow: ellipsis;  */
+	vertical-align: middle;
+	text-justify: center;  
+  font-size: 14px;
+  overflow: hidden; 
+	border-radius: 0px;
+	position: absolute;
+}
+ button::after{
+	  border: none;  
+	height: 39px;
+	width: 100%;
+  border-radius: 0px;
+	vertical-align: middle;
+
+}
+.weui-cells__title__active{
+  background-color: #ffffff;
+}
+.weui-cells__title__ischecked{
+
+	color: #ff6700;
+
+
+}

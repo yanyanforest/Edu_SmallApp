@@ -1,0 +1,55 @@
+/* pages/flex/flexDemo.wxss */
+.box{
+display: inline-flex;
+flex-direction: column;
+flex-wrap: nowrap;
+}
+/* pages/video/testVideo.wxss */
+ #myVideo {
+  width: 100%; 
+  height: 300px;
+} 
+.controls {
+  position: relative;
+  top: 91%;
+  height: 50px;
+  margin-top: -25px;
+   display: flex; 
+   background-color: red;
+}
+.weui-cell:first-child:before {
+  display: none;
+}
+.colorstyle{
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 17px;
+  line-height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.vertical {
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+}
+.play,.pause,.time{
+  flex: 1;
+  height: 100%;
+}
+
+.time {
+  text-align: center;
+  background-color: rgba(0, 0, 0, .5);
+  color: white;
+  line-height: 50rpx;
+}
+.img {
+  width: 40px;
+  height: 40px;
+  margin: 5px auto;
+}

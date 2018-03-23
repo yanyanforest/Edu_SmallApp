@@ -1,0 +1,72 @@
+ <!-- index.wxml -->
+ <!--https://mp.weixin.qq.com/debug/wxadoc/dev/quickstart/basic/file.html  -->
+<page>
+<view bindtap='count_down'>高考时间：{{time_high}}</view>
+ 倒计时 天数 ：{{days}} {{timeString}}
+<text style='display:block;text-align:center;font-size:30px;color:#f60;margin-top:50px;'>{{days}}</text>
+<view class='section tc'>
+<view class='userinfo'>
+<image background-size="cover" class="userinfo-avatar" src='http://pic32.photophoto.cn/20140711/0011024086081224_b.jpg'></image>
+ <text class='useinfo-nickname'>幸幸 </text> 
+</view>
+ <view class='usermotto weui-cells' style='align:center;margin:10px' > 
+<text class='user-motto' style='margin'>{{message}}</text>
+</view> 
+ <view class='usermotto weui-cells' style='align:center;margin:10px' bindtap='makeCall'> 
+<text class='user-motto' style='margin'>{{phone}}</text>
+</view> 
+
+<!--事件：点击事件 bindtap  -->
+<view bindtap="push">跳转页面</view>
+<!--<button class="btn-margin" bindtap='showPickView'> </button> -->
+<view class='btn-area'> </view>
+
+<view class='btn-area'> <button class="btn-margin" bindtap='makeCall'>{{phone}}</button></view>
+
+<view class='btn-area'> <button class="btn-margin" bindtap='flexPush'>flex的作用</button></view>
+<view class='btn-area'> <button class="btn-margin" bindtap='canvasTest'>画布Test</button></view>
+
+<view class='btn-area'> <button class="btn-margin" bindtap='canvasPush'>画布</button></view>
+<view class='btn-area'> <button class="btn-margin" bindtap='canvasDemo'>画布Demo</button></view>
+
+<view class='btn-area'> <button class="btn-margin" bindtap='locateMe'>进入地图</button></view>
+<view class='btn-area'> <button class="btn-margin" bindtap='pushLogin'>登录</button></view>
+<view class='btn-area'> <button class="btn-margin"bindtap='playVideo'>Video的播放</button></view>
+<view class='btn-area'> <button class="btn-margin"bindtap='pushHomeRequestPage'>网络请求首页</button></view>
+PickerView<picker-view indicator-style='height:50px;' style='width:100%; height:200px;' value='{{value}}' bindchange='pickerChanged'>
+    <picker-view-column> <view wx:for='{{years}}' style='line-height:50px;'>{{item}} 年</view></picker-view-column>
+		<picker-view-column> <view wx:for='{{months}}' style='line-height:50px;'>{{item}} 月</view></picker-view-column>
+		<picker-view-column> <view wx:for='{{dates}}' style='line-height:50px;'>{{item}} 日</view></picker-view-column>
+
+		</picker-view>
+</view>
+<template name="odd"  data="{{item}}">
+  <view>{{item}} is odd </view>
+</template>
+<template name="even" data="{{item}}">
+  <view>{{item}} is even </view>
+</template>
+<!--wx:for-item="item"  -->
+<block wx:for="{{[1, 2, 3, 4, 5]}}"  wx:key="item">
+    <template is="{{item % 2 == 0 ? 'even' : 'odd'}}" data="{{item}}"/>
+</block>
+ <!-- <template name="testOdd">
+  <view wx:if=>{{item}} is odd </view>
+</template>
+<template name="even" >
+  <view>{{item}} is even </view>
+</template> 
+
+ <block wx:for="{{[1, 2, 3, 4, 5]}}" wx:for-item="item">
+    <template is="{{item % 2 == 0 ? 'even' : 'odd'}}">
+</block>  -->
+<wxs src="tools.wxs" module="tools" />
+<view>{{tools.msg}}</view>
+<view>{{tools.bar(tools.FOO)}}</view>
+<view>{{tools.FOO}}</view>
+
+<view bindtap='optionClick'>运算符</view>
+带动画的进度条
+<progress percent="{{percentage}}" active show-info='true' />
+
+</page>

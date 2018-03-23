@@ -1,0 +1,31 @@
+<!--pages/userInfo/userInfo.wxml-->
+<page style='background: #F6F6F6;'>
+  <view class='section tc header' style='height: 80px'>
+
+    <view class='userinfo' bindtap='pushUserDetail'>
+      <image style='background-size:cover' class="userinfo-avatar" src='{{avatarUrl}}'></image>
+    </view>
+       <text class='useinfo-nickname'>{{username}} </text>
+
+  </view>
+  <!-- 列表 -->
+  <block wx:for='{{list}}' wx:for-item="items"class="weui-cells">
+	     <view class="weui-cells"> 
+
+		  <block wx:for='{{items}}' wx:for-item="item"  wx:for-index="index" wx:key="name">
+
+   <view data-item="{{item}}" class="weui-cell  weui-cell__ft_in-access" bindtap='cellClick'>
+	      <view class="weui-cell__icon" style='width: 30px;height: 30px;' >
+				<!-- mode='aspectFit'  -->
+				<image src="{{item.icon}}" style='width: 30px;height: 30px;' mode='aspectFit'> </image>
+				</view>
+     <view class="weui-cell__bd">
+      {{item.name}}
+      </view>
+      
+
+</view>
+  </block>
+ </view> 
+</block>
+</page>

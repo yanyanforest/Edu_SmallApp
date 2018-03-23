@@ -1,0 +1,13 @@
+画布
+<canvas canvas-id="myCanvas"
+  style="margin: 5px; border:1px solid #d3d3d3; width:700rpx;height:400px"
+  bindtouchstart="start"
+  bindtouchmove="move"
+  bindtouchend="end"
+	bindtouchcancel='cancel' bindlongtap='longtap'
+	binderror='error'/>
+
+<view hidden="{{hidden}}">
+  Coordinates: ({{x}}, {{y}})
+</view>
+<button class="weui-btn" bindtap='importImage'> 导出图片</button>

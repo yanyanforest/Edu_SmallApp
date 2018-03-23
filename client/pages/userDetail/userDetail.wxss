@@ -1,0 +1,11 @@
+/* pages/userDetail/userDetail.wxss */
+.container{
+	background: #F5F5F5;
+}
+.weui-cell__ft_in-access {
+  margin-right: 16px;
+
+}
+.picker{
+	border-top:1rpx solid #d9d9d9;
+}

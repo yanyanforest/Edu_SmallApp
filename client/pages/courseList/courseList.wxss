@@ -1,0 +1,78 @@
+/* pages/courseList/courseList.wxss */
+
+page {
+  background: #fff;
+  font-size: 16px;
+}
+
+.container {
+  /* margin: 5px 0;   *//* display: block *//* margin: 0px 0px;  */
+  border-top: 1px solid #e4e4e4;
+  width: 100%;
+}
+
+.brand_item {
+  border-top: none;
+  border-bottom: 1px solid #e4e4e4;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 44px;
+  float: true;
+  background: #fff;
+  border-bottom: 0.5px solid #e4e4e4;
+}
+
+.header_left {
+  /* display: flex; */
+  margin: 8px 0;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 66%;
+  text-align: center;
+  height: 30px;
+}
+
+.header_right {
+  margin: 8px 0;
+  width: 34%;
+  border-left: 0.5px solid #e4e4e4;
+  text-align: center;
+  height: 30px;
+}
+
+.header_active {
+  color: #ff6700;
+}
+
+.brand_item .pic {
+  float: left;
+  padding: 8px 8px;
+  width: 120px;
+  height: 70px;
+}
+
+.right_cont {
+  /* float: right; */
+  padding: 5px;
+  text-align: left;
+}
+
+.right_cont text {
+  display: block;
+  margin: 5px 0;
+}
+
+.right_cont .count {
+  font-size: 12px;
+  color: #939393;
+}
+
+.right_cont .price {
+  color: #f16236;
+}

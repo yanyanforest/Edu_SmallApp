@@ -1,0 +1,11 @@
+<!--pages/canvasTest/canvasTest.wxml-->
+<canvas class="canvas" style='width:{{canvasw}}px;height:{{canvash}}px'  id="canvas" canvas-id="canvas" disable-scroll="true" bindtouchstart="canvasStart" bindtouchmove="canvasMove" bindtouchend="canvasEnd" touchcancel="canvasEnd" binderror="canvasIdErrorCallback"></canvas>
+
+<view class="canvas-tools">
+<button type="default" bindtap="cancelDraw">撤销</button>
+    <button type="default" bindtap="cleardraw">清除</button>
+		    <button type="default" bindtap="colorSelect">选颜色</button>
+		    <!-- <button type="default" bindtap="widthSelect">选粗细</button> -->
+
+    <button type="default" bindtap="getimg">导出图片</button>
+		</view>

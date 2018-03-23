@@ -1,0 +1,57 @@
+<!--pages/home/home.wxml-->
+<view class='section'>
+   <!-- <scroll-view class="scroll-view_H" style="height:300px;overflow:scroll;white-space: nowrap;display: flex" scroll-x="true"  scroll-with-animation="true" >
+<block wx:for="{{slides}}" wx:key="item">
+    <view class="scroll-view-item-H" style='display:inline-block;width: 750rpx;height: 100%'> <image class='scroll-view-item-H' src='{{item.ad_image_url}}'></image></view>
+ 
+    </block>
+</scroll-view>  -->
+  <swiper class="scroll-view_H" indicator-dots="true" indicator-active-color="#ff6700" autoplay="{{false}}" duration='500' circular='true' bindchange='swiperChanged'>
+    <block wx:for="{{slides}}" wx:key="item">
+      <swiper-item bindtap="tapSwiperItem" data-id="{{ item }}">
+        <image class='scroll-view-item-H' src='{{ item.img }}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 分类  -->
+  <view class="category-grids">
+    <block wx:for="{{categoryData}}" wx:key="item">
+      <view class="category-grid" bindtap="">
+        <image class="category-grid__icon" src="{{item.brief}}"></image>
+        <text class='category-grid__label'>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 感兴趣的分类 class='interest-grids'  -->
+	<!-- 实验 scrollview 滚动 tab  -->
+
+		  <view class='interest-grids' style='inline'>
+    <view class='view_selectCategory' style='width:300px;font-size: 15px' bindtap='chooseInterest' data-id='{{}}' >
+		{{interestCategory.name}}
+    </view> 
+    <scroll-view class="recommend_scroll_x_box" scroll-x="true">
+
+  <view class="recommend_hot_box"  wx:for="{{ interestCategory.children }}" wx:key="item">
+    <view class=" text_center {{currentTab==index?'title__ischecked':'title'}}"  bindtap='interestSelected' data-id='{{index}}'>{{item.name}}</view>
+  </view>
+</scroll-view>
+
+   
+   </view>   
+
+  <!-- 一些推荐的课程  -->
+    <view class='list-grids'>
+    <block wx:for="{{ listData }}" wx:key="item">
+      <view class="list-grid">
+        <image class="list-grid__icon" src="{{item.picture}}">
+          <view class="list-grid__icon_label">
+            <text style='margin:5rpx;'>  {{item.num}} 人在学  </text>
+
+          </view>
+        </image>
+        <text class="list-grid__label" style=''>{{item.title}}</text>
+        <text class='list-grid__label' style="color: red;text-align: left"> ¥ {{item.price}}</text>
+      </view>
+    </block>
+  </view>  
+</view>

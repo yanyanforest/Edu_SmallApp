@@ -1,0 +1,15 @@
+/**app.wxss**/
+@import "./comm.wxss"; 
+@import "weui.wxss";
+.mainColor{
+  color: #ff6700;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 
+.middle-p {
+padding: 15px;
+}

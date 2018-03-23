@@ -1,0 +1,37 @@
+<!--pages/courseOrder/courseOrder.wxml-->
+ <!-- <loading hidden="false" bindChange="pullDownChange" style="background-color:red">加载中...</loading>  -->
+ 
+
+ <view class='weui-grids'>
+     <view class='weui-grid'  wx:for="{{btns}}" wx:for-item="item" wx:key="item">
+		 <!--hover-class='weui-cells__title__active'  -->
+  <button hover-class='weui-cells__title__active' class="weui-grid__label {{selectedIndex==index?'weui-cells__title__ischecked':''}}" bindtap='btnclick' data-id='{{index}}'>
+ {{item.name}}
+  </button> 
+  </view>
+</view> 
+ 
+<scroll-view scroll-y="true" style='height:100%' bindscrolltolower="loadMore" bindscrolltoupper="refesh" upper-threshold="50" bindscroll="scroll" enable-back-to-top="true">
+<!-- <view class='weui-cells'> -->
+<!--<block wx:for="{{recommends}}" wx:for-item="item" wx:key='item'>-->
+    <!--<view wx:for="{{recommends}}" wx:for-item="item" wx:key='item' class="weui-panel__bd">-->
+        <navigator wx:for="{{recommends}}" wx:for-item="item" wx:key='item'  url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+		 <view class='weui-media-box__hd weui-media-box__hd_in-appmsg'>
+		<image class='weui-media-box__thumb'  src='{{item.imageurl}}'></image>
+		 </view>
+        <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">
+                {{item.name}}
+            </view>
+
+        </view>
+        </navigator>
+<!--</view>-->
+<!--</block>-->
+<!-- </view> -->
+<!--style="display: flex;flex-direction: row;align-items: center;align-self: center;justify-content: center;"  -->
+<view class='weui-loadmore' hidden='{{isHideLoadMore}}' >
+<view class='weui-loading'></view>
+<view class='weui-loadmore__tips'>正在加载......</view>
+</view>
+</scroll-view>

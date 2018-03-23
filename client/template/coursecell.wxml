@@ -1,0 +1,14 @@
+<import src="coursecell.wxss"></import>
+<template name="coursecell">
+    <navigator url="../pages/courseDetail/courseDetail?courseId={{courseId}}">
+        <view class="course">
+            <image class="course_icon" src="{{item.picture}}" ></image>
+            <view class="course_detail">
+						<text class="title">{{item.title}}</text>
+              <text class="count"> 已有{{item.num}}人学习</text> 
+                <text class="price"> ¥ {{ item.price }}</text>
+
+            </view>
+        </view>
+    </navigator>
+</template>

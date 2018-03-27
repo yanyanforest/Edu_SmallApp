@@ -1,0 +1,78 @@
+.order .order-hd {
+  background-color: #FFFFFF;
+}
+.order .order-hd .item {
+  display: flex;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}
+.order .order-hd .item .lable {
+  font-size: 30rpx;
+  color: #666666;
+}
+.order .order-hd .item .text {
+  margin-left: 40rpx;
+  color: #2e2e2e
+}
+.order .order-hd .item .text.status-paying {
+  color: #FF6700;
+}
+.order .order-hd .item .text.status-payed {
+  color: #1A1A1A;
+}
+.order .order-hd .item .text.status-reviewing {
+  color: #279AF7;
+}
+.order .order-bd {
+  border-top: 20rpx solid #F5F5F5;
+  border-bottom: 20rpx solid #F5F5F5;
+}
+.order .order-bd .order-item {
+  display: flex;
+  padding: 30rpx;
+  background: #FFFFFF;
+}
+.order .order-bd .order-item .item-image {
+  width: 220rpx;
+  height: 110rpx;
+}
+.order .order-bd .order-item .item-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 110rpx;
+  margin-left: 15rpx;
+}
+.order .order-bd .order-item .item-desc .desc-title {
+  font-size: 35rpx;
+  color: #000000;
+}
+.order .order-bd .order-item .item-desc .desc-teacher {
+  font-size: 26rpx;
+  color: #808080;
+}
+.order .order-bd .order-item .item-desc .desc-price {
+  font-size: 32rpx;
+  color: #FF6700;
+}
+.order .order-bd .order-summary .item {
+  display: flex;
+  justify-content: space-between;
+  height: 37rpx;
+  line-height: 37rpx;
+  padding: 30rpx;
+  border-top: 3rpx solid #F8F8F8;
+  background-color: #FFFFFF;
+}
+.order .order-bd .order-summary .item .text-price {
+  font-size: 32rpx;
+  color: #ef4023;
+}
+.order .order-ft .action-pay {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #FFFFFF;
+  background-color: #FF6700;
+}

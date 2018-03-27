@@ -16,12 +16,13 @@ Page({
     [{
 			"icon": './aboutme/me_icon_orderlist@3x.png',
       "name": "课程订单",
-			"link": "../courseOrder/courseOrder"
+			"link": "../orders/orders"	
+			// "link": "../courseOrder/courseOrder"
     },
     {
 			"icon": './aboutme/me_icon_courseFavorite@3x.png',
       "name": "课程收藏",
-      "link": ""
+			"link": "../favorite/favorite"
     },
     {
 			"icon": './aboutme/me_icon_commentlist@3x.png',
@@ -71,7 +72,7 @@ choosePhoto:function(){
 },
 cellClick:function(res){
 
-  
+  //判断是否登录。未登录则显示登录界面
   var item = res.currentTarget.dataset.item;
   console.log("跳转",item );
 wx.navigateTo({

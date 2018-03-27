@@ -1,0 +1,126 @@
+.orders .orders-header {
+  display: flex;
+  padding: 20rpx 0;
+  border-top: 2rpx solid #F5F5F5;
+  background: #FFFFFF;
+}
+.orders .orders-header__item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  border-left: 2rpx solid #DDDDDD;
+  font-size: 26rpx;
+}
+.orders .orders-header__item.active {
+  color: #FF6700;
+}
+.orders .orders-header__item.active:after {
+  display: block;
+  position: absolute;
+  top: 120%;
+  left: 40%;
+  width: 50rpx;
+  height: 9rpx;
+  margin: 0 auto;
+  border-radius: 5rpx;
+  background: #FF6700;
+  content: '';
+}
+.orders .orders-header__item:nth-of-type(1) {
+  border-left: 0;
+}
+.orders .orders-list {
+  border-top: 8rpx solid #F8F8F8;
+  background: #FFFFFF;
+}
+.orders .orders-list .orders-list__item {
+  border-top: 8rpx solid #F8F8F8;
+}
+.orders .orders-list .orders-list__item-hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72rpx;
+  line-height: 72rpx;
+}
+.orders .orders-list .orders-list__item-sn {
+  margin-left: 30rpx;
+  font-size: 20rpx;  
+  color: #999999;
+}
+.orders .orders-list .orders-list__item-status {
+  width: 128rpx;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-right: 30rpx;
+  border-radius: 50rpx;
+  font-size: 24rpx;
+}
+.orders .orders-list .orders-list__item-status__paying {
+  color: #FF6700;
+  background: #FFF0E5;
+}
+.orders .orders-list .orders-list__item-status__payed {
+  color: #1A1A1A;
+  background: #F5F5F5;
+}
+.orders .orders-list .orders-list__item-status__reviewing {
+  color: #279AF7;
+  background: #E9F5FE;
+}
+.orders .orders-list .orders-list__item-bd {
+  display: flex;
+  height: 160rpx;
+  padding: 30rpx;
+  background: #F8F8F8;
+}
+.orders .orders-list .orders-list__item-image {
+  width: 300rpx;
+  height: 160rpx;
+}
+.orders .orders-list .orders-list__item-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160rpx;
+  margin-left: 15rpx;
+}
+.orders .orders-list .orders-list__item-desc .desc-title {
+  font-size: 35rpx;
+  color: #000000;
+}
+.orders .orders-list .orders-list__item-desc .desc-teacher {
+  color: #808080;
+}
+.orders .orders-list .orders-list__item-desc .desc-price {
+  color: #FF6700;
+}
+.orders .orders-list .orders-list__item-ft {
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+.orders .orders-list .orders-list__item-ft .action-price {
+  flex: 1;
+  margin-left: 30rpx;
+  font-size: 26rpx;
+  color: #000000;
+}
+.orders .orders-list .orders-list__item-ft .action-button {
+  background: #FFFFFF;
+  height: 70rpx;
+  width: 198rpx;
+  line-height: 70rpx;
+  margin-right: 30rpx;
+  font-size: 26rpx;
+}
+.orders .orders-list .orders-list__item-ft .action-pay {
+  color: #FF6700;
+  border: 1rpx solid #FF6700;
+  background-color: transparent;
+}
+.orders .orders-list .orders-list__item-ft .action-review {
+  color: #279AF7;
+}

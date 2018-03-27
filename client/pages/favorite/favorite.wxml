@@ -1,0 +1,31 @@
+
+<view class="favorite">
+  <view class="items" wx:for="{{[3,5,7]}}" wx:key="*this">
+  <view class="item"  style="left:{{delta[index]}}rpx" > 
+  <navigator
+  id="course-1"
+    class="nav"  
+   url="/pages/order/order" 
+   data-key="{{index}}"
+  bindtouchstart="onTouchStart" 
+  bindtouchend="onTouchEnd"
+  bindtouchmove="onTouchMove">
+    <image class="item-image" src="../../img/pic_article.png"/>
+    <view class="item-desc">
+      <view class="desc-title">从唐从从从各个国</view>
+      <view class="desc-teacher">160人在学</view>
+       <view class="desc-price">
+        <view class="price">￥399.00</view>
+        <image class="deadline-image" src="../../img/my-ico.png"/>
+        <view class="deadline-text">180天</view>
+      </view>
+    </view>
+    </navigator>
+    <view class="item-action">
+      取消收藏
+    </view>
+  </view>
+ 
+</view>
+
+</view>

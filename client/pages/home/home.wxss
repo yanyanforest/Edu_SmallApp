@@ -1,7 +1,49 @@
 /* pages/home/home.wxss */
-
+.section{
+  background:#f7f7f7;
+}
+.searchBar{
+  position: fixed;
+  width:90%;
+  height:96rpx;
+  top:24rpx;
+  left:42rpx;
+  border-radius:10rpx;
+  z-index:99;
+}
+.search{
+  position: fixed;
+  width:76%;
+  border:1px solid #e6e6e6;
+  height:96rpx;
+  top:24rpx;
+  background:#ffffff;
+  border-radius:10rpx;
+}
+.search image{
+  position:relative;
+  width:42rpx;
+  height:42rpx;
+  margin:27rpx 30rpx;
+  float:left;
+}
+.search input{
+  width:70%;
+   height:96rpx;
+  line-height: 96rpx;
+}
+.scan{
+  float:right;
+  width:70rpx;
+  height:70rpx;
+  margin-top:13rpx;
+}
+.scan image{
+  width:70rpx;
+  height:70rpx;
+}
 .scroll-view_H {
-  top: 10px;
+  top: 0;
   left: 0px;
   border-color: red;
   width: 100%;
@@ -19,8 +61,10 @@
 /* 分类  */
 
 .category-grids {
+  height:140rpx;
   border-top: 1rpx solid #d9d9d9;
   border-left: 1rpx solid #d9d9d9;
+  background: #ffffff;
 }
 
 .category-grid {
@@ -29,8 +73,6 @@
   padding: 20rpx;
   width: 20%;
   box-sizing: border-box;
-  /* border-right: 1rpx solid #d9d9d9;
-      border-bottom: 1rpx solid #d9d9d9; */
 }
 
 .category-grid_active {
@@ -43,7 +85,6 @@
   height: 50rpx;
   margin: 0 auto;
 }
-
 .category-grid__label {
   margin-top: 5px;
   display: block;
@@ -56,73 +97,37 @@
   width: 100%;
 }
 
-/* 感兴趣的二级分类，无图标  */
-
-/* .tab-h {
-  height: 80rpx;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-  line-height: 80rpx;
-  background: #f7f7f7;
-  font-size: 16px;
-  white-space: nowrap;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99;
-}
-
-.tab-item {
-  margin: 0 36rpx;
-  display: inline-block;
-}
-
-.tab-item.active {
-  color: #4675f9;
-  position: relative;
-}
-.tab-item .active:after {
-  content: "";
-  display: block;
-  height: 8rpx;
-  background: #4675f9;
-  position: absolute;
-  bottom: 0;
-  left: 5rpx;
-  border-radius: 16rpx;
-}
-
-.item-ans {
-  width: 100%;
-  display: flex;
-  flex-grow: row no-wrap;
-  justify-content: space-between;
-  padding: 30rpx;
-  box-sizing: border-box;
-  height: 180rpx;
-  align-items: center;
-  border-bottom: 1px solid #f2f2f2;
-} */
-
-.scroll-view_H1 {
-  height: 40px;
-  padding-right: 80px;
-  width: 100%;
-}
-
 .interest-grids {
-  height: 40px;
-  line-height: 40px;
-  padding-top: 1rpx;
-  padding-right:1px;
+  margin-top:30rpx;
+  height: 120rpx;
+  line-height: 120rpx;
   overflow: hidden;
 	flex-direction:row;
-	justify-content: space-between;
 	display: flex; 
+  background: #ffffff;
+  font-family: SourceHanSansCN-Normal;
+  width:100%;
+  border-bottom:1px solid #cdcdcd;
+}
+.view_selectCategory{
+  width:50%;
+  border-right:1px solid #cdcdcd;
+  text-align: center;
+  color:#000;
+  font-size:42rpx;
+  
+}
+.interest-grids .select{
+  height:120rpx;
+  position:relative;
+  top:0rpx;
+  right:50rpx;
 
 }
-
+.interest-grids image{
+  width:30rpx;
+  height:16rpx;
+}
 .interest-grid {
   position: relative;
   float: left;
@@ -131,13 +136,12 @@
 }
 
 .interest-grid__label {
-  margin: 5px 5px;
-  padding: 0px 0px;
+  width: 96%;
+  margin:0 auto;
   display: block;
   text-align: center;
   color: #000;
   overflow: hidden;
-  width: auto;
   border: none;
   font-size: 12px;
   background-color: white;
@@ -175,16 +179,16 @@ button::after {
 /* 感兴趣的课程列表  */
 
 .list-grids {
-  border-top: 1rpx solid #d9d9d9;
-  border-left: 1rpx solid #d9d9d9;
+  width:96%;
+  margin:0 auto;
 }
 
 .list-grid {
-  position: relative;
+  margin:30rpx 0;
   float: left;
-  padding: 24rpx;
   width: 50%;
   box-sizing: border-box;
+
 }
 
 .list-grid__icon {
@@ -192,6 +196,7 @@ button::after {
   width: 342rpx;
   height: 180rpx;
   margin: 0 auto;
+  border-radius: 10rpx;
 }
 
 .list-grid__icon_label {
@@ -216,19 +221,17 @@ button::after {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 100%;
+  width: 92%;
 }
 
 /*  */
 
-.recommend_scroll_x_box {
+ .recommend_scroll_x_box {
   height: 80rpx;
-  padding: 0rpx 0rpx;
-  white-space: nowrap;
-  display: flex;
+  /* white-space: nowrap; */
+   display: flex;
   margin-right: 0px;
-	flex: 1;
-}
+} 
 
 
 .recommend_hot_box:first-child {
@@ -264,11 +267,3 @@ recommend_hot_box__ischecked{
 
 }
 
-.view_selectCategory {
-	/* position: relative; */
-	 background: white; 
-	justify-content: left;
-  text-align: center;
-	width: 300px;
-	flex: 1;
-}

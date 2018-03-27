@@ -1,11 +1,14 @@
 <!--pages/home/home.wxml-->
 <view class='section'>
-   <!-- <scroll-view class="scroll-view_H" style="height:300px;overflow:scroll;white-space: nowrap;display: flex" scroll-x="true"  scroll-with-animation="true" >
-<block wx:for="{{slides}}" wx:key="item">
-    <view class="scroll-view-item-H" style='display:inline-block;width: 750rpx;height: 100%'> <image class='scroll-view-item-H' src='{{item.ad_image_url}}'></image></view>
- 
-    </block>
-</scroll-view>  -->
+<view class="searchBar">
+  <view class="search">
+        <image src="../../images/search.png"/>
+       <input focus="{{focus}}" placeholder='输入课程'/>
+  </view>
+  <view class="scan" bindtap="scanCode">
+     <image src="../../images/code.png"/>
+  </view>
+</view>
   <swiper class="scroll-view_H" indicator-dots="true" indicator-active-color="#ff6700" autoplay="{{false}}" duration='500' circular='true' bindchange='swiperChanged'>
     <block wx:for="{{slides}}" wx:key="item">
       <swiper-item bindtap="tapSwiperItem" data-id="{{ item }}">
@@ -23,24 +26,28 @@
     </block>
   </view>
   <!-- 感兴趣的分类 class='interest-grids'  -->
-	<!-- 实验 scrollview 滚动 tab  -->
+  <!-- 实验 scrollview 滚动 tab  -->
 
-		  <view class='interest-grids' style='inline'>
-    <view class='view_selectCategory' style='width:300px;font-size: 15px' bindtap='chooseInterest' data-id='{{}}' >
-		{{interestCategory.name}}
-    </view> 
+  <view class='interest-grids'>
+    <view class='view_selectCategory' bindtap='chooseInterest' data-id='{{}}'>
+       {{interestCategory.name}} 
+      
+    </view>
+    <view class="select">
+      <image src="../../images/selectedButton_Normal.png" />
+    </view>
     <scroll-view class="recommend_scroll_x_box" scroll-x="true">
 
-  <view class="recommend_hot_box"  wx:for="{{ interestCategory.children }}" wx:key="item">
-    <view class=" text_center {{currentTab==index?'title__ischecked':'title'}}"  bindtap='interestSelected' data-id='{{index}}'>{{item.name}}</view>
-  </view>
-</scroll-view>
+      <view class="recommend_hot_box" wx:for="{{ interestCategory.children }}" wx:key="item">
+        <view class=" text_center {{currentTab==index?'title__ischecked':'title'}}" bindtap='interestSelected' data-id='{{index}}'>{{item.name}}</view>
+      </view>
+    </scroll-view>
 
-   
-   </view>   
+
+  </view>
 
   <!-- 一些推荐的课程  -->
-    <view class='list-grids'>
+  <view class='list-grids'>
     <block wx:for="{{ listData }}" wx:key="item">
       <view class="list-grid">
         <image class="list-grid__icon" src="{{item.picture}}">
@@ -53,5 +60,5 @@
         <text class='list-grid__label' style="color: red;text-align: left"> ¥ {{item.price}}</text>
       </view>
     </block>
-  </view>  
+  </view>
 </view>

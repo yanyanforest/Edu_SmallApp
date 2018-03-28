@@ -25,16 +25,16 @@
         <!-- <view class="orders-list__item-status orders-list__item-status__paying  ">待支付</view> -->
          <view class="orders-list__item-status {{ item.statusWxss }} ">{{ item.statusDesc }}</view> 
       </view>
-      <view class="orders-list__item-bd">
+      <view class="orders-list__item-bd" bindtap='showOrderDetail' data-id='{{item}}'>
         <image class="orders-list__item-image" src="{{item.courses.picture}}"/>
         <view class="orders-list__item-desc">
           <label class="desc-title">{{item.title}}</label>
-          <label class="desc-teacher">{{item.courses.teacher}}</label>
+          <label class="desc-teacher">授课老师：{{item.courses.teacher}}</label>
           <label class="desc-price">￥{{item.courses.price}}</label>
         </view>
       </view>
       <view class="orders-list__item-ft">
-        <lable class="action-price">合计： ￥{{item.totalPrice}}</lable>
+        <lable class="action-price">合计：￥{{item.totalPrice}}</lable>
 			
         <button wx:if="{{item.statusDesc == '待支付'}}" class="action-button action-cancel">取消订单</button>
         <button wx:if="{{item.statusDesc == '待支付'}}" class="action-button action-pay" plain="true">立即支付</button>

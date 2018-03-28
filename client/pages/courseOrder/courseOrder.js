@@ -213,6 +213,13 @@ that.setData({
 	},
 	scroll: function (res) {
 		console.log("-------", res);
+	},
+	showOrderDetail: function(res){
+		console.log("选中的订单：", res.currentTarget.dataset.id);
+		var item = res.currentTarget.dataset.id;
+		wx.navigateTo({
+			url: '../order/order?detail='+JSON.stringify(item),
+		})
 	}
 
 })

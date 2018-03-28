@@ -1,18 +1,43 @@
 // pages/order/order.js
+var url_base = getApp().data.url_server_base;
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+  order:{},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+	var item = JSON.parse(options.detail);
+	console.log("接收：",item);
+		var id = item.id;
+		console.log("接收：", id);
+  var that = this;
+	// that.setData({
+	// 	order:item.id
+	// });
+	wx.request({
+		url: url_base + "orders/"+id,
+		header:{
+			'X-AUTH-TOKEN': wx.getStorageSync('token'),
+			'content-type': 'application/json'
+
+		},
+		method:'GET',
+		success:function(res){
+			var data = res.data.data;
+			data.statusDesc = item.statusDesc;
+			data.statusWxss = item.statusWxss;
+			that.setData({
+				order: data
+			});
+
+}	});
   },
 
   /**

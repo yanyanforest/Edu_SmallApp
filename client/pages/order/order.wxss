@@ -15,14 +15,17 @@
   margin-left: 40rpx;
   color: #2e2e2e
 }
-.order .order-hd .item .text.status-paying {
+.order .order-hd .item .text.orders-list__item-status__paying {
   color: #FF6700;
 }
-.order .order-hd .item .text.status-payed {
+.order .order-hd .item .text.orders-list__item-status__payed {
   color: #1A1A1A;
 }
-.order .order-hd .item .text.status-reviewing {
+.order .order-hd .item .text.orders-list__item-status__reviewing {
   color: #279AF7;
+}
+.order .order-hd .item .text.orders-list__item-status__cancelled {
+  color: lightgray;
 }
 .order .order-bd {
   border-top: 20rpx solid #F5F5F5;
@@ -69,10 +72,30 @@
   font-size: 32rpx;
   color: #ef4023;
 }
+
+
 .order .order-ft .action-pay {
   position: fixed;
   bottom: 0;
   width: 100%;
   color: #FFFFFF;
   background-color: #FF6700;
+		border-radius: 0;
+
+}
+.order .order-ft .action-comment {
+		border-radius: 0;
+
+  position: fixed;
+  bottom: 0;
+	border-top: 1rpx solid #c2c2c2;
+  border-bottom: none;
+  width: 100%;
+  color: #FF6700;
+  background-color: #F7F7F7;
+}
+button
+{
+	border:none;
+	border-radius: 0rpx;
 }

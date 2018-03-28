@@ -4,9 +4,8 @@
 		"pages/category/category",
 		"pages/userInfo/userInfo",
 		"pages/order/order",
-				"pages/orders/orders",
-								"pages/favorite/favorite",
-								
+		"pages/orders/orders",
+		"pages/favorite/favorite",
 		"pages/index/index",
 		"pages/courseList/courseList",
 		"pages/addCgi/addCgi",

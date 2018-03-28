@@ -92,6 +92,7 @@
 }
 .orders .orders-list .orders-list__item-desc .desc-teacher {
   color: #808080;
+	font-size: 28rpx;
 }
 .orders .orders-list .orders-list__item-desc .desc-price {
   color: #FF6700;

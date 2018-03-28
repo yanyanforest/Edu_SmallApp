@@ -1,0 +1,78 @@
+
+.item-text,
+.item-desc .desc-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.favorite {
+  border-top: 8rpx solid #F8F8F8;
+  position: fixed;
+}
+.item {
+  display: flex;
+  position: relative;
+  height: 170rpx;
+  padding-left: 30rpx;
+  background: #FFFFFF;  
+}
+.nav {
+  display: flex;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+.item-image {
+  width: 220rpx;
+  height: 110rpx;
+  margin-top: 30rpx;
+  margin-right: 20rpx;
+}
+.item-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 110rpx;
+  width: 450rpx;
+  margin-top: 30rpx;
+}
+.item-desc .desc-title {
+  display: block;
+  font-size: 34rpx;
+  font-weight: 550;
+  color: #2e2e2e;
+}
+.item-desc .desc-teacher {
+  font-size: 26rpx;
+  color: #808080;
+}
+.item-desc .desc-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28rpx;
+}
+.item-desc .desc-price .price {
+  flex: 1;
+  font-size: 34rpx;
+  color: #ef4023;
+}
+.item-desc .desc-price .deadline-image {
+  width: 20rpx;
+  height: 20rpx;
+}
+.item-desc .desc-price .deadline-text {
+  color: #73757b;
+  font-size: 28prx;
+  margin-left: 8rpx;
+  margin-right: 8rpx;
+}
+.item-action {
+  position: absolute;
+  right: -240rpx;
+  text-align: center;
+  width: 240rpx;
+  margin-right: -40rpx;
+  line-height: 170rpx;
+  color: #FFFFFF;
+  background-color: #FF6700;
+
+}

@@ -1,0 +1,42 @@
+
+<view class="order">
+  <view class="order-hd">
+    <view class="item">
+      <view class="lable">订单状态</view>
+      <view class="text status-paying">待支付</view>
+    </view>
+    <view class="item">
+      <view class="lable">订单编号</view>
+      <view class="text">2017111111111</view>
+    </view>
+    <view class="item">
+      <view class="lable">下单时间</view>
+      <view class="text">2017-11-11 08:08</view>
+    </view>
+  </view>
+
+  <view class="order-bd">
+    <view class="order-item">
+      <image class="item-image" src="../../img/pic_article.png"/>
+      <view class="item-desc">
+        <view class="desc-title">从唐从从从各个国</view>
+        <view class="desc-teacher">主讲老师： 那是</view>
+        <view class="desc-price">￥399.00</view>
+      </view>
+    </view>
+    <view class="order-summary">
+      <view class="item">
+        <view class="label-price">课程价格</view>
+        <view class="text-price">￥399.00</view>
+      </view>
+      <view class="item">
+        <view class="label-price">应付金额</view>
+        <view class="text-price">￥399.00</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="order-ft">
+  <button class="action-pay" bindtap="buy">立即支付</button>
+  </view>
+</view>

@@ -1,5 +1,6 @@
 // pages/courseList/courseList.js
 var app = getApp();
+console.log(app)
 Page({
 
   /**

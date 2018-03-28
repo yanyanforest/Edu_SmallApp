@@ -1,0 +1,68 @@
+
+<view class="orders">
+
+  <view class="orders-header">
+    <lable class="orders-header__item active">全部</lable>
+    <lable class="orders-header__item">待支付</lable>
+    <lable class="orders-header__item">待评价</lable>
+  </view>
+  <view class="orders-list">
+    <view class="orders-list__item">
+      <view class="orders-list__item-hd">
+        <view class="orders-list__item-sn">订单号： 20171010132456</view>
+        <view class="orders-list__item-status orders-list__item-status__paying">待支付</view>
+      </view>
+      <view class="orders-list__item-bd">
+        <image class="orders-list__item-image" src="../../img/pic_article.png"/>
+        <view class="orders-list__item-desc">
+          <label class="desc-title">从唐从从从各个国</label>
+          <label class="desc-teacher">主讲老师： 那是</label>
+          <label class="desc-price">￥399.00</label>
+        </view>
+      </view>
+      <view class="orders-list__item-ft">
+        <lable class="action-price">合计： ￥399</lable>
+        <button class="action-button action-cancel">取消订单</button>
+        <button class="action-button action-pay" plain="true">立即支付</button>
+      </view>
+    </view>
+    <view class="orders-list__item">
+      <view class="orders-list__item-hd">
+        <view class="orders-list__item-sn">订单号： 20171010132456</view>
+        <view class="orders-list__item-status orders-list__item-status__reviewing">待评价</view>
+      </view>
+      <view class="orders-list__item-bd">
+        <image class="orders-list__item-image" src="../../img/pic_article.png"/>
+        <view class="orders-list__item-desc">
+          <label class="desc-title">从唐从从从各个国</label>
+          <label class="desc-teacher">主讲老师： 那是</label>
+          <label class="desc-price">￥399.00</label>
+        </view>
+      </view>
+      <view class="orders-list__item-ft">
+        <lable class="action-price">合计： ￥399</lable>
+        <button class="action-button action-review">去评价</button>
+      </view>
+    </view>
+
+    <view class="orders-list__item">
+      <view class="orders-list__item-hd">
+        <view class="orders-list__item-sn">订单号： 20171010132456</view>
+        <view class="orders-list__item-status orders-list__item-status__payed">已完成</view>
+      </view>
+      <view class="orders-list__item-bd">
+        <image class="orders-list__item-image" src="../../img/pic_article.png"/>
+        <view class="orders-list__item-desc">
+          <label class="desc-title">从唐从从从各个国</label>
+          <label class="desc-teacher">主讲老师： 那是</label>
+          <label class="desc-price">￥399.00</label>
+        </view>
+      </view>
+      <view class="orders-list__item-ft">
+        <lable class="action-price">合计： ￥399</lable>
+        <button class="action-button action-cancel">取消订单</button>
+        <button class="action-button action-pay" plain="true">立即支付</button>
+      </view>
+    </view>
+  </view>
+</view>

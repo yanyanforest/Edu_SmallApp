@@ -1,4 +1,5 @@
 // pages/order/order.js
+var base_url = getApp.data.url_server_base;
 Page({
 
   /**
@@ -12,7 +13,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+		
+		wx.request({
+			url: base_url +'me/orders',
+			header:{
+				'content-type': 'application/json',
+				"X-AUTH-TOKEN":wx.getStorage({
+					key: 'token',
+					success: function(res) {},
+				})
+			}
+		})
   },
 
   /**

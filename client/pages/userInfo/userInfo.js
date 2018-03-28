@@ -27,7 +27,7 @@ Page({
     {
 			"icon": './aboutme/me_icon_commentlist@3x.png',
       "name": "课程评价",
-      "link": ""
+			"link": "../courseOrder/courseOrder"
     }],
 		[{
 			"icon": 'aboutme/me_icon_messages@3x.png',

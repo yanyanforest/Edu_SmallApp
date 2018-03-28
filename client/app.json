@@ -5,9 +5,8 @@
      "pages/userInfo/userInfo",        
 		"pages/courseList/courseList",	
 		"pages/order/order",
-				"pages/orders/orders",
-								"pages/favorite/favorite",
-								
+		"pages/orders/orders",
+		"pages/favorite/favorite",
 		"pages/index/index",
 		"pages/addCgi/addCgi",
 		"pages/login/login",

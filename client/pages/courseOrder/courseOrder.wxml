@@ -1,29 +1,50 @@
 <!--pages/courseOrder/courseOrder.wxml-->
-<import src="../../template/courseordercell/ordercell.wxml"></import>
+<!-- <import src="../../template/courseordercell/ordercell.wxml"></import> -->
 
   <loading hidden="false" bindChange="pullDownChange" style="background-color:red">加载中...</loading>  
- 
-
- <view class='weui-grids'>
-     <view class='weui-grid'  wx:for="{{btns}}" wx:for-item="item" wx:key="item">
-		 <!--hover-class='weui-cells__title__active'  -->
-  <button hover-class='weui-cells__title__active' class="weui-grid__label {{selectedIndex==index?'weui-cells__title__ischecked':''}}" bindtap='btnclick' data-id='{{index}}'>
- {{item.name}}
-  </button> 
+	<view class='orders'>
+ <view class="orders-header">
+ <block wx:for="{{btns}}" wx:for-item="item" wx:key="item">
+    <lable class="orders-header__item {{selectedIndex==index?'active':''}}" bindtap='btnclick' data-id='{{index}}'> {{item.name}}</lable>
+   
+		</block>
   </view>
-</view> 
- 
-<scroll-view scroll-y="true" style='height:100%' bindscrolltolower="loadMore" bindscrolltoupper="refesh" upper-threshold="50" bindscroll="scroll" enable-back-to-top="true">
-<!-- 全部  -->
-<view >
-<template is="ordercell" data="{{ item }}"></template></view>
-<!-- 待支付  -->
-       <view ></view>
-			 <!-- 已支付  -->
+	<!-- header 结束  -->
 
-			 <view ></view>
-<view class='weui-loadmore' hidden='{{isHideLoadMore}}' >
-<view class='weui-loading'></view>
-<view class='weui-loadmore__tips'>正在加载......</view>
+    
+<!--  
+ <swiper class="orders-list_content" indicator-dots='false' indicator-active-color="#ff6700" autoplay="{{false}}" duration='500'  bindchange='swiperChanged' >
+    <block wx:for="{{btns}}" wx:key="item">
+      <swiper-item bindtap="tapSwiperItem" data-id="{{ index }}"> -->
+			<view class="orders-list">
+ <!--  -->
+    <block wx:for="{{ orderList }}" wx:for-item="item" wx:key="item" >
+		<view class="orders-list__item">
+      <view class="orders-list__item-hd">
+        <view class="orders-list__item-sn">订单号：{{ item.sn }}</view>
+        <!-- <view class="orders-list__item-status orders-list__item-status__paying  ">待支付</view> -->
+         <view class="orders-list__item-status {{ item.statusWxss }} ">{{ item.statusDesc }}</view> 
+      </view>
+      <view class="orders-list__item-bd">
+        <image class="orders-list__item-image" src="{{item.courses.picture}}"/>
+        <view class="orders-list__item-desc">
+          <label class="desc-title">{{item.title}}</label>
+          <label class="desc-teacher">{{item.courses.teacher}}</label>
+          <label class="desc-price">￥{{item.courses.price}}</label>
+        </view>
+      </view>
+      <view class="orders-list__item-ft">
+        <lable class="action-price">合计： ￥{{item.totalPrice}}</lable>
+			
+        <button wx:if="{{item.statusDesc == '待支付'}}" class="action-button action-cancel">取消订单</button>
+        <button wx:if="{{item.statusDesc == '待支付'}}" class="action-button action-pay" plain="true">立即支付</button>
+        <button wx:if="{{item.statusDesc == '待评价'}}" class="action-button action-comment" plain="true">去评价</button>
+      </view>
+			</view>
+		</block>
+    </view>
+      <!-- </swiper-item>
+    </block>
+  </swiper>
+  -->
 </view>
-</scroll-view>

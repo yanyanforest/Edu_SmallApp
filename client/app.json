@@ -13,14 +13,9 @@
 		"pages/video/testVideo",
 		"pages/flex/flexDemo",
 		"pages/color/selectColor",
-		"pages/test/test",
-		"pages/testFlex/testFlex",
 		"pages/courseOrder/courseOrder",
 		"pages/userDetail/userDetail",
-		"pages/chooseInterest/chooseInterest",
-		"pages/canvas/canvasTest",
-		"pages/canvasTest/canvasTest",
-		"pages/canvasDemo/canvasDemo"
+		"pages/chooseInterest/chooseInterest"
 	],
 	"window": {
 		"backgroundColor": "#F6F6F6",
@@ -42,12 +37,6 @@
 				"text": "首页",
 				"iconPath": "images/1@3x.png",
 				"selectedIconPath": "images/1selected@3x.png"
-			},
-			{
-				"pagePath": "pages/index/index",
-				"text": "学习",
-				"iconPath": "images/2@3x.png",
-				"selectedIconPath": "images/2selected@3x.png"
 			},
 			{
 				"pagePath": "pages/category/category",

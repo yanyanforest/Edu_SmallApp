@@ -1,12 +1,12 @@
 <!--pages/category/category.wxml-->
 <view class="container">
-  <view class="nav_left">
+  <scroll-view class="nav_left">
     <block wx:for="{{ categorys }}" wx:for-item="item">
       <view class="nav_left_items {{selectFirstCategory.id == item.id ? 'active' : ''}}" bindtap="switchFirstTab" data-index="{{index}}" data-id="{{ item }}">{{item.name}}</view>
     </block>
-  </view>
+  </scroll-view>
   <!-- 中间二级分类  -->
-  <view class="nav_center">
+  <scroll-view class="nav_center">
     <view class="nav_center_items {{selectSecondCategory.id == selectFirstCategory.id ? 'active' : ''}}" data-id="{{ selectFirstCategory }}" bindtap="switchSecondFirstTab">
       <!--  -->
       全部
@@ -18,9 +18,9 @@
       </view>
 
     </block>
-  </view>
+  </scroll-view>
   <!-- 靠右  -->
-  <view class="nav_right">
+  <scroll-view class="nav_right">
     <view class="nav_right_items {{selectSecondCategory.id == selectThirdCategory.id ? 'active' : ''}}" data-id="{{ selectSecondCategory }}" bindtap="switchThirdFirstTab" hidden="{{selectSecondCategory.children.length <= 0}}">
       <!--{'id':selectSecondCategory.id,'name':selectSecondCategory.name,'children':[]}  -->
       全部
@@ -32,6 +32,6 @@
 
     </block>
 
-  </view>
+  </scroll-view>
   <!--  -->
 </view>

@@ -182,7 +182,6 @@ console.log("success--secondItem", secondItem);
 		// 		selectThirdCategory: item
 		// 	});
 		// 	wx.navigateTo({
-		// 		// url: '../courseList/courseList?item=' + this.data.selectThirdCategory,
 		// 		url: '../courseList/courseList?id=' + item.id +'&name='+item.name+'&children='+item.children,
 		// 	})
 		// },

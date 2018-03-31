@@ -1,0 +1,30 @@
+.orders-list__item-bd {
+  display: flex;
+  height: 160rpx;
+  padding: 30rpx;
+  background: #F8F8F8;
+}
+ .orders-list__item-image {
+  width: 300rpx;
+  height: 160rpx;
+}
+ .orders-list__item-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160rpx;
+  margin-left: 15rpx;
+}
+ .orders-list__item-desc .desc-title {
+  font-size: 32rpx;
+  color: #000000;
+}
+.orders-list__item-desc .desc-teacher {
+  color: #808080;
+	font-size: 28rpx;
+}
+ .orders-list__item-desc .desc-price {
+  color: #FF6700;
+		font-size: 30rpx;
+
+}

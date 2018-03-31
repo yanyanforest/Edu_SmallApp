@@ -1,0 +1,63 @@
+/* pages/orderComment/comment.wxss */
+@import "../../template/courseorder/course.wxss";
+/* @import "../../template/comment_star/comment_star.wxss"; */
+
+.comment-stars .comment-starBox{
+     display: flex;
+		 flex-direction: row;
+    justify-content: flex-start;
+    align-items: center; 
+    padding: 20rpx 0 0;
+		margin-left: 20px;
+}
+/* .comment-stars  */
+.comment-stars .comment-starBox.comment-starImg{
+    /* width: 50rpx;
+    height: 50rpx; */
+		 width: 25px;
+    height: 25px;
+		margin: 5px;
+}
+.comment-starTitle{
+margin-right: 20rpx;
+margin-left:25rpx;
+color: #030303;
+font-size: 36rpx;
+justify-content: left;
+vertical-align: center;
+}
+image{
+			margin: 5px;
+
+			 width: 25px;
+    height: 25px;
+}
+ .comment-content
+{
+	margin-left:30rpx;
+
+	 padding: 10rpx; 
+	border: 1rpx solid darkgray;
+	border-radius: 5rpx;
+	font-size: 30rpx;
+	text-align: right;
+
+}
+textarea{
+		margin: 30rpx;
+
+	 padding: 10rpx; 
+	border: 1rpx solid darkgray;
+	border-radius: 5rpx;
+	font-size: 30rpx;
+}
+button
+{
+	margin: 30rpx;
+	padding: 10rpx;
+	/* height: 45px; */
+	 line-height: 30px; 
+	background: #FF6700;
+	color: #FFFFFF;
+	font-size: 36rpx;
+}

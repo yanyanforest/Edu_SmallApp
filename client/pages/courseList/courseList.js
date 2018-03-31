@@ -1,6 +1,5 @@
 // pages/courseList/courseList.js
 var app = getApp();
-console.log(app)
 Page({
 
   /**
@@ -17,7 +16,9 @@ Page({
   courseList:[],
 	hasRefresh:true,//正在刷新
   hideLoadMore:true,
-	selectedCategory:{}
+	selectedCategory:{},
+	firstSelectedCategory:{},
+	categorys: app.data.allCategorys
   },
 
   /**
@@ -25,15 +26,22 @@ Page({
    */
   onLoad: function (options) {
 		console.log(options);
+		var categorys = app.data.allCategorys;
+		var firstSelectedCategory = JSON.parse(options.first);
+		var secondSelectedCategory = JSON.parse(options.second);
 
+		var thirdSelectedCategory = JSON.parse(options.third);
+
+		console.log("firstSelectedCategory---",firstSelectedCategory);
 		var that = this;
 		that.setData({
 			selectedCategory: {"id": options.id, "name": options.name, "children": options.children},
 			categoryBtn: { "id": options.id, "title": options.name, "isSelected": true },
-
+			categorys: categorys,
+			firstSelectedCategory: firstSelectedCategory,
+			secondSelectedCategory: secondSelectedCategory,
+			thirdSelectedCategory: thirdSelectedCategory
 		});
-		console.log("----", that.data.selectedCategory);
-
 		this.requestListData({});
   },
 requestListData:function(params){
@@ -65,7 +73,8 @@ requestListData:function(params){
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+		this.category = this.selectComponent("#category");
+
   },
 
   /**
@@ -142,6 +151,8 @@ requestListData:function(params){
 		var that = this;
 		var item = this.data.categoryBtn;
 		item.isSelected = true;
+		console.log("分类",this.data.categorys);
+		this.category.showView();
 		that.setData({
 			categoryBtn:item
 		});
@@ -149,6 +160,11 @@ requestListData:function(params){
 // wx.navigateTo({
 // 	url: '',
 // });
+
+	},
+	_categorySelected:function(e){
+		console.log("选中的分类",e);
+		this.category.hideView()
 	}
 
 })

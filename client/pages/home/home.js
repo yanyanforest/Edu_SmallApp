@@ -53,7 +53,13 @@ Page({
 					var dataItem = { "id": item.id, "name": item.name, "brief": brief };
 					rootcategories.push(dataItem);
 				}
-				getApp().allCategorys = data.categories;
+				console.log("分类：",data.categories)
+				// getApp().setData({
+				// 	allCategorys: data.categories
+				// });
+				getApp().data.allCategorys = data.categories;
+				console.log("---分类：", getApp().data.allCategorys)
+
 				rootcategories.push(localdata[4]);
 				that.setData({
 					slides: data.carousel,
@@ -74,7 +80,6 @@ Page({
 	interestSelected: function (res) {
 		var index = parseInt(res.currentTarget.dataset.id);
 		console.log("interestSelected:", res);
-		console.log("interestSelected:", index);
 		this.setData({
 			currentTab: index
 		});

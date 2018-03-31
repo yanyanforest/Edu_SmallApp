@@ -1,0 +1,17 @@
+<template name="comment_stars">
+    <view class='comment-stars'>
+        <view class='comment-starTile'>评分</view>
+        <view class='comment-starBox'>
+            <block wx:for="{{two_star}}">
+                <view class='comment-starImg'>
+                    <image src='{{starData.starActiveUrl?starData.starActiveUrl:"star_normal.png"}}' data-id='{{index+1}}' data-imgitem="starActive" bindtap='starComment'></image>
+                </view>
+            </block>
+            <block wx:for="{{starData.one_star}}">
+                <view class='comment-starImg'>
+                    <image src='{{starData.starUrl}}' data-id='{{index+1}}' data-imgItem="starNormal" bindtap='starComment'></image>
+                </view>
+            </block>
+        </view>
+    </view>
+</template>

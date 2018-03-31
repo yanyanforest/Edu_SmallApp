@@ -36,9 +36,9 @@
       <view class="orders-list__item-ft">
         <lable class="action-price">合计：￥{{item.totalPrice}}</lable>
 			
-        <button wx:if="{{item.statusDesc == '待支付'}}" class="action-button action-cancel">取消订单</button>
-        <button wx:if="{{item.statusDesc == '待支付'}}" class="action-button action-pay" plain="true">立即支付</button>
-        <button wx:if="{{item.statusDesc == '待评价'}}" class="action-button action-comment" plain="true">去评价</button>
+        <button wx:if="{{item.statusDesc == '待支付'}}" class="action-button action-cancel" bindtap='toCancleOrder'>取消订单</button>
+        <button wx:if="{{item.statusDesc == '待支付'}}" class="action-button action-pay" plain="true" bindtap='toPay' data-id='{{item}}'>立即支付</button>
+        <button wx:if="{{item.statusDesc == '待评价'}}" class="action-button action-comment" plain="true" bindtap='toComment' data-id='{{item}}'>去评价</button>
       </view>
 			</view>
 		</block>

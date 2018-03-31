@@ -1,0 +1,10 @@
+.comment-stars .comment-starBox{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20rpx 0 0;
+}
+.comment-stars .comment-starImg{
+    width: 50rpx;
+    height: 50rpx;
+}

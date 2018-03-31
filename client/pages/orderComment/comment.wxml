@@ -1,0 +1,38 @@
+<!--pages/orderComment/comment.wxml-->
+
+<import src="../../template/courseorder/course.wxml" />
+<!-- <import src="../../template/comment_star/comment_star.wxml"/> -->
+
+<template is="order_course" data="{{ ...order }}"></template>
+<!-- <template is="comment_stars" data="{{ ...5 }}"></template> -->
+<view class='comment-stars'>
+    <form bindsubmit="comment_submit">
+  <view class='comment-starBox'>
+
+
+    <!-- 						 
+						<block wx:for="{{starData.one_star}}">
+                <view class='comment-starImg'>
+                    <image src='../../template/comment_star/star_selected.png' data-id='{{index+1}}' data-imgItem="starNormal" bindtap='starComment'></image>
+                </view>
+            </block>
+						 <block wx:for="{{starData.two_star}}">
+                <view class='comment-starImg'>
+                    <image src='../../template/comment_star/star_normal.png' data-id='{{index+1}}' data-imgitem="starActive" bindtap='starComment'></image>
+                </view>
+            </block> -->
+
+    <block wx:for="{{starData.max}}">
+      <view class='comment-starImg' wx:for-index="index" bindtap='starComment' data-id='{{index}}'>
+        <image wx:if="{{starData.selected >= index+1 }}" src='../../template/comment_star/star_selected.png'></image>
+        <image wx:else src='../../template/comment_star/star_normal.png' data-id='{{index}}' bindtap='starComment'></image>
+      </view>
+
+    </block>
+		<input hidden='true' name="starLevel"value="{{starData.selected}}"></input>
+<view class='comment-starTitle'>{{starData.selected}}星好评</view>
+  </view>
+	<textarea placeholder='请写下对课程和讲师的感受吧...' name="content" value='{{content}}'></textarea>
+	<button formType="submit" formty> 提交 </button>
+    </form>
+</view>

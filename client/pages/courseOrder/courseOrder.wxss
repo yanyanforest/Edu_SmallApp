@@ -40,9 +40,7 @@
 .orders .orders-header__item:nth-of-type(1) {
   border-left: 0;
 }
-.orders .orders-header__item:nth-of-type(1) {
-  border-left: 0;
-}
+
 .orders .orders-list {
   border-top: 8rpx solid #F8F8F8;
   background: #FFFFFF;

@@ -56,7 +56,7 @@ Page({
 			success: function (res) {
 				var data = res.data.data;
 				console.log(data);
-
+var total = data.total;
 				var list = data.resources;
 				var listTemp = that.data.orderList;
 				for (var i = 0; i < list.length; i++) {
@@ -67,7 +67,9 @@ Page({
 
 				}
 				that.setData({
-					orderList: listTemp
+					orderList: listTemp,
+					total:total,
+			
 				})
 			},
 			fail: function (error) {
@@ -172,37 +174,73 @@ that.setData({
 	onReachBottom: function () {
 		console.log('--- 加载更多---');
 		var page = this.data.page;
+		console.log('--- 加载更多---',page);
+
 		var isHideLoadMore = false;
 
-		setTimeout(() => {
-			if (page < 5) {
+	
+			if (page < this.data.total) {
+			var token = wx.getStorageSync('token');
+		var that = this;
+		wx.request({
+			url: url_base + 'me/orders',
+			header: {
+				'content-type': 'application/json',
+				'X-AUTH-TOKEN': token
+			},
+			data:{
+				
+			}
+			success: function (res) {
+				var data = res.data.data;
+				console.log(data);
+var total = data.total;
+				var list = data.resources;
+				var listTemp = that.data.orderList;
+				for (var i = 0; i < list.length; i++) {
+					var item = list[i];
+					item.statusDesc = that.showOrderItemStatus(item);
+					item.statusWxss = that.showOrderStatusWxss(item);
+					listTemp.push(item);
 
-				var curList = this.data.recommends_page;
-				var recommends = this.data.recommends;
-				for (var i = 0; i < curList.length; i++) {
-					recommends.push(curList[i]);
 				}
-				this.setData({
-					recommends: recommends
-				});
-				page++;
-				if (page >= 5) {
-					isHideLoadMore = true;
-				}
-				this.setData({
-					isHideLoadMore: isHideLoadMore,
-					recommends: recommends,
-					page: page
-				});
-			} else {
-				isHideLoadMore = true;
-				this.setData({
-					isHideLoadMore: isHideLoadMore,
-					page: page
-				});
+				that.setData({
+					orderList: listTemp,
+					total:total,
+			
+				})
+			},
+			fail: function (error) {
+				console.log(error);
+			}
+		})
+	},
+	showOrderItemStatus: function (item) {
+		console.log(item.status);
+		if (item.status == "cancelled") {
+			return "已取消";
+		}
+		if (item.status == "created") {
+			return "待支付";
+		}
+		if (item.status == "paid") {
+			if (item.reviewed) {
+				return "已完成";
+			}
+			return "待评价";
+		}
+		return "已关闭";
+	}, 
+	swiperChanged:function(res){
+console.log('---',res);
+var selectIndex = res.detail.current;
+var that = this;
+that.setData({
+	selectedIndex:selectIndex,
+})
 			}
 
-		}, 1000);
+			
 	},
 
   /**
@@ -220,6 +258,12 @@ that.setData({
 		wx.navigateTo({
 			url: '../order/order?detail='+JSON.stringify(item),
 		})
+	},
+	toComment: function (res){
+		console.log(res);
+		wx.navigateTo({
+			url: '../orderComment/comment?item='+JSON.stringify(res.currentTarget.dataset.id),
+		});
 	}
 
 })

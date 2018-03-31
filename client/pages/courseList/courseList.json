@@ -1,4 +1,7 @@
 {
 	"navigationBarTitleText": "课程列表",
-	"enablePullDownRefresh": false
+	"enablePullDownRefresh": false,
+	"usingComponents":{
+		"category":"../../components/Category/category"
+	}
 }

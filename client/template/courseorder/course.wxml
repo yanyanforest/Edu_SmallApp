@@ -1,0 +1,12 @@
+<template name="order_course">
+<!-- bindtap='showOrderDetail' data-id='{{item}}'  -->
+<view class="orders-list__item-bd">
+
+        <image class="orders-list__item-image" src="{{courses.picture}}"/>
+        <view class="orders-list__item-desc">
+          <label class="desc-title">{{title}}</label>
+          <label class="desc-teacher">授课老师：{{courses.teacher}}</label>
+          <label class="desc-price">￥{{courses.price}}</label>
+        </view>
+      </view>
+</template>

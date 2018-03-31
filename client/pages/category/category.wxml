@@ -1,29 +1,29 @@
 <!--pages/category/category.wxml-->
 <view class="container">
-  <view class="nav_left">
+				<category style="top:0px" isShowAll="{{false}}" id="category"  categorys="{{ categorys }}" bind:categorySelected="_categorySelected" firstDefaultCategory="{{selectFirstCategory}}"></category>
+
+  <!-- <view class="nav_left">
     <block wx:for="{{ categorys }}" wx:for-item="item">
       <view class="nav_left_items {{selectFirstCategory.id == item.id ? 'active' : ''}}" bindtap="switchFirstTab" data-index="{{index}}" data-id="{{ item }}">{{item.name}}</view>
     </block>
   </view>
   <!-- 中间二级分类  -->
-  <view class="nav_center">
+  <!-- <view class="nav_center">
     <view class="nav_center_items {{selectSecondCategory.id == selectFirstCategory.id ? 'active' : ''}}" data-id="{{ selectFirstCategory }}" bindtap="switchSecondFirstTab">
-      <!--  -->
       全部
     </view>
     <block wx:for="{{ selectFirstCategory.children }}" wx:for-item="secondItem">
-      <!--  -->
       <view class="nav_center_items {{selectSecondCategory.id == secondItem.id ? 'active' : ''}}" data-id="{{ secondItem }}" bindtap="switchSecondTab">
         {{ secondItem.name }}
       </view>
 
     </block>
-  </view>
+  </view> -->
   <!-- 靠右  -->
-  <view class="nav_right">
-    <view class="nav_right_items {{selectSecondCategory.id == selectThirdCategory.id ? 'active' : ''}}" data-id="{{ selectSecondCategory }}" bindtap="switchThirdFirstTab" hidden="{{selectSecondCategory.children.length <= 0}}">
+  <!-- <view class="nav_right">
+    <view class="nav_right_items {{selectSecondCategory.id == selectThirdCategory.id ? 'active' : ''}}" data-id="{{ selectSecondCategory }}" bindtap="switchThirdFirstTab" hidden="{{selectSecondCategory.children.length <= 0}}"> -->
       <!--{'id':selectSecondCategory.id,'name':selectSecondCategory.name,'children':[]}  -->
-      全部
+      <!-- 全部
     </view>
     <block wx:for="{{ selectSecondCategory.children }}" wx:for-item="thirdItem">
       <view class="nav_right_items {{selectThirdCategory.id == thirdItem.id ? 'active' : ''}}" bindtap='switchThirdTab' data-id='{{ thirdItem }}'>
@@ -32,6 +32,6 @@
 
     </block>
 
-  </view>
-  <!--  -->
+  </view>  -->
+ 
 </view>

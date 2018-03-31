@@ -15,7 +15,11 @@
 
          </block>
 		</view>
-        <view class="header_right {{categoryBtn.isSelected ? 'header_active':''}}"  bindtap='category_choose'>{{categoryBtn.title}}</view>
+        <view class="header_right {{categoryBtn.isSelected ? 'header_active':''}}"  bindtap='category_choose'>{{ categoryBtn.title }}</view>
+				<category style="top:44px" id="category" isShowAll="true" categorys="{{ categorys }}" bind:categorySelected="_categorySelected" 
+				firstDefaultCategory="{{firstSelectedCategory}}" 
+				secondDefaultCategory="{{secondSelectedCategory}}"
+			  thirdDefaultCategory="{{thirdSelectedCategory}}"></category>
 
     </view>
 <!-- <view class='weui-loading' hidden="{{ !hasRefresh }}" >
@@ -38,7 +42,7 @@
                 <image src="{{ item.picture }}" class="pic"></image>
                 <view class="right_cont">
                     <text class="title">{{ item.title }}</text>
-                    <text class="count"> 已有{{item.num}}人学习</text>
+                    <text class="count"> {{item.num}}人在学</text>
                     <text class="price">￥{{item.price}}元</text>
                 </view>
             </navigator>

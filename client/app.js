@@ -9,9 +9,9 @@ App({
 	data:{
 		url_server_base:"https://www.sdkhcm.com/api/",
 		mainSelectedColor: "#ff6700",
-		
+		allCategorys: [],
 	},
-	allCategorys:[],
+	
   //wxa735808d227bcd7a
   //当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
     onLaunch: function () {

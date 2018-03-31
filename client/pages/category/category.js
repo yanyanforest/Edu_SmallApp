@@ -71,7 +71,9 @@ console.log("success--secondItem", secondItem);
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+		this.category = this.selectComponent("#category");
+		this.category.showView();
+
   },
 
   /**
@@ -115,63 +117,73 @@ console.log("success--secondItem", secondItem);
   onShareAppMessage: function () {
   
   },
-		switchFirstTab: function (e) {
+	_categorySelected:function(e){
+		console.log("分类界面接收 选中的分类",e);
+		var selectFirstCategory = this.category.data.selectFirstCategory;
+		var selectSecondCategory = this.category.data.selectSecondCategory;
+		var selectThirdCategory = this.category.data.selectThirdCategory;
+		var item = e.detail;
+		wx.navigateTo({
+			url: '../courseList/courseList?id=' + item.id + '&name=' + item.name + '&children=' + item.children + '&first=' + JSON.stringify(selectFirstCategory)+'&second='+JSON.stringify(selectSecondCategory)+'&third='+JSON.stringify(selectThirdCategory)
+		})
+	},
+		// switchFirstTab: function (e) {
 
-			let item = e.target.dataset.id;
-			console.log("selected first item", item);
-			console.log("selected first item", item.children);
+		// 	let item = e.target.dataset.id;
+		// 	console.log("selected first item", item);
+		// 	console.log("selected first item", item.children);
 
-			this.setData({
-				selectFirstCategory: item,
-			})
-		},
-		switchSecondFirstTab:function(e){
-			let item = e.target.dataset.id;
-			var selectedItem = { 'id': item.id, 'name': item.name, 'children': [] } 
-			this.setData({
-				selectSecondCategory: selectedItem
-			});
-			wx.navigateTo({
-				// url: '../courseList/courseList?item=' + this.data.selectThirdCategory,
-				url: '../courseList/courseList?id=' + selectedItem.id + '&name=' + selectedItem.name + '&children=' + selectedItem.children,
-			})
-		}
-		,
-		switchSecondTab: function (e) {
+		// 	this.setData({
+		// 		selectFirstCategory: item,
+		// 	})
+		// },
+		// switchSecondFirstTab:function(e){
+		// 	let item = e.target.dataset.id;
+		// 	var selectedItem = { 'id': item.id, 'name': item.name, 'children': [] } 
+		// 	this.setData({
+		// 		selectSecondCategory: selectedItem
+		// 	});
+		// 	wx.navigateTo({
+		// 		// url: '../courseList/courseList?item=' + this.data.selectThirdCategory,
+		// 		url: '../courseList/courseList?id=' + selectedItem.id + '&name=' + selectedItem.name + '&children=' + selectedItem.children,
+		// 	})
+		// }
+		// ,
+		// switchSecondTab: function (e) {
 
-			let item = e.target.dataset.id;
+		// 	let item = e.target.dataset.id;
 
-			console.log("selected second Item", item);
-			this.setData({
-				selectSecondCategory: item
-			});
+		// 	console.log("selected second Item", item);
+		// 	this.setData({
+		// 		selectSecondCategory: item
+		// 	});
 		
-		},
-		switchThirdFirstTab: function(e){
+		// },
+		// switchThirdFirstTab: function(e){
 
-			let item = e.target.dataset.id;
-			console.log("selected third Item", item);
-			var selectedItem = { 'id': item.id, 'name': item.name, 'children': [] } 
+		// 	let item = e.target.dataset.id;
+		// 	console.log("selected third Item", item);
+		// 	var selectedItem = { 'id': item.id, 'name': item.name, 'children': [] } 
 
-			this.setData({
-				selectThirdCategory	: item
-			});
-			wx.navigateTo({
-				url: '../courseList/courseList?id=' + selectedItem.id + '&name=' + selectedItem.name + '&children=' + selectedItem.children,
-			})
-		}
-		,
-		switchThirdTab: function (e) {
+		// 	this.setData({
+		// 		selectThirdCategory	: item
+		// 	});
+		// 	wx.navigateTo({
+		// 		url: '../courseList/courseList?id=' + selectedItem.id + '&name=' + selectedItem.name + '&children=' + selectedItem.children,
+		// 	})
+		// }
+		// ,
+		// switchThirdTab: function (e) {
 
-			let item = e.target.dataset.id;
-			console.log("selected third Item", item);
+		// 	let item = e.target.dataset.id;
+		// 	console.log("selected third Item", item);
 
-			this.setData({
-				selectThirdCategory: item
-			});
-			wx.navigateTo({
-				// url: '../courseList/courseList?item=' + this.data.selectThirdCategory,
-				url: '../courseList/courseList?id=' + item.id +'&name='+item.name+'&children='+item.children,
-			})
-		},
+		// 	this.setData({
+		// 		selectThirdCategory: item
+		// 	});
+		// 	wx.navigateTo({
+		// 		// url: '../courseList/courseList?item=' + this.data.selectThirdCategory,
+		// 		url: '../courseList/courseList?id=' + item.id +'&name='+item.name+'&children='+item.children,
+		// 	})
+		// },
 })

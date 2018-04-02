@@ -5,6 +5,8 @@
 		"pages/userInfo/userInfo",
 		"pages/courseList/courseList",
 		"pages/courseDetail/courseDetail",	
+				"pages/courseOrder/courseOrder",
+				
 		"pages/order/order",
 		"pages/favorite/favorite",
 		"pages/index/index",
@@ -14,7 +16,6 @@
 		"pages/video/testVideo",
 		"pages/flex/flexDemo",
 		"pages/color/selectColor",
-		"pages/courseOrder/courseOrder",
 		"pages/userDetail/userDetail",
 		"pages/chooseInterest/chooseInterest",
 		"pages/orderComment/comment"

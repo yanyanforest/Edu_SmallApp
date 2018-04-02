@@ -1,5 +1,4 @@
 // pages/courseOrder/courseOrder.js
-var url_base = getApp().data.url_server_base;
 Page({
 
   /**
@@ -47,6 +46,7 @@ Page({
 	onLoad: function (options) {
 		var token = wx.getStorageSync('token');
 		var that = this;
+		var url_base = getApp().data.url_server_base;
 		wx.request({
 			url: url_base + 'me/orders',
 			header: {
@@ -55,7 +55,7 @@ Page({
 			},
 			success: function (res) {
 				var data = res.data.data;
-				console.log(data);
+				console.log("data:",data);
 var total = data.total;
 				var list = data.resources;
 				var listTemp = that.data.orderList;
@@ -175,10 +175,8 @@ that.setData({
 		console.log('--- 加载更多---');
 		var page = this.data.page;
 		console.log('--- 加载更多---',page);
-
+		var url_base = getApp().data.url_server_base;
 		var isHideLoadMore = false;
-
-	
 			if (page < this.data.total) {
 			var token = wx.getStorageSync('token');
 		var that = this;
@@ -188,12 +186,9 @@ that.setData({
 				'content-type': 'application/json',
 				'X-AUTH-TOKEN': token
 			},
-			data:{
-				
-			}
 			success: function (res) {
 				var data = res.data.data;
-				console.log(data);
+				console.log("=========", data);
 var total = data.total;
 				var list = data.resources;
 				var listTemp = that.data.orderList;
@@ -211,9 +206,10 @@ var total = data.total;
 				})
 			},
 			fail: function (error) {
-				console.log(error);
+				console.log("error:",error);
 			}
 		})
+	}
 	},
 	showOrderItemStatus: function (item) {
 		console.log(item.status);
@@ -238,10 +234,7 @@ var that = this;
 that.setData({
 	selectedIndex:selectIndex,
 })
-			}
-
-			
-	},
+			},
 
   /**
    * 用户点击右上角分享

@@ -1,8 +1,10 @@
 <!--pages/courseOrder/courseOrder.wxml-->
 <!-- <import src="../../template/courseordercell/ordercell.wxml"></import> -->
 
-  <loading hidden="false" bindChange="pullDownChange" style="background-color:red">加载中...</loading>  
+  <!-- <loading hidden="false" bindChange="pullDownChange" style="background-color:red">加载中...</loading>   -->
 	<view class='orders'>
+		<!-- header   -->
+
  <view class="orders-header">
  <block wx:for="{{btns}}" wx:for-item="item" wx:key="item">
     <lable class="orders-header__item {{selectedIndex==index?'active':''}}" bindtap='btnclick' data-id='{{index}}'> {{item.name}}</lable>

@@ -164,6 +164,12 @@ requestListData:function(params){
 	},
 	_categorySelected:function(e){
 		console.log("选中的分类",e);
+		var selectedCategory = e.detail;
+		this.setData({
+			selectedCategory:selectedCategory,
+			categoryBtn: { "id": selectedCategory.id, "title": selectedCategory.name, "isSelected": true },
+
+		});
 		this.category.hideView()
 	}
 

@@ -49,7 +49,9 @@
   <!-- 一些推荐的课程  -->
   <view class='list-grids'>
     <block wx:for="{{ listData }}" wx:key="item">
-      <view class="list-grid">
+		            <navigator url="../courseDetail/courseDetail?brand={{item.id}}&typeid={{item.typeid}}">
+
+      <view class="list-grid" bindtap='showCourseDetail' data-item='{{item}}'>
         <image class="list-grid__icon" src="{{item.picture}}">
           <view class="list-grid__icon_label">
             <text style='margin:5rpx;'>  {{item.num}} 人在学  </text>
@@ -59,6 +61,7 @@
         <text class="list-grid__label" style=''>{{item.title}}</text>
         <text class='list-grid__label' style="color: red;text-align: left"> ¥ {{item.price}}</text>
       </view>
+</navigator>
     </block>
   </view>
 </view>

@@ -26,7 +26,7 @@ Page({
     {
 			"icon": './aboutme/me_icon_commentlist@3x.png',
       "name": "课程评价",
-			"link": ""
+			"link": "../evaluate/evaluate"
     }],
 		[{
 			"icon": 'aboutme/me_icon_messages@3x.png',
@@ -46,7 +46,7 @@ Page({
 		[{
 			"icon": './aboutme/me_icon_settings@3x.png',
 			"name": "设置",
-			"link": ""
+			"link": "../settings/settings"
 		}]	
   ],
 

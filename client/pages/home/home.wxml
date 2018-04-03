@@ -1,4 +1,5 @@
-<!--pages/home/home.wxml-->
+<import src="../commons/price.wxml" />
+
 <view class='section'>
 <view class="searchBar">
   <view class="search">
@@ -59,7 +60,9 @@
           </view>
         </image>
         <text class="list-grid__label" style=''>{{item.title}}</text>
-        <text class='list-grid__label' style="color: red;text-align: left"> ¥ {{item.price}}</text>
+				            <template is="price" data="{{price:item.price}}"/>
+
+        <!-- <text class='list-grid__label' style="color: red;text-align: left"> ¥ {{item.price}}</text> -->
       </view>
 </navigator>
     </block>

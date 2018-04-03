@@ -1,0 +1,17 @@
+.price {
+  font-size: 28rpx;
+	flex-direction: row;
+}
+
+.price.point {
+  font-size: 24rpx;
+  color: #f16236;
+}
+
+.price.unit {
+  color: #f16236;
+}
+
+.price.free {
+  color: #279af7;
+}

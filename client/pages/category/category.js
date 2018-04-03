@@ -40,7 +40,6 @@ selectThirdCategory: {},
 
 			},
 			success: function (res) {
-				console.log("success--", res);
 
 var result = res.data.data;
 console.log("success--", result);

@@ -1,4 +1,6 @@
 /* pages/home/home.wxss */
+@import "../commons/price.wxss";
+
 .section{
   background:#f7f7f7;
 }

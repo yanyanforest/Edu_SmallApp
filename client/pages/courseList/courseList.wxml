@@ -1,58 +1,55 @@
+<import src="../commons/price.wxml" />
+
 <!-- <import src="../../template/coursecell.wxml"></import> -->
 <!-- <loading hidden="{{hasRefresh != true}}" bindchange="loadingChange">
     加载中...
   </loading>  -->
-	<!--<view class='weui-loading' hidden='{{ !hasRefresh }}' >-->
+<!--<view class='weui-loading' hidden='{{ !hasRefresh }}' >-->
 <!--<view class='weui-loading'>正在刷新......</view>-->
 <!--</view>-->
 <!--wx:if="{{ hasRefresh }}"  -->
 <view class='container'>
-    <!--header 是个按钮-->
-    <view class="header">
+  <!--header 是个按钮-->
+  <view class="header">
     <view class='header_left'>
-		 <block wx:for="{{ btns }}" wx:key="{{ item }}">
-             <view class="{{selectedIndex == item.id? 'header_active':''}}" bindtap='category_changed' data-id='{{ item }}' >{{item.title}}</view>
+      <block wx:for="{{ btns }}" wx:key="{{ item }}">
+        <view class="{{selectedIndex == item.id? 'header_active':''}}" bindtap='category_changed' data-id='{{ item }}'>{{item.title}}</view>
 
-         </block>
-		</view>
-        <view class="header_right {{categoryBtn.isSelected ? 'header_active':''}}"  bindtap='category_choose'>{{ categoryBtn.title }}</view>
-				<category style="top:44px" id="category" isShowAll="true" categorys="{{ categorys }}" bind:categorySelected="_categorySelected" 
-				firstDefaultCategory="{{firstSelectedCategory}}" 
-				secondDefaultCategory="{{secondSelectedCategory}}"
-			  thirdDefaultCategory="{{thirdSelectedCategory}}"></category>
-
+      </block>
     </view>
-<!-- <view class='weui-loading' hidden="{{ !hasRefresh }}" >
+    <view class="header_right {{categoryBtn.isSelected ? 'header_active':''}}" bindtap='category_choose'>{{ categoryBtn.title }}</view>
+    <category style="top:44px" id="category" isShowAll="true" categorys="{{ categorys }}" bind:categorySelected="_categorySelected" firstDefaultCategory="{{firstSelectedCategory}}" secondDefaultCategory="{{secondSelectedCategory}}" thirdDefaultCategory="{{thirdSelectedCategory}}"></category>
+
+  </view>
+  <!-- <view class='weui-loading' hidden="{{ !hasRefresh }}" >
     <view class='weui-loading'>正在刷新......</view>
 </view> -->
-<scroll-view scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refreshList" style='height:100%;'>
+  <scroll-view scroll-y="true" bindscrolltolower="loadMore" bindscrolltoupper="refreshList" style='height:100%;'>
 
-<!-- <view class='weui-cells'> -->
-    <!-- <block>
-        <view class='weui-cell' wx:for="{{courseList}}" wx:item="item" wx:key="item">
-            <template is="coursecell" data="{{ item }}"></template>
-				</view>
-    </block> -->
-		<!-- </view> -->
-	
-	  <!-- <view class="">   -->
+
     <block wx:for="{{ courseList }}" wx:key="item">
-        <view class="brand_item">
-            <navigator url="../courseDetail/courseDetail?brand={{item.id}}&typeid={{item.typeid}}">
-                <image src="{{ item.picture }}" class="pic"></image>
-                <view class="right_cont">
-                    <text class="title">{{ item.title }}</text>
-                    <text class="count"> {{item.num}}人在学</text>
-                    <text class="price">￥{{item.price}}元</text>
-                </view>
-            </navigator>
-        </view>
+      <view class="brand_item">
+        <navigator url="../courseDetail/courseDetail?brand={{item.id}}&typeid={{item.typeid}}">
+          <image src="{{ item.picture }}" class="pic"></image>
+          <view class="right_cont">
+            <view>
+              <text class="title">{{ item.title }}</text>
+            </view>
+            <view>
+              <text class="count"> {{item.num}}人在学</text>
+            </view>
+            <!-- <text class="price">￥{{item.price}}</text>  -->
+            <view>
+              <text class="price"><template is="price" data="{{price:item.price}}"/></text> </view>
+          </view>
+        </navigator>
+      </view>
     </block>
- <!-- </view>  -->
-<!--  上拉加载  -->
+    <!-- </view>  -->
+    <!--  上拉加载  -->
 
-</scroll-view>
-<!-- <view class='weui-loadmore' hidden='{{ hideLoadMore }}' >
+  </scroll-view>
+  <!-- <view class='weui-loadmore' hidden='{{ hideLoadMore }}' >
 <view class='weui-loading'></view>
 <view class='weui-loadmore__tips'>正在加载......</view>
 </view> -->

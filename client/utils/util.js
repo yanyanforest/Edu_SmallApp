@@ -1,3 +1,7 @@
+const base_url = 'https://www.sdkhcm.com/api/';
+var getRequestUrl = function(briefUrl){
+	return base_url + briefUrl;
+}
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -39,4 +43,56 @@ var showModel = (title, content) => {
     })
 }
 
-module.exports = { formatTime, showBusy, showSuccess, showModel }
+var showCourseExpiryDay = (num) =>
+{
+ if( num <= 0){
+	 return "永久有效";
+ } else {
+	 return num + '天';
+ }
+}
+// get 方法请求
+var getRequest = (briefUrl,header,params,succcess,failure)=>{
+	var headerTmp = {'content-type': 'application/json'};
+	// 'X-AUTH-TOKEN': wx.getStorageSync('token'),
+	if(header){
+headerTmp.push(header);
+	}
+	wx.request({
+		url: base_url+briefUrl,
+		header:headerTmp,
+		method: 'GET',
+		data: params,
+		success : succcess,
+		fail:failure
+	});
+
+}
+var postRequest = (briefUrl, header, params, succcess, failure) => {
+	var headerTmp = { 'content-type': 'application/json' };
+	// 'X-AUTH-TOKEN': wx.getStorageSync('token'),
+	if (header) {
+		headerTmp.push(header);
+	}
+	wx.request({
+		url: base_url + briefUrl,
+		header: headerTmp,
+		method: 'POST',
+		data: params,
+		success: succcess,
+		fail: failure
+	});
+}
+
+module.exports = { formatTime, showBusy, showSuccess, showModel, showCourseExpiryDay, getRequestUrl};
+//,getRequest, postRequest
+
+//, getRequest, postRequest
+// var getRequest = module.exports = {
+//     briefUrl:  briefUrl,
+//     header: header,
+//     // method: 'GET',
+//     params: params,
+//     success: succcess,
+//     failure: failure
+// };

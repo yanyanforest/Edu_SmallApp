@@ -1,4 +1,6 @@
 // pages/courseOrder/courseOrder.js
+var url_base = getApp().data.url_server_base;
+
 Page({
 
   /**
@@ -46,7 +48,6 @@ Page({
 	onLoad: function (options) {
 		var token = wx.getStorageSync('token');
 		var that = this;
-		var url_base = getApp().data.url_server_base;
 		wx.request({
 			url: url_base + 'me/orders',
 			header: {
@@ -55,8 +56,8 @@ Page({
 			},
 			success: function (res) {
 				var data = res.data.data;
-				console.log("data:",data);
-var total = data.total;
+				console.log("data:", data);
+				var total = data.total;
 				var list = data.resources;
 				var listTemp = that.data.orderList;
 				for (var i = 0; i < list.length; i++) {
@@ -68,8 +69,8 @@ var total = data.total;
 				}
 				that.setData({
 					orderList: listTemp,
-					total:total,
-			
+					total: total,
+
 				})
 			},
 			fail: function (error) {
@@ -92,14 +93,14 @@ var total = data.total;
 			return "待评价";
 		}
 		return "已关闭";
-	}, 
-	swiperChanged:function(res){
-console.log('---',res);
-var selectIndex = res.detail.current;
-var that = this;
-that.setData({
-	selectedIndex:selectIndex,
-})
+	},
+	swiperChanged: function (res) {
+		console.log('---', res);
+		var selectIndex = res.detail.current;
+		var that = this;
+		that.setData({
+			selectedIndex: selectIndex,
+		})
 	},
 	showOrderStatusWxss: function (item) {
 		if (item.status == "cancelled") {
@@ -174,42 +175,41 @@ that.setData({
 	onReachBottom: function () {
 		console.log('--- 加载更多---');
 		var page = this.data.page;
-		console.log('--- 加载更多---',page);
-		var url_base = getApp().data.url_server_base;
+		console.log('--- 加载更多---', page);
 		var isHideLoadMore = false;
-			if (page < this.data.total) {
+		if (page < this.data.total) {
 			var token = wx.getStorageSync('token');
-		var that = this;
-		wx.request({
-			url: url_base + 'me/orders',
-			header: {
-				'content-type': 'application/json',
-				'X-AUTH-TOKEN': token
-			},
-			success: function (res) {
-				var data = res.data.data;
-				console.log("=========", data);
-var total = data.total;
-				var list = data.resources;
-				var listTemp = that.data.orderList;
-				for (var i = 0; i < list.length; i++) {
-					var item = list[i];
-					item.statusDesc = that.showOrderItemStatus(item);
-					item.statusWxss = that.showOrderStatusWxss(item);
-					listTemp.push(item);
+			var that = this;
+			wx.request({
+				url: url_base + 'me/orders',
+				header: {
+					'content-type': 'application/json',
+					'X-AUTH-TOKEN': token
+				},
+				success: function (res) {
+					var data = res.data.data;
+					console.log("=========", data);
+					var total = data.total;
+					var list = data.resources;
+					var listTemp = that.data.orderList;
+					for (var i = 0; i < list.length; i++) {
+						var item = list[i];
+						item.statusDesc = that.showOrderItemStatus(item);
+						item.statusWxss = that.showOrderStatusWxss(item);
+						listTemp.push(item);
 
+					}
+					that.setData({
+						orderList: listTemp,
+						total: total,
+
+					})
+				},
+				fail: function (error) {
+					console.log("error:", error);
 				}
-				that.setData({
-					orderList: listTemp,
-					total:total,
-			
-				})
-			},
-			fail: function (error) {
-				console.log("error:",error);
-			}
-		})
-	}
+			})
+		}
 	},
 	showOrderItemStatus: function (item) {
 		console.log(item.status);
@@ -226,15 +226,15 @@ var total = data.total;
 			return "待评价";
 		}
 		return "已关闭";
-	}, 
-	swiperChanged:function(res){
-console.log('---',res);
-var selectIndex = res.detail.current;
-var that = this;
-that.setData({
-	selectedIndex:selectIndex,
-})
-			},
+	},
+	swiperChanged: function (res) {
+		console.log('---', res);
+		var selectIndex = res.detail.current;
+		var that = this;
+		that.setData({
+			selectedIndex: selectIndex,
+		})
+	},
 
   /**
    * 用户点击右上角分享
@@ -245,17 +245,17 @@ that.setData({
 	scroll: function (res) {
 		console.log("-------", res);
 	},
-	showOrderDetail: function(res){
+	showOrderDetail: function (res) {
 		console.log("选中的订单：", res.currentTarget.dataset.id);
 		var item = res.currentTarget.dataset.id;
 		wx.navigateTo({
-			url: '../order/order?detail='+JSON.stringify(item),
+			url: '../order/order?detail=' + JSON.stringify(item),
 		})
 	},
-	toComment: function (res){
+	toComment: function (res) {
 		console.log(res);
 		wx.navigateTo({
-			url: '../orderComment/comment?item='+JSON.stringify(res.currentTarget.dataset.id),
+			url: '../orderComment/comment?item=' + JSON.stringify(res.currentTarget.dataset.id),
 		});
 	}
 

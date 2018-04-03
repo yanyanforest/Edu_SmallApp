@@ -4,7 +4,7 @@ Component({
 	options:{
 		multipleSlots: true //在组件定义时启用多 slot 支持
 
-	}
+	},
   /**
    * 组件的属性列表
    */

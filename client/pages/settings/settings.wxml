@@ -1,0 +1,29 @@
+
+	     <view class="weui-cells"> 
+
+<!-- 允许2G/3G/4G网络观看视频 -->
+   <view  class="weui-cell">
+	    
+     <view class="weui-cell__bd">
+      允许2G/3G/4G网络观看视频
+      </view>
+      <switch checked='{{ isChecked }}' bindchange='changePlayNetWork'></switch>
+
+</view>
+<!-- 清除缓存 -->
+   <!-- <view  class="weui-cell" bindtap='clear'>
+			
+     <view class="weui-cell__bd" >
+      清除缓存
+      </view>
+</view> -->
+<!-- 关于我们 -->
+   <view  class="weui-cell" bindtap='cellClick'>
+     <view class="weui-cell__bd" >
+      关于我们
+      </view>   
+
+</view>
+<view wx:if="{{ isLogined }}">
+<button class='weui-btn weui-footer_fixed-bottom footer' bindtap='logout'>退出登录</button></view>
+ </view> 

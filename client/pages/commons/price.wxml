@@ -1,0 +1,25 @@
+
+<wxs module="parsePrice">
+var parse = function(price,param = 'point') {
+  if(param == 'point'){
+    return price.slice(-3);
+  }else{
+    return price.slice(0,price.length - 3);
+  }
+  
+}
+
+module.exports = {
+  parse: parse
+};
+
+</wxs>
+
+<template name="price">
+<block wx:if="{{ price > 0}}">
+<text class="price unit">￥{{parsePrice.parse(price,'integer')}}</text><text class="price point">{{parsePrice.parse(price)}}</text>
+</block>
+<block wx:else>
+          <text class='price free'>免费</text>
+</block>
+</template>

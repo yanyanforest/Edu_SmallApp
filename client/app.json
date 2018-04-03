@@ -19,6 +19,7 @@
 		"pages/chooseInterest/chooseInterest",
 		"pages/orderComment/comment",
 		"pages/settings/settings",
+    "pages/myCourse/myCourse",
 		"pages/evaluate/evaluate"
 	],
 	"window": {

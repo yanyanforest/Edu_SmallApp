@@ -1,0 +1,115 @@
+<view class="container">
+  <view class="menu_box">
+    <text class='menu1 {{menuTapCurrent=="0"?"borders":""}}' data-current="0" catchtap="menuTap">学习中</text>
+    <text class='menu2 {{menuTapCurrent=="1"?"borders":""}}' data-current="1" catchtap="menuTap">已学完</text>
+  </view>
+  <scroll-view class="learn" hidden="{{menuTapCurrent!='0'}}" scroll-y style="height:{{height-60}}px">
+    <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋</view>
+        <progress percent="60" activeColor="#ff6700" stroke-width="4"  border-radius="4" show-info/>
+      </view>
+    </view>
+    <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋</view>
+        <progress percent="90" activeColor="#ff6700" stroke-width="4"  border-radius="4" show-info/>
+      </view>
+    </view>
+    <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋</view>
+       <progress percent="50" activeColor="#ff6700" stroke-width="4"  border-radius="4" show-info/>
+      </view>
+    </view>
+    <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋</view>
+        <progress percent="10" activeColor="#ff6700" stroke-width="4"  border-radius="4" show-info/>
+      </view>
+    </view>
+    <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋</view>
+       <progress percent="70" activeColor="#ff6700" stroke-width="4"  border-radius="4" show-info/>
+      </view>
+    </view>
+    <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋</view>
+        <progress percent="80" activeColor="#ff6700" stroke-width="4"  border-radius="4" show-info/>
+      </view>
+    </view>
+    <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋</view>
+        <progress percent="50" activeColor="#ff6700" stroke-width="4"  border-radius="4" show-info/>
+      </view>
+    </view>
+  </scroll-view>
+  <scroll-view class="learn" hidden="{{menuTapCurrent!='1'}}" scroll-y style="height:{{height-60}}px">
+      <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋</view>
+        <view class="listTime">学习时长：30分钟</view>
+      </view>
+    </view>
+   <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋从</view>
+        <view class="listTime">学习时长：30分钟</view>
+      </view>
+    </view>
+     <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋</view>
+        <view class="listTime">学习时长：30分钟</view>
+      </view>
+    </view>
+       <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋</view>
+        <view class="listTime">学习时长：30分钟</view>
+      </view>
+    </view>
+    <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋</view>
+        <view class="listTime">学习时长：30分钟</view>
+      </view>
+    </view>
+    <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋</view>
+        <view class="listTime">学习时长：30分钟</view>
+      </view>
+    </view>
+     <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋</view>
+        <view class="listTime">学习时长：30分钟</view>
+      </view>
+    </view>
+    <view class="listContent">
+      <image src="../images/img4.jpg" />
+      <view class="listCont">
+        <view class="listTitle">从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋从唐宋</view>
+        <view class="listTime">学习时长：30分钟</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

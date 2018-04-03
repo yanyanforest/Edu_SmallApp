@@ -1,0 +1,89 @@
+.container {
+  padding: 0;
+  margin: 0;
+  background: #f5f5f5;
+}
+
+.menu_box {
+  width: 750rpx;
+  display: flex;
+  flex-direction: row;
+  height: 90rpx;
+  background: #fff;
+  border-top: 1rpx solid #e9e9e9;
+  justify-content: center;
+  align-items: center;
+    margin-bottom:8rpx;
+}
+
+.menu1, .menu2 {
+  flex: 1;
+  font-size: 32rpx;
+  border-right:2rpx solid #e9e9e9;
+  text-align: center;
+  position: relative;
+}
+
+.borders {
+  width: 40rpx;
+  color: #ff6700;
+}
+.borders:after {
+  display: block;
+  position: absolute;
+  top: 50rpx;
+  left:160rpx;
+  width: 50rpx;
+  height: 9rpx;
+  margin: 0 auto;
+  border-radius: 5rpx;
+  background: #ff6700;
+  content: '';
+}
+/*学习中下面列表*/
+.listContent {
+  width: 750rpx;
+  padding: 30rpx 30rpx 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background: #fff;
+  margin-bottom:16rpx;
+}
+
+.listContent image {
+  width: 220rpx;
+  height: 110rpx;
+}
+
+.listCont {
+  margin-left: 20rpx;
+  margin-top: -5rpx;
+  font-family: SourceHansCN-Normal;
+}
+
+.listCont .listTitle {
+  width: 460rpx;
+  font-size: 34rpx;
+  color: #2e2e2e;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+    line-height:42rpx;
+  -webkit-line-clamp: 2;
+  min-height: 88rpx;
+  padding:0;
+  margin:0;
+
+}
+progress{
+  width: 450rpx;
+  font-size:26rpx;
+  color:#ff6700;
+  border-radius: 30rpx;
+}
+.listTime{
+  font-size:26rpx;
+  color:#808080;
+}

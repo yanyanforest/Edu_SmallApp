@@ -1,72 +1,22 @@
 <view class="container">
   <view class="evaList">
+    <block wx:for="{{list}}" wx:key="{{item}}">
     <view class="oneList">
       <span class="imgList">
-        <image src="../images/img2.jpg"></image>
+        <image src="{{item.course.middlePicture}}"></image>
       </span>
       <span class="conList">
         <view class="">
-          <span class="title">一年级语文上册作文精讲1111111</span>
+          <span class="title">{{item.course.title}}</span>
           <span class="right">
-            <view bindtap="starTap" data-index="{{index}}" class="star" wx:for="{{userStars}}" wx:key="index">
-              <image src="{{item}}"></image>
-            </view>
+              <image src="images/comment_level_{{item.rating}}.png"></image>
           </span>
         </view>
-        <view class="dateTime">2018-03-24 14:28 </view>
-        <view class="describe">课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价课程评价</view>
+        <view class="dateTime">{{item.createdTime}} </view>
+        <view class="describe">{{item.content}}</view>
       </span>
     </view>
-    <view class="oneList">
-      <span class="imgList">
-        <image src="../images/img2.jpg"></image>
-      </span>
-      <span class="conList">
-        <view class="">
-          <span class="title">一年级语文上册作文精讲</span>
-           <span class="right">
-            <view bindtap="starTap" data-index="{{index}}" class="star" wx:for="{{userStars}}" wx:key="index">
-              <image src="{{item}}"></image>
-            </view>
-          </span>
-        </view>
-        <view class="dateTime">2018-03-24 14:28 </view>
-        <view class="describe">课程评价课程评价课程评价课程评价课程评价课程评价</view>
-      </span>
-    </view>
-    <view class="oneList">
-      <span class="imgList">
-        <image src="../images/img2.jpg"></image>
-      </span>
-      <span class="conList">
-        <view class="">
-          <span class="title">一年级语文上册作文精讲</span>
-          <span class="right">
-            <view bindtap="starTap" data-index="{{index}}" class="star" wx:for="{{userStars}}" wx:key="index">
-              <image src="{{item}}"></image>
-            </view>
-          </span>
-        </view>
-        <view class="dateTime">2018-03-24 14:28 </view>
-        <view class="describe">课程评价课程评价课程评价课程评价课程评价课程评价</view>
-      </span>
-    </view>
-    <view class="oneList">
-      <span class="imgList">
-        <image src="../images/img2.jpg"></image>
-      </span>
-      <span class="conList">
-        <view class="">
-          <span class="title">一年级语文上册作文精讲文精讲</span>
-           <span class="right">
-            <view bindtap="starTap" data-index="{{index}}" class="star" wx:for="{{userStars}}" wx:key="index">
-              <image src="{{item}}"></image>
-            </view>
-          </span>
-        </view>
-        <view class="dateTime">2018-03-24 14:28 </view>
-        <view class="describe">课程评价课程评价课程评价课程评价课程评价课程评价</view>
-      </span>
-    </view>
+</block>
   </view>
+	<view ></view>
 </view>

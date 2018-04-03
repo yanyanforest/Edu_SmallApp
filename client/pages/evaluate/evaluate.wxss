@@ -29,29 +29,22 @@
 .oneList .conList .title{
   font-size:32rpx;
   color:#2e2e2e;
-  width:350rpx;
+  width:400rpx;
   float:left;
   overflow: hidden;
    white-space: nowrap;
    text-overflow: ellipsis;
- 
 }
 .right{
   display: inline-flex;
   flex-direction: row;
-  width:180rpx;
-  padding-left:30rpx;
+  width:160rpx;
+  padding-left:20rpx;
 }
-.right .star {
-  width: 30rpx;
-  height: 30rpx;
-  text-align: center;
-  line-height:30rpx;
-  padding: 10rpx 2rpx;
-}
-.star image{
-  width: 28rpx;
-  height: 28rpx;
+
+.right image{
+  width: 130rpx;
+  height: 24rpx;
 }
 .oneList .conList .dateTime{
   font-size:22rpx;

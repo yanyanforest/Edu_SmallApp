@@ -11,6 +11,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseList/courseList.wxml" afterPath="$PROJECT_DIR$/client/pages/courseList/courseList.wxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseList/courseList.wxss" afterPath="$PROJECT_DIR$/client/pages/courseList/courseList.wxss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js" afterPath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/evaluate/evaluate.js" afterPath="$PROJECT_DIR$/client/pages/evaluate/evaluate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml" afterPath="$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/favorite/favorite.js" afterPath="$PROJECT_DIR$/client/pages/favorite/favorite.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/favorite/favorite.wxml" afterPath="$PROJECT_DIR$/client/pages/favorite/favorite.wxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/home/home.wxml" afterPath="$PROJECT_DIR$/client/pages/home/home.wxml" />
@@ -135,11 +137,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="price.wxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="price.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/pages/commons/price.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+            <state relative-caret-position="165">
+              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="evaluate.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/pages/evaluate/evaluate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="evaluate.wxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -153,28 +175,6 @@
               <folding>
                 <element signature="e#9836#11739#1" expanded="true" />
                 <element signature="e#11827#13530#2" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comment_star.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/template/comment_star/comment_star.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="comment.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/orderComment/comment.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="78" column="6" lean-forward="false" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
-              <folding>
-                <marker date="1522378112000" expanded="true" signature="1342:1348" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -254,6 +254,8 @@
         <option value="$PROJECT_DIR$/client/pages/favorite/favorite.js" />
         <option value="$PROJECT_DIR$/client/pages/settings/settings.wxml" />
         <option value="$PROJECT_DIR$/client/pages/commons/price.wxml" />
+        <option value="$PROJECT_DIR$/client/pages/evaluate/evaluate.js" />
+        <option value="$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml" />
       </list>
     </option>
   </component>
@@ -267,8 +269,8 @@
     <handled-path value="$PROJECT_DIR$/server/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="180" />
-    <option name="y" value="23" />
+    <option name="x" value="221" />
+    <option name="y" value="194" />
     <option name="width" value="1660" />
     <option name="height" value="548" />
   </component>
@@ -431,7 +433,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="commons" />
+              <option name="myItemId" value="evaluate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -569,15 +571,15 @@
       <workItem from="1521506364042" duration="6172000" />
       <workItem from="1522286888131" duration="5945000" />
       <workItem from="1522657567745" duration="1915000" />
-      <workItem from="1522726076122" duration="1491000" />
+      <workItem from="1522726076122" duration="2183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89825000" />
+    <option name="totallyTimeSpent" value="90517000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="180" y="23" width="1660" height="548" extended-state="0" />
+    <frame x="221" y="194" width="1660" height="548" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964613" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -617,20 +619,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/pages/index/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="68" lean-forward="false" selection-start-line="20" selection-start-column="68" selection-end-line="20" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/index/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../chooseInterest.wxss" />
     <entry file="file://$PROJECT_DIR$/client/pages/canvasDemo/canvasDemo.wxml" />
     <entry file="file://$PROJECT_DIR$/client/pages/canvasDemo/canvasDemo.json" />
@@ -973,8 +961,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/commons/price.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="45" lean-forward="true" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        <state relative-caret-position="165">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/evaluate/evaluate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="48" />
           <folding />
         </state>
       </provider>

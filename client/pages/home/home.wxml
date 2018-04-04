@@ -37,6 +37,17 @@
     <view class="select">
       <image src="../../images/selectedButton_Normal.png" />
     </view>
+     <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+        <scroll-view class="action" scroll-y>
+            <view wx:for-items="{{actionSheetItems}}" wx:key="{{key}}" class="subList">
+          <view class="itemTitle">{{item.txt}}</view>
+         <block wx:for-items="{{item.children}}" wx:for-item="list">
+           <view  class="itemContent {{list.select == catalogSelect ? 'selActive':''}}"bindtap="chooseCatalog" data-select="{{list.select}}" data-grade="{{list.grade}}">{{list.grade}}</view>
+           </block>
+        </view>
+        </scroll-view>
+        
+      </action-sheet>
     <scroll-view class="recommend_scroll_x_box" scroll-x="true">
 
       <view class="recommend_hot_box" wx:for="{{ interestCategory.children }}" wx:key="item">

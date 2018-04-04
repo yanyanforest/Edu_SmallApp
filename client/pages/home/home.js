@@ -12,7 +12,13 @@ Page({
 		slides: [],/* 轮播图**/
 		categoryData: [],/** 首页一直显示的一级分类*/
 		listData: [],
-		allCategorys: []
+		allCategorys: [],
+    actionSheetHidden: true,
+    actionSheetItems: [
+      { txt: '学前教育', children: [{ grade: "早教", select: 1 }, { grade: "早教", "select": 2 }, { grade: "早教", "select": 3 }] },
+      { txt: '小学教育', children: [{ grade: "一年级", "select": 4 }, { grade: "二年级", "select": 5 }, { grade: "三年级", "select": 6 }, { grade: "四年级", "select": 7 }, { grade: "五年级", "select": 8 }, { grade: "六年级", "select": 9 }, { grade: "小升初", "select": 10 }] },
+      { txt: '中学教育', children: [{ grade: "一年级", "select": 11 }, { grade: "二年级", "select": 12 }, { grade: "三年级", "select": 13 }, { grade: "四年级", "select": 14 }, { grade: "五年级", "select": 15 }, { grade: "六年级", "select": 16 }, { grade: "小升初", "select": 17 }] },
+    ]
 	},
 
   /**
@@ -86,13 +92,21 @@ Page({
 	},
 	//  展示分类。一级和二级
 	chooseInterest: function (res) {
-		console.log("首页传递分类数据", this.data.allCategorys);
-		var that = this;
-		var selectedCategory = that.data.interestCategory;
-		wx.navigateTo({
-			url: '../chooseInterest/chooseInterest?id=' + selectedCategory.id,
-		});
+   
+      this.setData({
+        actionSheetHidden: !this.data.actionSheetHidden
+      })
 	},
+  chooseCatalog: function (e) {
+    var that = this;
+    console.log(e);
+    console.log(e.currentTarget.dataset.grade)
+    that.setData({//把选中值放入判断值
+      catalogSelect: e.currentTarget.dataset.select,
+      catalogGrade: e.currentTarget.dataset.grade,
+      actionSheetHidden: !this.data.actionSheetHidden
+    })
+  },
 	tapSwiperItem: function (res) {
 		console.log("点击轮播图---", res);
 	},

@@ -62,13 +62,12 @@ hideView(){
 },
 //  默认的第一级分类
 _firstCategoryChange:function(e){
-	if(e){
 
 			console.log(" 默认选中的一级分类:", e);
 			var children = e.children;
-			console.log(" 默认选中的一级分类===:", children);
-			console.log(" 默认选中的一级:", children.length);
+			console.log(" 默认选中的一级分类===:", typeof e.children);
 
+			if (typeof e.children != 'undefined' ) {
 			let secondItem = e.children.length > 0 ? e.children[0] : { "id": e.id, "name": "全部" };//选中的二级分类
 
 			this.setData({
@@ -77,7 +76,7 @@ _firstCategoryChange:function(e){
 
 			});
 
-	}
+			}
 
 		},
 		_secondCategoryChange:function(e){

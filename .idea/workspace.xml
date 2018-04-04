@@ -2,23 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35da441d-258e-4311-81a5-af2624b995fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app.json" afterPath="$PROJECT_DIR$/client/app.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Category/category.js" afterPath="$PROJECT_DIR$/client/components/Category/category.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Category/category.json" afterPath="$PROJECT_DIR$/client/components/Category/category.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Dialog/dialog.js" afterPath="$PROJECT_DIR$/client/components/Dialog/dialog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/category/category.js" afterPath="$PROJECT_DIR$/client/pages/category/category.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseList/courseList.wxml" afterPath="$PROJECT_DIR$/client/pages/courseList/courseList.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseList/courseList.wxss" afterPath="$PROJECT_DIR$/client/pages/courseList/courseList.wxss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js" afterPath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/home/home.wxss" afterPath="$PROJECT_DIR$/client/pages/home/home.wxss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/evaluate/evaluate.js" afterPath="$PROJECT_DIR$/client/pages/evaluate/evaluate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml" afterPath="$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/favorite/favorite.js" afterPath="$PROJECT_DIR$/client/pages/favorite/favorite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/utils/util.js" afterPath="$PROJECT_DIR$/client/utils/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Category/category.json" afterPath="$PROJECT_DIR$/client/components/Category/category.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/userInfo/userInfo.js" afterPath="$PROJECT_DIR$/client/pages/userInfo/userInfo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/favorite/favorite.wxml" afterPath="$PROJECT_DIR$/client/pages/favorite/favorite.wxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/home/home.wxml" afterPath="$PROJECT_DIR$/client/pages/home/home.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/home/home.wxss" afterPath="$PROJECT_DIR$/client/pages/home/home.wxss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/userInfo/userInfo.js" afterPath="$PROJECT_DIR$/client/pages/userInfo/userInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/utils/util.js" afterPath="$PROJECT_DIR$/client/utils/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js" afterPath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/category/category.js" afterPath="$PROJECT_DIR$/client/pages/category/category.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Category/category.js" afterPath="$PROJECT_DIR$/client/components/Category/category.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml" afterPath="$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseList/courseList.wxss" afterPath="$PROJECT_DIR$/client/pages/courseList/courseList.wxss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app.json" afterPath="$PROJECT_DIR$/client/app.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Dialog/dialog.js" afterPath="$PROJECT_DIR$/client/components/Dialog/dialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/favorite/favorite.js" afterPath="$PROJECT_DIR$/client/pages/favorite/favorite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseList/courseList.wxml" afterPath="$PROJECT_DIR$/client/pages/courseList/courseList.wxml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -49,49 +49,7 @@
             <state relative-caret-position="630">
               <caret line="42" column="15" lean-forward="false" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
               <folding>
-                <marker date="1522662490000" expanded="true" signature="163:3174" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="347:1230" ph="{...}" />
                 <marker date="1522662490000" expanded="true" signature="726:727" ph="{&quot;briefUrl&quot;: 'me/courses'...}" />
-                <marker date="1522662490000" expanded="true" signature="823:1182" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="877:927" ph="{&quot;relation&quot;: &quot;favorited&quot;...}" />
-                <marker date="1522662490000" expanded="true" signature="940:972" ph="{&quot;X-AUTH-TOKEN&quot;: token...}" />
-                <marker date="1522662490000" expanded="true" signature="1001:1143" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="1054:1135" ph="{&quot;courseList&quot;: res.data.data.resources...}" />
-                <marker date="1522662490000" expanded="true" signature="1171:1178" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="1200:1226" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="1235:1268" ph="/** 生命周期函数--监听页面初次渲染完成 ...*/" />
-                <marker date="1522662490000" expanded="true" signature="1291:1296" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="1301:1330" ph="/** 生命周期函数--监听页面显示 ...*/" />
-                <marker date="1522662490000" expanded="true" signature="1352:1357" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="1362:1391" ph="/** 生命周期函数--监听页面隐藏 ...*/" />
-                <marker date="1522662490000" expanded="true" signature="1413:1418" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="1423:1452" ph="/** 生命周期函数--监听页面卸载 ...*/" />
-                <marker date="1522662490000" expanded="true" signature="1476:1481" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="1486:1521" ph="/** 页面相关事件处理函数--监听用户下拉动作 ...*/" />
-                <marker date="1522662490000" expanded="true" signature="1554:1559" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="1564:1592" ph="/** 页面上拉触底事件的处理函数 ...*/" />
-                <marker date="1522662490000" expanded="true" signature="1621:1626" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="1631:1655" ph="/** 用户点击右上角分享 ...*/" />
-                <marker date="1522662490000" expanded="true" signature="1688:1693" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="1724:1858" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="1816:1853" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="1888:2452" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2105:2200" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2125:2150" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2172:2196" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2223:2355" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2243:2268" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2314:2334" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2426:2447" ph="{&quot;delta&quot;: datas...}" />
-                <marker date="1522662490000" expanded="true" signature="2481:3101" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2669:2775" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2697:2744" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2750:2771" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2804:2910" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2831:2876" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="2882:2906" ph="{...}" />
-                <marker date="1522662490000" expanded="true" signature="3051:3096" ph="{&quot;delta&quot;: datas...}" />
-                <marker date="1522662490000" expanded="true" signature="3135:3172" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -120,7 +78,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/vendor/wafer2-client-sdk/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
+            <state relative-caret-position="75">
               <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
@@ -130,7 +88,7 @@
       <file leaf-file-name="settings.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/pages/settings/settings.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
+            <state relative-caret-position="405">
               <caret line="27" column="94" lean-forward="false" selection-start-line="27" selection-start-column="94" selection-end-line="27" selection-end-column="94" />
               <folding />
             </state>
@@ -141,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/client/pages/commons/price.wxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -150,7 +108,7 @@
       <file leaf-file-name="evaluate.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/pages/evaluate/evaluate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
+            <state relative-caret-position="105">
               <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="12" />
               <folding />
             </state>
@@ -160,7 +118,7 @@
       <file leaf-file-name="evaluate.wxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
+            <state relative-caret-position="134">
               <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="48" />
               <folding />
             </state>
@@ -170,7 +128,7 @@
       <file leaf-file-name="weui.wxss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/weui.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-713">
+            <state relative-caret-position="75">
               <caret line="5" column="8540" lean-forward="false" selection-start-line="5" selection-start-column="8516" selection-end-line="5" selection-end-column="8540" />
               <folding>
                 <element signature="e#9836#11739#1" expanded="true" />
@@ -289,7 +247,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -439,6 +396,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -572,11 +530,12 @@
       <workItem from="1522286888131" duration="5945000" />
       <workItem from="1522657567745" duration="1915000" />
       <workItem from="1522726076122" duration="2485000" />
+      <workItem from="1522801701669" duration="17000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90819000" />
+    <option name="totallyTimeSpent" value="90836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="221" y="194" width="1660" height="548" extended-state="0" />
@@ -816,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="56" lean-forward="false" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="97" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -824,9 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <marker date="1522369177000" expanded="true" signature="183:189" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -834,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,7 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="32" column="5" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,9 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
           <caret line="78" column="6" lean-forward="false" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
-          <folding>
-            <marker date="1522378112000" expanded="true" signature="1342:1348" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -885,56 +835,14 @@
         <state relative-caret-position="630">
           <caret line="42" column="15" lean-forward="false" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
           <folding>
-            <marker date="1522662490000" expanded="true" signature="163:3174" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="347:1230" ph="{...}" />
             <marker date="1522662490000" expanded="true" signature="726:727" ph="{&quot;briefUrl&quot;: 'me/courses'...}" />
-            <marker date="1522662490000" expanded="true" signature="823:1182" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="877:927" ph="{&quot;relation&quot;: &quot;favorited&quot;...}" />
-            <marker date="1522662490000" expanded="true" signature="940:972" ph="{&quot;X-AUTH-TOKEN&quot;: token...}" />
-            <marker date="1522662490000" expanded="true" signature="1001:1143" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="1054:1135" ph="{&quot;courseList&quot;: res.data.data.resources...}" />
-            <marker date="1522662490000" expanded="true" signature="1171:1178" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="1200:1226" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="1235:1268" ph="/** 生命周期函数--监听页面初次渲染完成 ...*/" />
-            <marker date="1522662490000" expanded="true" signature="1291:1296" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="1301:1330" ph="/** 生命周期函数--监听页面显示 ...*/" />
-            <marker date="1522662490000" expanded="true" signature="1352:1357" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="1362:1391" ph="/** 生命周期函数--监听页面隐藏 ...*/" />
-            <marker date="1522662490000" expanded="true" signature="1413:1418" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="1423:1452" ph="/** 生命周期函数--监听页面卸载 ...*/" />
-            <marker date="1522662490000" expanded="true" signature="1476:1481" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="1486:1521" ph="/** 页面相关事件处理函数--监听用户下拉动作 ...*/" />
-            <marker date="1522662490000" expanded="true" signature="1554:1559" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="1564:1592" ph="/** 页面上拉触底事件的处理函数 ...*/" />
-            <marker date="1522662490000" expanded="true" signature="1621:1626" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="1631:1655" ph="/** 用户点击右上角分享 ...*/" />
-            <marker date="1522662490000" expanded="true" signature="1688:1693" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="1724:1858" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="1816:1853" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="1888:2452" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2105:2200" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2125:2150" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2172:2196" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2223:2355" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2243:2268" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2314:2334" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2426:2447" ph="{&quot;delta&quot;: datas...}" />
-            <marker date="1522662490000" expanded="true" signature="2481:3101" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2669:2775" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2697:2744" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2750:2771" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2804:2910" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2831:2876" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="2882:2906" ph="{...}" />
-            <marker date="1522662490000" expanded="true" signature="3051:3096" ph="{&quot;delta&quot;: datas...}" />
-            <marker date="1522662490000" expanded="true" signature="3135:3172" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/vendor/wafer2-client-sdk/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
+        <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
@@ -942,7 +850,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/weui.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-713">
+        <state relative-caret-position="75">
           <caret line="5" column="8540" lean-forward="false" selection-start-line="5" selection-start-column="8516" selection-end-line="5" selection-end-column="8540" />
           <folding>
             <element signature="e#9836#11739#1" expanded="true" />
@@ -953,7 +861,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/settings/settings.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
+        <state relative-caret-position="405">
           <caret line="27" column="94" lean-forward="false" selection-start-line="27" selection-start-column="94" selection-end-line="27" selection-end-column="94" />
           <folding />
         </state>
@@ -962,14 +870,14 @@
     <entry file="file://$PROJECT_DIR$/client/pages/commons/price.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/evaluate/evaluate.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
+        <state relative-caret-position="105">
           <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="12" />
           <folding />
         </state>
@@ -977,7 +885,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="134">
           <caret line="9" column="48" lean-forward="false" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="48" />
           <folding />
         </state>

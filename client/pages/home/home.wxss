@@ -269,3 +269,47 @@ recommend_hot_box__ischecked{
 
 }
 
+/*底部弹窗*/
+.action{
+  height:800rpx;
+}
+.subList{
+  padding-bottom:30rpx;
+   width:690rpx;
+  margin-left:30rpx;
+  margin-right:30rpx;
+  border-bottom:1rpx solid #e5e5e5; 
+}
+.subList:last-child{
+  border-bottom: none;
+}
+.itemTitle{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:40rpx;
+  font-size:32rpx;
+  color:#2e2e2e;
+}
+.itemContent{
+  width:210rpx;
+  height:64rpx;
+  display: inline-flex;
+  background: #f7f7f7;
+  justify-content: center;
+  align-items: center;
+  color:#2e2e2e;
+  font-size:30rpx;
+  margin-top:30rpx;
+ border-radius: 4rpx;
+ margin-right:30rpx;
+}
+.itemContent:nth-child(3n+1)
+{
+  margin-right:0;
+}
+.selActive{
+  background: #ff6700;
+  color:#fff;
+}

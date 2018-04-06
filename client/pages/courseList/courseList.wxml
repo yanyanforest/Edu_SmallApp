@@ -12,12 +12,28 @@
   <!--header 是个按钮-->
   <view class="header">
     <view class='header_left'>
-      <block wx:for="{{ btns }}" wx:key="{{ item }}">
+      <!-- <block wx:for="{{ btns }}" wx:key="{{ item }}">
         <view class="{{selectedIndex == item.id? 'header_active':''}}" bindtap='category_changed' data-id='{{ item }}'>{{item.title}}</view>
 
-      </block>
+      </block> -->
+       <view class='option {{menuTapCurrent=="0"?"activeOpt":""}}' data-current="0" catchtap="menuTap">
+            <span>综合</span>
+        </view>
+        <view class='option {{menuTapCurrent=="1"?"activeOpt":""}}' data-current="1" catchtap="menuTap">
+          <span>人气</span>
+          <image src="../../images/bottomGray.png" class="garyBottom"></image>
+        </view>
+        <view class='option {{menuTapCurrent=="2"?"activeOpt":""}}' data-current="2" catchtap="menuTap">
+          <span>价格</span>
+          <image src="../../images/topGray.png" class="bottomGary"></image>
+          <image src="../../images/bottomGray.png" class="topGary"></image>
+        </view>
     </view>
-    <view class="header_right {{categoryBtn.isSelected ? 'header_active':''}}" bindtap='category_choose'>{{ categoryBtn.title }}</view>
+    <view class="header_right {{categoryBtn.isSelected ? 'header_active':''}}" bindtap='category_choose'>
+    
+    {{ categoryBtn.title }}
+     <image src="../../images/bottomGray.png" class="topGary"></image>
+    </view>
     <category style="top:44px" id="category" isShowAll="true" categorys="{{ categorys }}" bind:categorySelected="_categorySelected" firstDefaultCategory="{{firstSelectedCategory}}" secondDefaultCategory="{{secondSelectedCategory}}" thirdDefaultCategory="{{thirdSelectedCategory}}"></category>
 
   </view>

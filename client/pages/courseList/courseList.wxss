@@ -27,26 +27,64 @@ page {
   border-bottom: 0.5px solid #e4e4e4;
 }
 
-.header_left {
-  margin: 8px 0;
-  display: inline-flex;
+.header {
+  font-family: SourceHansCN-Normal;
+  font-size: 30rpx;
+  color: #4d4d4d;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border-bottom: 2rpx solid #ddd;
+  display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 66%;
-  text-align: center;
-  height: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
-.header_right {
-  margin: 8px 0;
-  width: 34%;
-  border-left: 0.5px solid #e4e4e4;
-  text-align: center;
-  height: 30px;
+.header .header_left{
+  width: 464rpx;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-right: 2rpx solid #e9e9e9;
 }
 
-.header_active {
+.header_left view {
+  width: 166rpx;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.activeOpt {
   color: #ff6700;
+}
+
+.header_left image {
+  display: inline-flex;
+  width: 16rpx;
+  height: 8rpx;
+}
+
+.garyBottom {
+  position: absolute;
+  top: 20rpx;
+  right: 30rpx;
+}
+
+.bottomGary {
+  position: absolute;
+  top: 16rpx;
+  right: 30rpx;
+}
+
+.topGary {
+  position: absolute;
+  top: 26rpx;
+  right: 30rpx;
 }
 
 .brand_item .pic {
@@ -81,3 +119,19 @@ overflow:hidden;
   .right_cont .price {
   color: #f16236;
 }  
+.header_right {
+  width: 250rpx;
+  display: inline-flex;
+  justify-content: center;
+  font-family: SourceHansCN-Normal;
+  color: #000;
+  font-size: 30rpx;
+}
+
+.header_right image {
+  width: 16rpx;
+  height: 8rpx;
+  position: relative;
+  top: 20rpx;
+  left: 8rpx;
+}

@@ -14,12 +14,13 @@
 	<!-- header 结束  -->
 
     
-<!--  
- <swiper class="orders-list_content" indicator-dots='false' indicator-active-color="#ff6700" autoplay="{{false}}" duration='500'  bindchange='swiperChanged' >
+  
+ <swiper class="orders-list_content" indicator-dots='{{false}}' indicator-active-color="#ff6700" autoplay="{{false}}"   bindchange='swiperChanged' >
     <block wx:for="{{btns}}" wx:key="item">
-      <swiper-item bindtap="tapSwiperItem" data-id="{{ index }}"> -->
-			<view class="orders-list">
- <!--  -->
+      <swiper-item bindtap="tapSwiperItem" data-id="{{ index }}"> 
+			 <scroll-view class="orders-list" scroll-y>
+			<!-- <view class="orders-list">  -->
+
     <block wx:for="{{ orderList }}" wx:for-item="item" wx:key="item" >
 		<view class="orders-list__item">
       <view class="orders-list__item-hd">
@@ -44,9 +45,10 @@
       </view>
 			</view>
 		</block>
-    </view>
-      <!-- </swiper-item>
+     <!-- </view>  -->
+		 </scroll-view> 
+       </swiper-item>
     </block>
   </swiper>
-  -->
+  
 </view>

@@ -13,7 +13,6 @@
   border-color: red;
    width: 100%;
 	 bottom: 0; 
-    height: 500px;  
 }
 .orders .orders-header__item {
   flex: 1;

@@ -7,18 +7,16 @@ Page({
    * 页面的初始数据
    */
 	data: {
-		currentTab: 0,/** 感兴趣的下标 index 不是 id*/
+		currentInterestId: 0,/** 感兴趣的分类 id  三级 or 二级*/
 		interestCategory: {},/*感兴趣的分类*/
 		slides: [],/* 轮播图**/
 		categoryData: [],/** 首页一直显示的一级分类*/
 		listData: [],
 		allCategorys: [],
-    actionSheetHidden: true,
-    actionSheetItems: [
-      { txt: '学前教育', children: [{ grade: "早教", select: 1 }, { grade: "早教", "select": 2 }, { grade: "早教", "select": 3 }] },
-      { txt: '小学教育', children: [{ grade: "一年级", "select": 4 }, { grade: "二年级", "select": 5 }, { grade: "三年级", "select": 6 }, { grade: "四年级", "select": 7 }, { grade: "五年级", "select": 8 }, { grade: "六年级", "select": 9 }, { grade: "小升初", "select": 10 }] },
-      { txt: '中学教育', children: [{ grade: "一年级", "select": 11 }, { grade: "二年级", "select": 12 }, { grade: "三年级", "select": 13 }, { grade: "四年级", "select": 14 }, { grade: "五年级", "select": 15 }, { grade: "六年级", "select": 16 }, { grade: "小升初", "select": 17 }] },
-    ]
+		actionSheetHidden: true,
+		actionSheetItems: [],
+		total: 0,//当前分类下课程的总条数   
+		currentPage: 0
 	},
 
   /**
@@ -26,7 +24,11 @@ Page({
    */
 	onLoad: function (options) {
 		var that = this;
-
+		var data = {};
+		var selectedCategoryId = wx.getStorageSync("selectedCategoryId");
+		if (typeof selectedCategoryId != 'undefined') {
+			data = { "categoryId": selectedCategoryId };
+		}
 		//获取当前的地理信息
 		wx.getLocation({
 			success: function (res) {
@@ -36,7 +38,7 @@ Page({
 		wx.request({
 			url: baseUrl + 'mobileschools/home',
 			method: 'GET',
-			data: {},
+			data: data,
 			header: {
 				'Accept': 'application/json'
 			},
@@ -54,25 +56,25 @@ Page({
 				for (var i = 0; i < data.rootcategories.length; i++) {
 					var item = data.rootcategories[i];
 					var brief = item.icon.length > 0 ? item.icon : localdata[i].brief;
-					console.log("brief =", brief);
 
 					var dataItem = { "id": item.id, "name": item.name, "brief": brief };
 					rootcategories.push(dataItem);
 				}
-				console.log("分类：",data.categories)
-				// getApp().setData({
-				// 	allCategorys: data.categories
-				// });
+				//data.category  选中的 category
 				getApp().data.allCategorys = data.categories;
 				console.log("---分类：", getApp().data.allCategorys)
-
 				rootcategories.push(localdata[4]);
+				var total = data.total;
+
 				that.setData({
 					slides: data.carousel,
 					interestCategory: data.category,
+					currentInterestId: data.category.id,
 					categoryData: rootcategories,
 					listData: data.courses,
-
+					actionSheetItems: data.categories,
+					total: total,
+					currentPage: 0
 				});
 
 			}
@@ -87,26 +89,38 @@ Page({
 		var index = parseInt(res.currentTarget.dataset.id);
 		console.log("interestSelected:", res);
 		this.setData({
-			currentTab: index
+			currentInterestId: index,
+			currentPage: 0,
+			listData:[]
 		});
+			this.requestHomeList();
+	},
+	showCategorys:function(res){
+		this.setData({
+			actionSheetHidden: !this.data.actionSheetHidden
+		})
 	},
 	//  展示分类。一级和二级
 	chooseInterest: function (res) {
-   
-      this.setData({
-        actionSheetHidden: !this.data.actionSheetHidden
-      })
+
+		this.setData({
+			actionSheetHidden: !this.data.actionSheetHidden
+		});
 	},
-  chooseCatalog: function (e) {
-    var that = this;
-    console.log(e);
-    console.log(e.currentTarget.dataset.grade)
-    that.setData({//把选中值放入判断值
-      catalogSelect: e.currentTarget.dataset.select,
-      catalogGrade: e.currentTarget.dataset.grade,
-      actionSheetHidden: !this.data.actionSheetHidden
-    })
-  },
+	chooseCategory: function (e) {
+		var that = this;
+		console.log(e.currentTarget.dataset)
+		var selectInterestCategory = e.currentTarget.dataset.item;
+		that.setData({//把选中值放入判断值
+			interestCategory: selectInterestCategory,
+			currentInterestId: selectInterestCategory.id,
+			actionSheetHidden: !that.data.actionSheetHidden,
+			currentPage:0,
+			listData:[]
+		});
+		this.requestHomeList();
+
+	},
 	tapSwiperItem: function (res) {
 		console.log("点击轮播图---", res);
 	},
@@ -115,7 +129,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
 	onReady: function () {
-
+		var that = this;
+		wx.getSystemInfo({
+			success: function (res) {
+				that.setData({
+					appHeight: res.windowHeight
+				});
+			},
+		})
 	},
 
   /**
@@ -145,12 +166,52 @@ Page({
 	onPullDownRefresh: function () {
 
 	},
-	
   /**
    * 页面上拉触底事件的处理函数
    */
 	onReachBottom: function () {
+		console.log("------------");
+		console.log("还未加载完成", this.data.currentPage);
+		var that = this;
+		var list = that.data.listData;
+		var total = that.data.total;
+		var curPage = that.data.currentPage;
+		if (total > list.length) {
+			//还未加载完成
+			console.log("还未加载完成", total);
 
+			wx.request({
+				url: baseUrl + 'courses',
+				data: {
+					'categoryId': this.data.currentInterestId,
+					'start': curPage
+				},
+				header: {
+					'Accept': 'application/json'
+				},
+				success: function (res) {
+					console.log("还未加载完成", res);
+					var data = res.data.data.resources;
+					curPage = curPage + 1;
+					for (var i = 0; i < data.length; i++) {
+						list.push(data[i]);
+					}
+					that.setData({
+						listData: list,
+						currentPage: curPage
+					});
+
+				},
+				fail: function (error) {
+					wx.showToast({
+						title: '加载失败',
+						icon: 'failure',
+						duration: 3000,
+						mask: true,
+					});
+				}
+			})
+		}
 	},
 
   /**
@@ -158,5 +219,43 @@ Page({
    */
 	onShareAppMessage: function () {
 
+	},
+	requestHomeList: function (params) {
+		var that = this;
+		var list = that.data.listData;
+		var total = that.data.total;
+		var curPage = that.data.currentPage;
+		wx.request({
+			url: baseUrl + 'courses',
+			data: {
+				'categoryId': this.data.currentInterestId,
+				'start': curPage
+			},
+			header: {
+				'Accept': 'application/json'
+			},
+			success: function (res) {
+				console.log("-----加载完成", res);
+				var data = res.data.data;
+				curPage = curPage + 1;
+				for (var i = 0; i < data.resources.length; i++) {
+					list.push(data.resources[i]);
+				}
+				that.setData({
+					listData: list,
+					currentPage: curPage,
+					total: data.total
+				});
+
+			},
+			fail: function (error) {
+				wx.showToast({
+					title: '加载失败',
+					icon: 'failure',
+					duration: 3000,
+					mask: true,
+				});
+			}
+		})
 	}
 })

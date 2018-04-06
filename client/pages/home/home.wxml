@@ -30,28 +30,28 @@
   <!-- 实验 scrollview 滚动 tab  -->
 
   <view class='interest-grids'>
-    <view class='view_selectCategory' bindtap='chooseInterest' data-id='{{}}'>
+    <view class='view_selectCategory' bindtap='showCategorys' data-id='{{item}}'>
        {{interestCategory.name}} 
       
     </view>
     <view class="select">
       <image src="../../images/selectedButton_Normal.png" />
     </view>
-     <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+     <action-sheet hidden="{{actionSheetHidden}}" bindchange="chooseInterest">
         <scroll-view class="action" scroll-y>
             <view wx:for-items="{{actionSheetItems}}" wx:key="{{key}}" class="subList">
-          <view class="itemTitle">{{item.txt}}</view>
-         <block wx:for-items="{{item.children}}" wx:for-item="list">
-           <view  class="itemContent {{list.select == catalogSelect ? 'selActive':''}}"bindtap="chooseCatalog" data-select="{{list.select}}" data-grade="{{list.grade}}">{{list.grade}}</view>
+          <view class="itemTitle">{{item.name}}</view>
+         <block wx:for-items="{{item.children}}" wx:for-item="item_sub">
+           <view class="itemContent {{item_sub.id == interestCategory.id ? 'selActive':''}}" bindtap="chooseCategory" data-item="{{ item_sub }}" >{{item_sub.name}}</view>
            </block>
         </view>
         </scroll-view>
         
       </action-sheet>
     <scroll-view class="recommend_scroll_x_box" scroll-x="true">
-
+<view class='recommend_hot_box'>  <view class=" text_center {{currentInterestId==interestCategory.id?'title__ischecked':'title'}}" bindtap='interestSelected' data-id='{{interestCategory.id}}'>全部</view></view>
       <view class="recommend_hot_box" wx:for="{{ interestCategory.children }}" wx:key="item">
-        <view class=" text_center {{currentTab==index?'title__ischecked':'title'}}" bindtap='interestSelected' data-id='{{index}}'>{{item.name}}</view>
+        <view class=" text_center {{currentInterestId==item.id?'title__ischecked':'title'}}" bindtap='interestSelected' data-id='{{item.id}}'>{{item.name}}</view>
       </view>
     </scroll-view>
 
@@ -59,7 +59,13 @@
   </view>
 
   <!-- 一些推荐的课程  -->
-  <view class='list-grids'>
+  <!-- <swiper bindchange='swipechange' data-item=''>
+<block wx:for="{{interestCategory.children}}" wx:key="{{category_item}}">
+	<swiper-item scroll-y style="overflow: auto !important;" > -->
+	<block wx:if="{{listData.length >= 0}}">
+	 <view class='list-grids'> 
+	<!-- <scroll-view class='list-grids' scroll-y="{{true}}" style="height:{{appHegiht?appHegiht:'auto'}};"> -->
+
     <block wx:for="{{ listData }}" wx:key="item">
 		            <navigator url="../courseDetail/courseDetail?brand={{item.id}}&typeid={{item.typeid}}">
 
@@ -77,5 +83,17 @@
       </view>
 </navigator>
     </block>
-  </view>
+		
+			<!-- </scroll-view> -->
+   </view> 
+	<!-- </swiper-item>
+ </block> 
+	</swiper> -->
+	 </block> 
+	<block wx:else>
+	<text class='list-grid__label'>暂无相关课程</text>
+		<view class='list-grid__label' style='height:300px;width:400px'>
+		暂无相关课程
+		</view>
+		</block>
 </view>

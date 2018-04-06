@@ -12,6 +12,12 @@ Component({
 			type: Boolean,
 			value: false
 		},
+		allCategory:{
+			type: Object,
+			value: {id: '', name: '全部' }
+		}
+		,
+
 		categorys:{
 			type: Array,
 			value: []
@@ -65,8 +71,6 @@ _firstCategoryChange:function(e){
 
 			console.log(" 默认选中的一级分类:", e);
 			var children = e.children;
-			console.log(" 默认选中的一级分类===:", typeof e.children);
-
 			if (typeof e.children != 'undefined' ) {
 			let secondItem = e.children.length > 0 ? e.children[0] : { "id": e.id, "name": "全部" };//选中的二级分类
 

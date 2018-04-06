@@ -18,21 +18,28 @@ Page({
   hideLoadMore:true,
 	selectedCategory:{},
 	firstSelectedCategory:{},
-	categorys: app.data.allCategorys
+	categorys: app.data.allCategorys,
+	priceAsc :  0,// 0标识 未选中，1标识升序，2 标识降序,
+	total:1,//总的条数
+	start:0,// 请求完 start 的开始页数
+	requestParams:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-		console.log(options);
+		console.log("onLoad---", options);
 		var categorys = app.data.allCategorys;
+		var secondSelectedCategory = {};
+		var thirdSelectedCategory = {};
 		var firstSelectedCategory = JSON.parse(options.first);
-		var secondSelectedCategory = JSON.parse(options.second);
-
-		var thirdSelectedCategory = JSON.parse(options.third);
-
-		console.log("firstSelectedCategory---",firstSelectedCategory);
+		if (options.second != 'undefined'){
+		 secondSelectedCategory = JSON.parse(options.second);
+		}
+		if (options.third != 'undefined') {
+			var thirdSelectedCategory = JSON.parse(options.third);
+		}
 		var that = this;
 		that.setData({
 			selectedCategory: {"id": options.id, "name": options.name, "children": options.children},
@@ -42,14 +49,19 @@ Page({
 			secondSelectedCategory: secondSelectedCategory,
 			thirdSelectedCategory: thirdSelectedCategory
 		});
-		this.requestListData({});
+		this.setData({
+			requestParams: { "categoryId": options.id,"start":0}
+		});
+		this.requestListData(this.data.requestParams);
   },
 requestListData:function(params){
-	var that = this;
+	var that = this;	
+	var start = this.data.courseList.length;
+	var list = this.data.courseList;
 	wx.request({
 		url: app.data.url_server_base + 'courses',
 		method: 'GET',
-		data: {},
+		data: params,
 		header: {
 			'Accept': 'application/json',
 			'content-type': 'application/json'
@@ -57,9 +69,12 @@ requestListData:function(params){
 		},
 		success: function (res) {
 			console.log("success---", res);
+			var curList = res.data.data.resources;
+			list.push.apply(list, curList);
 			that.setData({
-				courseList: res.data.data.resources,
-				hasRefresh: false
+				courseList: list,
+				hasRefresh: false,
+				total: res.data.data.total,
 			})
 		},
 		fail: function (error) {
@@ -108,9 +123,19 @@ requestListData:function(params){
   /**
    * 页面上拉触底事件的处理函数
    */
-  // onReachBottom: function () {
-  
-  // },
+  onReachBottom: function () {
+		var total = this.data.total;
+		console.log("onReachBottom:", this.data.total);
+		var that = this;
+		if (total > this.data.courseList.length){
+			var data = this.data.requestParams;
+			data['start'] = this.data.courseList.length;
+			that.setData({
+				requestParams : data
+			});
+			this.requestListData(this.data.requestParams)
+		}
+  },
 
   /**
    * 用户点击右上角分享
@@ -118,10 +143,54 @@ requestListData:function(params){
   onShareAppMessage: function () {
   
   },
-	loadMore:function(e){
-		console.log("loadMore");
 
-	},
+	// 左边三个按钮的点击事件
+	leftbtnClick:function(res){
+		console.log("左边三个按钮的点击事件",res);
+		var priceAsc = 0;
+		var dataset = res.currentTarget.dataset;
+		var curSelectedIndex = dataset.index;
+		var data = {};
+		var that = this;
+		if (curSelectedIndex == 2){
+// 如果当前选中的是价格，那么开始判断 是否升序或者降序
+			 if(this.data.priceAsc == 1){
+				priceAsc = 2;
+				data = { "sort": "priceDesc" }
+
+			} else {
+				priceAsc = 1;
+			data = { "sort": "priceAsc" }
+			} 
+		
+
+		} else if (this.data.selectedIndex != curSelectedIndex && curSelectedIndex != 2){
+if (curSelectedIndex == 0){
+	//综合排序
+	data = {}
+} else {
+	// 人气 升序
+	data = { 'sort': "popular"};
+}
+
+		} else{
+			return;
+		}
+		if (this.data.selectedCategory.id.length  > 0){
+			data['categoryId'] = this.data.selectedCategory.id;
+		}
+			that.setData({
+				priceAsc: priceAsc,
+				selectedIndex:curSelectedIndex
+			});
+			data['start'] = 0;
+			that.setData({
+				requestParams : data,
+					courseList :[]
+			})
+			this.requestListData(this.data.requestParams);
+	}
+	,
 	// 刷新列表
 	refreshList:function(e){
 		console.log("refreshList");
@@ -152,24 +221,37 @@ requestListData:function(params){
 		var item = this.data.categoryBtn;
 		item.isSelected = true;
 		console.log("分类",this.data.categorys);
+		console.log("分类---", item);
+
 		this.category.showView();
 		that.setData({
 			categoryBtn:item
 		});
-		// 展开分类 显示
-// wx.navigateTo({
-// 	url: '',
-// });
 
 	},
 	_categorySelected:function(e){
-		console.log("选中的分类",e);
-		var selectedCategory = e.detail;
-		this.setData({
-			selectedCategory:selectedCategory,
-			categoryBtn: { "id": selectedCategory.id, "title": selectedCategory.name, "isSelected": true },
+		var that = this;
+var selectedCategory = e.detail;
 
+var categoryBtn = { 'id': selectedCategory.id, 'title': selectedCategory.name, 'isSelected': true };
+		var params = this.data.requestParams;
+
+if(selectedCategory.id.length > 0){
+	params['categoryId'] = selectedCategory.id;	
+	
+}else{
+	delete params['categoryId'];
+}
+params['start'] = 0;
+		
+		that.setData({
+			selectedCategory:selectedCategory,
+			categoryBtn: categoryBtn,
+			requestParams: params,
+			courseList:[]
 		});
+		that.requestListData(this.data.requestParams);
+
 		this.category.hideView()
 	}
 

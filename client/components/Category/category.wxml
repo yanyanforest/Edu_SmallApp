@@ -3,7 +3,7 @@
   <view class="nav_left">
 	<!-- 是否在一级分类显示全部  -->
 	<block wx:if="{{ isShowAll }}">
-	<view class="nav_left_items {{selectFirstCategory.id == item.id ? 'active' : ''}}" bindtap="_switchAllFirstTab" data-id="{'id':'','name':'全部'}"> 全部</view>
+	<view class="nav_left_items {{selectFirstCategory.id == allCategory.id ? 'active' : ''}}" bindtap="_switchAllFirstTab" data-id="{{ allCategory }}"> 全部</view>
 	</block>
     <block wx:for="{{ categorys }}" wx:for-item="item" wx:key="item">
 
@@ -12,7 +12,7 @@
   </view>
   <!-- 中间二级分类  -->
   <view class="nav_center">
-    <view class="nav_center_items {{selectSecondCategory.id == selectFirstCategory.id ? 'active' : ''}}" data-id="{{ selectFirstCategory }}" bindtap="_switchSecondFirstTab">
+    <view  wx:if="{{selectFirstCategory.id.length > 0}}" class="nav_center_items {{selectSecondCategory.id == selectFirstCategory.id ? 'active' : ''}}" data-id="{{ selectFirstCategory }}" bindtap="_switchSecondFirstTab">
       全部
     </view>
     <block wx:for="{{ selectFirstCategory.children }}" wx:for-item="secondItem" wx:key="secondItem">
@@ -24,7 +24,7 @@
   </view>
   <!-- 靠右  -->
   <view class="nav_right">
-    <view class="nav_right_items {{selectSecondCategory.id == selectThirdCategory.id ? 'active' : ''}}" data-id="{{ selectSecondCategory }}" bindtap="_switchThirdFirstTab" hidden="{{selectSecondCategory.children.length <= 0}}">
+    <view wx:if="{{selectFirstCategory.id.length > 0}}" class="nav_right_items {{selectSecondCategory.id == selectThirdCategory.id ? 'active' : ''}}" data-id="{{ selectSecondCategory }}" bindtap="_switchThirdFirstTab" hidden="{{selectSecondCategory.children.length <= 0}}">
       全部
     </view>
     <block wx:for="{{ selectSecondCategory.children }}" wx:for-item="thirdItem">

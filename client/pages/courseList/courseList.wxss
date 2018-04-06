@@ -123,7 +123,7 @@ overflow:hidden;
   width: 250rpx;
   display: inline-flex;
   justify-content: center;
-  font-family: SourceHansCN-Normal;
+  /* font-family: SourceHansCN-Normal; */
   color: #000;
   font-size: 30rpx;
 }
@@ -134,4 +134,8 @@ overflow:hidden;
   position: relative;
   top: 20rpx;
   left: 8rpx;
+}
+.header_active {
+  color: #ff6700;
+	
 }

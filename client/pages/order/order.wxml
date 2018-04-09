@@ -40,8 +40,8 @@
     </view>
   </view>
 
-  <view class="order-ft">
-  <button class="action-comment" bindtap="tocomment" wx:if="{{order.statusDesc == '待评价'}}">去评价</button>
-	  <button class="action-pay" bindtap="buy" wx:if="{{order.statusDesc == '待支付'}}">立即支付</button>
+  <view class="order-ft" wx:if="{{order.statusDesc == '待评价'  || order.statusDesc == '待支付'}}">
+  <view class="action-comment" bindtap="tocomment" wx:if="{{order.statusDesc == '待评价'}}">去评价</view>
+	  <view class="action-pay" bindtap="buy" wx:if="{{order.statusDesc == '待支付'}}">立即支付</view>
   </view>
 </view>

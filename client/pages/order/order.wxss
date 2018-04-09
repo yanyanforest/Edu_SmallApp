@@ -74,29 +74,28 @@
 }
 
 
-.order .order-ft .action-pay {
+.order .order-ft {
   position: fixed;
-  bottom: 0;
+  bottom: 0px;
   width: 100%;
   color: #FFFFFF;
+	border-radius: 0px;
+	height: 44px;
+	border-top: 1rpx solid lightgrey;
+	text-align:center;
+
+}
+.order .order-ft .action-pay {
+  color: #FFFFFF;
   background-color: #FF6700;
-		border-radius: 0;
+	line-height: 44px;
 
 }
 .order .order-ft .action-comment {
-		border-radius: 0;
-
-  position: fixed;
-  bottom: 0;
-	border-top: 1rpx solid #c2c2c2;
-  border-bottom: none;
+		border-radius: 0px;
   width: 100%;
   color: #FF6700;
   background-color: #F7F7F7;
-}
-button
-{
-	border:none;
-	border-radius: 0rpx;
-	
+	line-height: 44px;
+
 }

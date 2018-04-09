@@ -1,25 +1,15 @@
 <!--pages/courseOrder/courseOrder.wxml-->
 <!-- <import src="../../template/courseordercell/ordercell.wxml"></import> -->
-
-  <!-- <loading hidden="false" bindChange="pullDownChange" style="background-color:red">加载中...</loading>   -->
 	<view class='orders'>
-		<!-- header   -->
 
  <view class="orders-header">
  <block wx:for="{{btns}}" wx:for-item="item" wx:key="item">
-    <lable class="orders-header__item {{selectedIndex==index?'active':''}}" bindtap='btnclick' data-id='{{index}}'> {{item.name}}</lable>
+    <lable class="orders-header__item {{selectedIndex==index?'active':''}}" bindtap='bindTab' data-id='{{index}}'> {{item.name}}</lable>
    
 		</block>
   </view>
-	<!-- header 结束  -->
-
-    
-  
- <!-- <swiper class="orders-list_content" indicator-dots='{{false}}' indicator-active-color="#ff6700" autoplay="{{false}}"   bindchange='swiperChanged' >
-    <block wx:for="{{btns}}" wx:key="item">
-      <swiper-item bindtap="tapSwiperItem" data-id="{{ index }}">  -->
 			  <scroll-view class="orders-list" scroll-y> 
-<!-- <view class="orders-list"> -->
+			 <block wx:if="{{ orderList.length > 0 }}">
     <block wx:for="{{ orderList }}" wx:for-item="item" wx:key="item" >
 		<view class="orders-list__item">
       <view class="orders-list__item-hd">
@@ -44,10 +34,20 @@
       </view>
 			</view>
 		</block>
-     <!--   -->
+		</block>
+		<block>
+		<view style='width:100%;height:100%;text-align: center;color:lightgrey;'>
+		<block wx:if="{{selectedIndex == 0}}">
+	暂无课程订单,现在<text style='color:#FF6700'>【去选课】</text>
+		</block>
+			<block wx:elif="{{selectedIndex == 1}}">
+暂无待支付课程订单
+		</block>
+	<block wx:else>
+暂无已支付课程订单
+		</block>
+		</view>
+		</block>
 		 </scroll-view> 
-       <!-- </swiper-item>
-    </block>
-  </swiper> -->
   
 </view>

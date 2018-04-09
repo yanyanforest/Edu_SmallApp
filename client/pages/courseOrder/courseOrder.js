@@ -2,81 +2,100 @@
 var url_base = getApp().data.url_server_base;
 
 Page({
-
   /**
    * 页面的初始数据
    */
 	data: {
 		selectedIndex: 0,
 		isHideLoadMore: false,
-		page: 0,
 		btns: [
 			{
 				id: 0,
-				name: "全部"
+				name: "全部",
+				params:{}
 			},
 			{
 				id: 1,
-				name: "待支付"
+				name: "待支付",
+				params: { status:"created"}
 			},
 			{
 				id: 2,
-				name: "待评价"
+				name: "已支付",
+				params: { status: "paid" }
 			}
 		],
 		orderList: [],
+		total:0,
 appHeight:0
 	},
 	loadMore: function (res) {
 		this.onReachBottom();
 	},
-	refesh: function (res) {
-		this.onPullDownRefresh();
-	},
 	pullDownChange: function (res) {
 
 	},
-	btnclick: function (res) {
+	bindTab: function (res) {
 		var index = parseInt(res.currentTarget.dataset.id);
 		this.setData({
-			selectedIndex: index
+			selectedIndex: index,
+			orderList:[]
 		});
+		var params = this.data.btns[index].params;
+		params['start'] = 0;
+		this.requestOrderList(params);
+
 	},
   /**
    * 生命周期函数--监听页面加载
    */
 	onLoad: function (options) {
-		var token = wx.getStorageSync('token');
-		var that = this;
-		wx.request({
-			url: url_base + 'me/orders',
-			header: {
-				'content-type': 'application/json',
-				'X-AUTH-TOKEN': token
-			},
-			success: function (res) {
-				var data = res.data.data;
-				console.log("data:", data);
-				var total = data.total;
-				var list = data.resources;
-				var listTemp = that.data.orderList;
-				for (var i = 0; i < list.length; i++) {
-					var item = list[i];
-					item.statusDesc = that.showOrderItemStatus(item);
-					item.statusWxss = that.showOrderStatusWxss(item);
-					listTemp.push(item);
+		this.requestOrderList();
+	},
+	requestOrderList:function(params){
+var data = params;
+console.log("请求订单列表参数：",params);
+console.log("请求订单列表参数typeof", typeof params);
 
-				}
-				that.setData({
-					orderList: listTemp,
-					total: total,
+if(typeof params == 'undefined'){
+	// data['start'] = 0;
+	data = { start: 0};
+} else if(typeof params.start == 'undefined'){
+	data['start'] = 0;
+}
 
-				})
-			},
-			fail: function (error) {
-				console.log(error);
-			}
-		})
+var token = wx.getStorageSync('token');
+var that = this;
+wx.request({
+	url: url_base + 'me/orders',
+	header: {
+		'content-type': 'application/json',
+		'X-AUTH-TOKEN': token
+	},
+	data:data,
+	success: function (res) {
+		var data = res.data.data;
+		console.log("data:", data);
+		var total = data.total;
+		var list = data.resources;
+		var listTemp = that.data.orderList;
+		for (var i = 0; i < list.length; i++) {
+			var item = list[i];
+			item.statusDesc = that.showOrderItemStatus(item);
+			item.statusWxss = that.showOrderStatusWxss(item);
+			listTemp.push(item);
+
+		}
+		that.setData({
+			orderList: listTemp,
+			total: total,
+		});
+	},
+	fail: function (error) {
+		console.log(error);
+	}
+})
+
 	},
 	showOrderItemStatus: function (item) {
 		console.log(item.status);
@@ -93,14 +112,6 @@ appHeight:0
 			return "待评价";
 		}
 		return "已关闭";
-	},
-	swiperChanged: function (res) {
-		console.log('---', res);
-		var selectIndex = res.detail.current;
-		var that = this;
-		that.setData({
-			selectedIndex: selectIndex,
-		})
 	},
 	showOrderStatusWxss: function (item) {
 		if (item.status == "cancelled") {
@@ -151,23 +162,6 @@ var appHeight = this.data.appHeight;
    */
 	onPullDownRefresh: function () {
 		console.log('刷新')
-		var page = 0;
-		var curList = this.data.recommends_page;
-		// 停止当前页面的下拉刷新、
-		// wx.showNavigationBarLoading() //在标题栏中显示加载
-
-		//模拟加载
-		// setTimeout(function () {
-		// 	// complete
-		// 	wx.hideNavigationBarLoading() //完成停止加载
-		// 	wx.stopPullDownRefresh() //停止下拉刷新
-		// 	this.setData({
-		// 		isHideLoadMore: false,
-		// 		page: 0,
-		// 		recommends: curList
-
-		// 	})
-		// }, 1500);
 	},
 
   /**
@@ -175,42 +169,10 @@ var appHeight = this.data.appHeight;
    */
 	onReachBottom: function () {
 		console.log('--- 加载更多---');
-		var page = this.data.page;
-		console.log('--- 加载更多---', page);
-		var isHideLoadMore = false;
-		if (page < this.data.total) {
-			var token = wx.getStorageSync('token');
-			var that = this;
-			wx.request({
-				url: url_base + 'me/orders',
-				header: {
-					'content-type': 'application/json',
-					'X-AUTH-TOKEN': token
-				},
-				success: function (res) {
-					var data = res.data.data;
-					console.log("=========", data);
-					var total = data.total;
-					var list = data.resources;
-					var listTemp = that.data.orderList;
-					for (var i = 0; i < list.length; i++) {
-						var item = list[i];
-						item.statusDesc = that.showOrderItemStatus(item);
-						item.statusWxss = that.showOrderStatusWxss(item);
-						listTemp.push(item);
+		var params = this.data.btns[this.data.selectedIndex].params;
+		params['start'] = this.data.orderList.length;
+		this.requestOrderList(params);
 
-					}
-					that.setData({
-						orderList: listTemp,
-						total: total,
-
-					})
-				},
-				fail: function (error) {
-					console.log("error:", error);
-				}
-			})
-		}
 	},
 	showOrderItemStatus: function (item) {
 		console.log(item.status);
@@ -228,23 +190,12 @@ var appHeight = this.data.appHeight;
 		}
 		return "已关闭";
 	},
-	swiperChanged: function (res) {
-		console.log('---', res);
-		var selectIndex = res.detail.current;
-		var that = this;
-		that.setData({
-			selectedIndex: selectIndex,
-		})
-	},
 
   /**
    * 用户点击右上角分享
    */
 	onShareAppMessage: function () {
 
-	},
-	scroll: function (res) {
-		console.log("-------", res);
 	},
 	showOrderDetail: function (res) {
 		console.log("选中的订单：", res.currentTarget.dataset.id);

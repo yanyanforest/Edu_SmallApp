@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35da441d-258e-4311-81a5-af2624b995fd" name="Default" comment="" />
+    <list default="true" id="35da441d-258e-4311-81a5-af2624b995fd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js" afterPath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.wxml" afterPath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.wxss" afterPath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.wxss" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -99,7 +103,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courseDetail.wxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="courseDetail.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
@@ -111,14 +115,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weui.wxss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/weui.wxss">
+      <file leaf-file-name="courseOrder.wxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/pages/courseOrder/courseOrder.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="8540" lean-forward="false" selection-start-line="5" selection-start-column="8516" selection-end-line="5" selection-end-column="8540" />
+            <state relative-caret-position="368">
+              <caret line="38" column="78" lean-forward="false" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
               <folding>
-                <element signature="e#9836#11739#1" expanded="true" />
-                <element signature="e#11827#13530#2" expanded="true" />
+                <element signature="n#style#0;n#view#0;n#block#1;n#scroll-view#0;n#view#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,7 +163,6 @@
         <option value="$PROJECT_DIR$/client/pages/userDetail/userDetail.wxml" />
         <option value="$PROJECT_DIR$/client/pages/userDetail/userDetail.wxss" />
         <option value="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.wxss" />
-        <option value="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.wxml" />
         <option value="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js" />
         <option value="$PROJECT_DIR$/client/pages/home/home.js" />
         <option value="$PROJECT_DIR$/client/pages/chooseInterest/chooseInterest.js" />
@@ -200,6 +202,7 @@
         <option value="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.js" />
         <option value="$PROJECT_DIR$/client/pages/home/home.wxss" />
         <option value="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml" />
+        <option value="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.wxml" />
       </list>
     </option>
   </component>
@@ -213,8 +216,8 @@
     <handled-path value="$PROJECT_DIR$/server/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="260" />
-    <option name="y" value="348" />
+    <option name="x" value="444" />
+    <option name="y" value="243" />
     <option name="width" value="1660" />
     <option name="height" value="660" />
   </component>
@@ -332,6 +335,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Edu_SmallApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Edu_SmallApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="courseOrder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -519,15 +544,15 @@
       <workItem from="1522801701669" duration="129000" />
       <workItem from="1522973904947" duration="267000" />
       <workItem from="1523059973356" duration="4128000" />
-      <workItem from="1523234178097" duration="861000" />
+      <workItem from="1523234178097" duration="1515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96204000" />
+    <option name="totallyTimeSpent" value="96858000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="260" y="348" width="1660" height="660" extended-state="0" />
+    <frame x="444" y="243" width="1660" height="660" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964613" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -567,7 +592,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/pages/canvasDemo/canvasDemo.wxss" />
     <entry file="file://$USER_HOME$/Downloads/drawing-canvas-master/pages/index/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -899,6 +923,16 @@
           <caret line="187" column="21" lean-forward="false" selection-start-line="187" selection-start-column="17" selection-end-line="187" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#text#0;n#block#1;n#view#0;n#scroll-view#0;n#view#2;n#view#0;n#view#1;n#view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/courseOrder/courseOrder.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="38" column="78" lean-forward="false" selection-start-line="38" selection-start-column="78" selection-end-line="38" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#view#0;n#block#1;n#scroll-view#0;n#view#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

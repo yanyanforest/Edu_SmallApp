@@ -6,7 +6,6 @@
   background: #FFFFFF;
 }
  .orders-list_content  
- /* .scroll-view_H */
 {
   top: 10px;
   left: 0px;
@@ -43,6 +42,8 @@
 .orders .orders-list {
   border-top: 8rpx solid #F8F8F8;
   background: #FFFFFF;
+	position: absolute;
+	
 }
 .orders .orders-list .orders-list__item {
   border-top: 8rpx solid #F8F8F8;

@@ -191,9 +191,20 @@
   </view>
 
   <view class='detail_footer'>
-    <view class='price'>
-      <template is="price" data="{{price:course.price}}" />
-    </view>
+     <view class='price'>
+      <!-- <template is="price" data="{{price:course.price}}" /> -->
+			<view class='image_text' bindtap='bindShare'>
+			<image src='../../images/detail/detail_share.png'></image>
+			<text> 分享给好友</text></view>
+			<block wx:if="{{course.hasFavorited}}">
+			<view class='image_text' bindtap='bindCancelFavorite'><image src='../../images/detail/detail_favorite.png'></image>
+			<text>取消收藏</text></view>
+			</block>
+			<block wx:else>
+			<view class='image_text' bindtap='bindFavorite'><image src='../../images/detail/detail_nofavorite.png'></image>
+			<text>收藏</text></view>
+			</block>
+    </view> 
     <!-- 这里不用login 判断 直接用 member 判断  -->
     <block wx:if="{{!course.member}}">
       <block wx:if="{{course.price > 0}}">

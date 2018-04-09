@@ -89,9 +89,20 @@ Page({
   
   },
 
-  buy: function(){
+	bindBuy: function(){
+		console.log("购买");
+
     wx.navigateTo({
       url: '/pages/orders/orders',
     })
-  }
+  },
+	bindComment:function(res){
+		console.log("评价", res);
+
+		var order = res.currentTarget.dataset.id;
+		console.log("评价",		order);
+		wx.navigateTo({
+			url: '/pages/orderComment/comment?item='+JSON.stringify(order),
+		})
+	}
 })

@@ -417,9 +417,21 @@
 	vertical-align: center;
 	 line-height: 44px; 
 	 background: #f7f7f7;
+display: flex;
+}
+.detail_footer .price .image_text{
+  flex-direction: column;
+	position: relative;
+		-moz-box-orient: vertical;
 
 }
-
+.detail_footer .price .image_text image{
+ width: 30rpx;
+ height: 30rpx;
+}
+.detail_footer .price .image_text text{
+font-size: 24rpx;
+}
 .detail_footer  .study {
   flex: 1;
 	 line-height: 44px; 

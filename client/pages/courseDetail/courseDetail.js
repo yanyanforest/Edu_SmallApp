@@ -82,6 +82,8 @@ wx.request({
 	header:header,
 	success:function(res){
 console.log("详情:",res);
+		if (res.statusCode == 200){
+		
 		var data = res.data.data;
 		var course = data.course;
 		if (course.about && course.about != 'null'){
@@ -105,7 +107,8 @@ console.log("详情:",res);
 			course:course,
 
 		});
-		
+
+		}	
 	},
 	fail:function(error){
 

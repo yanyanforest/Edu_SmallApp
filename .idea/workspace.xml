@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35da441d-258e-4311-81a5-af2624b995fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.js" afterPath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml" afterPath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml" />
-    </list>
+    <list default="true" id="35da441d-258e-4311-81a5-af2624b995fd" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -105,8 +102,8 @@
       <file leaf-file-name="courseDetail.wxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="184" column="56" lean-forward="false" selection-start-line="184" selection-start-column="56" selection-end-line="184" selection-end-column="56" />
+            <state relative-caret-position="253">
+              <caret line="187" column="21" lean-forward="false" selection-start-line="187" selection-start-column="17" selection-end-line="187" selection-end-column="21" />
               <folding>
                 <element signature="n#style#0;n#text#0;n#block#1;n#view#0;n#scroll-view#0;n#view#2;n#view#0;n#view#1;n#view#0;n#!!top" expanded="true" />
               </folding>
@@ -522,12 +519,12 @@
       <workItem from="1522801701669" duration="129000" />
       <workItem from="1522973904947" duration="267000" />
       <workItem from="1523059973356" duration="4128000" />
-      <workItem from="1523234178097" duration="755000" />
+      <workItem from="1523234178097" duration="861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96098000" />
+    <option name="totallyTimeSpent" value="96204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="260" y="348" width="1660" height="660" extended-state="0" />
@@ -898,8 +895,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="184" column="56" lean-forward="false" selection-start-line="184" selection-start-column="56" selection-end-line="184" selection-end-column="56" />
+        <state relative-caret-position="253">
+          <caret line="187" column="21" lean-forward="false" selection-start-line="187" selection-start-column="17" selection-end-line="187" selection-end-column="21" />
           <folding>
             <element signature="n#style#0;n#text#0;n#block#1;n#view#0;n#scroll-view#0;n#view#2;n#view#0;n#view#1;n#view#0;n#!!top" expanded="true" />
           </folding>

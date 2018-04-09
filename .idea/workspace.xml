@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35da441d-258e-4311-81a5-af2624b995fd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app.js" afterPath="$PROJECT_DIR$/client/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.js" afterPath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.json" afterPath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml" afterPath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxss" afterPath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml" afterPath="$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/home/home.wxml" afterPath="$PROJECT_DIR$/client/pages/home/home.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/home/home.wxss" afterPath="$PROJECT_DIR$/client/pages/home/home.wxss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/utils/util.js" afterPath="$PROJECT_DIR$/client/utils/util.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,16 +18,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/vendor/wafer2-client-sdk/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="settings.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/pages/settings/settings.wxml">
           <provider selected="true" editor-type-id="text-editor">
@@ -79,8 +61,8 @@
       <file leaf-file-name="courseDetail.wxss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+            <state relative-caret-position="480">
+              <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -89,10 +71,10 @@
       <file leaf-file-name="courseDetail.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="110" column="5" lean-forward="false" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
+            <state relative-caret-position="1665">
+              <caret line="111" column="5" lean-forward="false" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
               <folding>
-                <marker date="1523237532000" expanded="true" signature="6920:6922" ph="{...}" />
+                <marker date="1523241557000" expanded="true" signature="7267:7269" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -110,12 +92,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.wxss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.wxss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/pages/home/home.wxss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
               <caret line="225" column="13" lean-forward="true" selection-start-line="225" selection-start-column="13" selection-end-line="225" selection-end-column="13" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="courseDetail.wxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="184" column="56" lean-forward="false" selection-start-line="184" selection-start-column="56" selection-end-line="184" selection-end-column="56" />
+              <folding>
+                <element signature="n#style#0;n#text#0;n#block#1;n#view#0;n#scroll-view#0;n#view#2;n#view#0;n#view#1;n#view#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -158,7 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/pages/video/testVideo.js" />
         <option value="$PROJECT_DIR$/client/pages/video/testVideo.wxml" />
         <option value="$PROJECT_DIR$/client/pages/color/selectColor.wxss" />
         <option value="$PROJECT_DIR$/client/pages/color/selectColor.wxml" />
@@ -209,6 +202,7 @@
         <option value="$PROJECT_DIR$/client/pages/evaluate/evaluate.wxml" />
         <option value="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.js" />
         <option value="$PROJECT_DIR$/client/pages/home/home.wxss" />
+        <option value="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml" />
       </list>
     </option>
   </component>
@@ -341,6 +335,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="settings" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Edu_SmallApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Edu_SmallApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="courseDetail" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -506,12 +522,12 @@
       <workItem from="1522801701669" duration="129000" />
       <workItem from="1522973904947" duration="267000" />
       <workItem from="1523059973356" duration="4128000" />
-      <workItem from="1523234178097" duration="354000" />
+      <workItem from="1523234178097" duration="755000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95697000" />
+    <option name="totallyTimeSpent" value="96098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="260" y="348" width="1660" height="660" extended-state="0" />
@@ -554,13 +570,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="127" column="0" lean-forward="false" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/canvasDemo/canvasDemo.wxss" />
     <entry file="file://$USER_HOME$/Downloads/drawing-canvas-master/pages/index/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
@@ -853,18 +862,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="10" lean-forward="false" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+        <state relative-caret-position="480">
+          <caret line="32" column="10" lean-forward="false" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="110" column="5" lean-forward="false" selection-start-line="110" selection-start-column="5" selection-end-line="110" selection-end-column="5" />
+        <state relative-caret-position="1665">
+          <caret line="111" column="5" lean-forward="false" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
           <folding>
-            <marker date="1523237532000" expanded="true" signature="6920:6922" ph="{...}" />
+            <marker date="1523241557000" expanded="true" signature="7267:7269" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -884,6 +893,16 @@
         <state relative-caret-position="165">
           <caret line="225" column="13" lean-forward="true" selection-start-line="225" selection-start-column="13" selection-end-line="225" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="184" column="56" lean-forward="false" selection-start-line="184" selection-start-column="56" selection-end-line="184" selection-end-column="56" />
+          <folding>
+            <element signature="n#style#0;n#text#0;n#block#1;n#view#0;n#scroll-view#0;n#view#2;n#view#0;n#view#1;n#view#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

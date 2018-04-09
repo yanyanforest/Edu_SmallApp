@@ -317,5 +317,17 @@ getCourseComments: function (options) {
 		this.setData({ stv: this.data.stv });
 		}
 	},
+	//  加入学习
+	bindMember:function(){
+
+	},
+	//  立即购买
+		bindBuy:function(){
+
+	},
+		//  立即学习
+		bindStudy: function () {
+
+		},
 	
 })

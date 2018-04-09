@@ -1,4 +1,6 @@
 /* pages/courseOrder/courseOrder.wxss */
+@import "../commons/price.wxss";
+
 .orders .orders-header {
   display: flex;
   padding: 20rpx 0;
@@ -43,7 +45,7 @@
   border-top: 8rpx solid #F8F8F8;
   background: #FFFFFF;
 	position: absolute;
-	
+
 }
 .orders .orders-list .orders-list__item {
   border-top: 8rpx solid #F8F8F8;

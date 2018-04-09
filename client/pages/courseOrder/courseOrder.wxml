@@ -1,4 +1,6 @@
 <!--pages/courseOrder/courseOrder.wxml-->
+<import src="../commons/price.wxml" />
+
 <!-- <import src="../../template/courseordercell/ordercell.wxml"></import> -->
 	<view class='orders'>
 
@@ -22,7 +24,10 @@
         <view class="orders-list__item-desc">
           <label class="desc-title">{{item.title}}</label>
           <label class="desc-teacher">授课老师：{{item.courses.teacher}}</label>
-          <label class="desc-price">￥{{item.courses.price}}</label>
+       <!-- <label class="desc-price">￥{{item.courses.price}}</label> -->
+						       <label class="desc-price"><template is="price" data="{{price:item.courses.price}}"/></label>
+			            
+
         </view>
       </view>
       <view class="orders-list__item-ft">

@@ -69,5 +69,6 @@ fail:function(){
     onError:function(msg){
       console.log("onError:",msg)
     },
-    globalData:'全局变量'
+    globalData:'全局变量',
+
 })

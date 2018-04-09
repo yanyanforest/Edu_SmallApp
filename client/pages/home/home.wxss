@@ -217,7 +217,7 @@ button::after {
 .list-grid__label {
   margin-top: 5px;
   display: block;
-  text-align: center;
+  text-align: left;
   color: #000;
   font-size: 15px;
   white-space: nowrap;

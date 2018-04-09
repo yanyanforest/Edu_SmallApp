@@ -51,6 +51,8 @@ var showCourseExpiryDay = (num) =>
 	 return num + '天';
  }
 }
+//  课时时长
+
 // get 方法请求
 var getRequest = (briefUrl,header,params,succcess,failure)=>{
 	var headerTmp = {'content-type': 'application/json'};

@@ -1,0 +1,35 @@
+
+<wxs module="parseLessonTime">
+var parse = function(lessonLength) {
+ var time = '';
+	var length = lessonLength;
+	if (length > 3600) {
+	var hour = parseInt(lessonLength/3600);
+	time = hour+'小时';
+	length = num - hour * 3600;
+	} 
+	if(length >= 60){
+		var minute = parseInt(length / 60);
+		time = time + minute +'分';
+		length = length - minute * 60;
+	}
+	if(length > 0){
+		// 0 的时候不显示秒
+		var second = length;
+		time = time + second + '秒';
+	}
+return time;
+  
+}
+
+module.exports = {
+  parse: parse
+};
+
+</wxs>
+
+<template name="lesson_time">
+<!-- <text> -->
+{{parseLessonTime.parse(lessonLength)}}
+<!-- </text> -->
+</template>

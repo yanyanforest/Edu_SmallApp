@@ -67,7 +67,7 @@
 	<!-- <scroll-view class='list-grids' scroll-y="{{true}}" style="height:{{appHegiht?appHegiht:'auto'}};"> -->
 
     <block wx:for="{{ listData }}" wx:key="item">
-		            <navigator url="../courseDetail/courseDetail?brand={{item.id}}&typeid={{item.typeid}}">
+		            <navigator url="../courseDetail/courseDetail?courseId={{item.id}}&typeid={{item.typeid}}">
 
       <view class="list-grid" bindtap='showCourseDetail' data-item='{{item}}'>
         <image class="list-grid__icon" src="{{item.picture}}">

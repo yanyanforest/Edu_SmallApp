@@ -1,1 +1,431 @@
-/* pages/courseDetail/courseDetail.wxss */
+@import "../commons/price.wxss";
+@import "../commons/wxParse/wxParse.wxss";
+
+/*通用的样式*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/*标题、副标题、课程信息*/
+
+.container .flex-item {
+  width: 690rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #dbdbdb;
+}
+
+  .stv-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+} 
+.withAnimate {
+  transition: all 100ms ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+.stv-container .scroll-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+} 
+
+/* .stv-container  */
+
+   .scroll-view .scroll-view-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+}  
+ .scroll-view .scroll-view-wrapper .one-scene {
+  height: 100%;
+}
+.one-scene text {
+  display: flex;
+  justify-content: center;
+  padding-top: 10rpx;
+} 
+
+/* end 通用的样式 */
+
+.container .flex-item:first-child {
+  width: 100%;
+  border-bottom: none;
+}
+
+.video {
+  width: 100%;
+}
+
+/*选项栏*/
+
+.course-tab .ul {
+  display: flex;
+  height: 90rpx;
+  background: #fff;
+  text-align: center;
+  align-items: center;
+  border-bottom: 8rpx solid #f5f5f5;
+}
+
+/*选项卡*/
+
+.course-tab .li {
+  flex: 1;
+  display: flex;
+  height: 90rpx;
+	line-height: 40rpx;
+  align-items: center;
+  text-align: center;
+}
+
+ .course-tab .li .tab {
+  flex: 1;
+} 
+
+.course-tab .li:nth-child(2) .tab {
+  border-right: 1rpx solid #e9e9e9;
+  border-left: 1rpx solid #e9e9e9;
+}
+
+.course-tab .active {
+  color: #ff6700;
+}
+
+.course-tab .line {
+  position: absolute;
+  transition: all 0.35s;
+  width: 48rpx;
+  height: 6rpx;
+  border-radius: 6rpx;
+  background-color: #ff6700;
+  margin-top: -11rpx;
+  left: 113rpx;
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* end 选项栏*/
+
+/*价格栏*/
+
+.flex-price {
+  width: 100%;
+  border-bottom: 1rpx solid #dbdbdb;
+}
+
+.flex-price .flex-ul {
+  display: flex;
+  height: 120rpx;
+  align-items: center;
+}
+
+.flex-price .flex-li {
+  font-size: 30rpx;
+}
+
+.flex-price .font-ms {
+  font-size: 30rpx;
+}
+
+.flex-price .flex-li:first-child {
+  /* width: 195rpx;  */
+  justify-content: row;
+  font-size: 40rpx;
+  color: #ef4023;
+}
+
+.flex-price .flex-li:last-child {
+  flex: 1;
+  color: #bfbfbf;
+  padding-top: 3rpx;
+  text-decoration: line-through;
+}
+
+/*end 价格栏*/
+
+.flex-title {
+  width: 690rpx;
+  height: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.flex-title .title {
+  font-size: 36rpx;
+  color: #454545;
+  margin: 48rpx 0 24rpx 0;
+}
+
+.flex-title .flex-ul {
+  display: flex;
+  font-size: 24rpx;
+  color: #6d7689;
+  margin-bottom: 40rpx;
+  flex-direction: row;
+}
+
+.flex-title .flex-li {
+  flex: 1;
+}
+
+.flex-title .info {
+  color: #6d7689;
+  font-size: 24rpx;
+  margin-bottom: 48rpx;
+}
+
+.course-info {
+  border-bottom: 1px solid #dbdbdb;
+  padding: 48rpx 0 24rpx;
+}
+
+.course-info .header {
+  font-size: 34rpx;
+  color: #454545;
+  padding: 10rpx 0 24rpx;
+}
+
+.course-info .content {
+  border-left: 12rpx solid #b4b4b4;
+  background: #f7f7f7;
+  padding: 40rpx 66rpx 40rpx 32rpx;
+}
+
+/* 章的标题 */
+
+.chapter .chapter-header {
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  background: #fafafa;
+}
+
+/* 整个节的区域 */
+
+.chapter .section {
+  display: flex;
+}
+
+.chapter .section-line {
+  width: 1rpx;
+  height: 100vh;
+  border-left: 1rpx solid #ddd;
+  margin-left: 10rpx;
+  margin-top: 45rpx;
+}
+
+.chapter .section-conter {
+  flex: 1;
+}
+
+/* 节的图标 */
+
+.chapter .section .icon-yuandianzhong {
+  position: unset;
+  display: inline-block;
+  margin-left: -15rpx;
+  font-size: 34rpx;
+  color: #dedfe7;
+}
+
+/* 节的整行样式 */
+
+.chapter .section .section-header {
+  display: inline-block;
+  width: 630rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 课时的样式 */
+
+.chapter .section .section-class {
+  display: flex;
+  height: 120rpx;
+  padding-left: 40rpx;
+  align-items: center;
+}
+
+/* 课时整行统一样式 */
+
+.chapter .section .class-item {
+  height: 120rpx;
+  line-height: 120rpx;
+}
+
+/* 课时左侧 标题区域 */
+
+.chapter .section .title-time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 502rpx;
+  color: #73757b;
+  background: bule;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 课时标题 */
+
+.chapter .section .class-item .title {
+  font-size: 30rpx;
+  color: #2e2e2e;
+}
+
+/* 课时时间 */
+
+.chapter .section .class-item .time {
+  font-size: 26rpx;
+  color: #73757b;
+}
+
+/* 课时标题 */
+
+.chapter .section .class-item .class-item-s {
+  height: 50rpx;
+  line-height: 50rpx;
+  flex-direction: row;
+}
+
+/* 学习状态 已学完 */
+
+.chapter .section .learn-status-w {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #73757b;
+  width: 210rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+.chapter .section .learn-status-z {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #73757b;
+  width: 210rpx;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 评价  */
+
+.comment-list-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 40rpx;
+}
+
+.comment-list-item .imgList {
+  width: 125rpx;
+  padding-left: 30rpx;
+  margin-right: -10rpx;
+}
+
+.comment-list-item .user-avatar image {
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 38rpx;
+  margin-right: 8px;
+}
+
+.comment-list-item .conList {
+  width: 625rpx;
+  margin: 0;
+}
+
+.comment-list-item .conList .title {
+  font-size: 32rpx;
+  color: #2e2e2e;
+  width: 400rpx;
+  float: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.right {
+  display: inline-flex;
+  flex-direction: row;
+  width: 160rpx;
+  padding-left: 20rpx;
+}
+
+.right image {
+  width: 130rpx;
+  height: 24rpx;
+}
+
+.comment-list-item .conList .dateTime {
+  font-size: 22rpx;
+  color: #bfbfbf;
+  font-family: SourceHanSansCN-Normal;
+}
+
+.comment-list-item .conList  .describe {
+  font-size: 30rpx;
+  color: #73757b;
+  font-family: SourceHanSansCN-Normal;
+  border-bottom: 1rpx solid #e5e5e5;
+  padding: 20rpx 0 30rpx;
+  margin-right: 30rpx;
+}
+
+.detail_footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 44px;
+  margin-bottom: 0px;
+  display: flex;
+  margin: 0;
+  border-top: lightgray solid 1rpx;
+	justify-content: center;
+
+}
+
+.detail_footer  .price {
+  flex: 1;
+  position: relative;
+  text-align: center;
+	justify-content:center;
+	vertical-align: center;
+	 line-height: 44px; 
+	 background: #f7f7f7;
+
+}
+
+.detail_footer  .study {
+  flex: 1;
+	 line-height: 44px; 
+  position: relative;
+  background-color: #ff6700;
+  color: #f7f7f7;
+  font-size: 34rpx;
+  text-align: center;
+}

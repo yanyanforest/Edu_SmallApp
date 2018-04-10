@@ -7,6 +7,8 @@
 		"pages/courseDetail/courseDetail",
 		"pages/courseOrder/courseOrder",
 		"pages/order/order",
+		"pages/settleOrder/settleOrder",
+		"pages/payOrder/payOrder",							
 		"pages/favorite/favorite",
 		"pages/index/index",
 		"pages/addCgi/addCgi",

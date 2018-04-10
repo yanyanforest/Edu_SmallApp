@@ -268,8 +268,13 @@ getCourseComments: function (options) {
 	},
 	handlerEnd(e) {
 		console.log("滑动结束", e.changedTouches[0]);
-
 		let { clientX, clientY } = e.changedTouches[0];
+		if (Math.abs(this.clientX - this.data.stv.startX) <= 5)
+		{
+			console.log("滑动结束", this.clientX, +'this.data.stv.startX'+ this.data.stv.startX,this.clientX - this.data.stv.startX);
+
+			return;
+		}
 		let endTime = e.timeStamp;
 		let { tabs, stv, selectedIndex } = this.data;
 		let { offset, windowWidth } = stv;
@@ -326,7 +331,10 @@ getCourseComments: function (options) {
 	},
 	//  立即购买
 		bindBuy:function(){
-
+			var course = JSON.stringify(this.data.course);
+wx.navigateTo({
+	url: '../settleOrder/settleOrder?item='+course,
+})
 	},
 		//  立即学习
 		bindStudy: function () {

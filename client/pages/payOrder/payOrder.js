@@ -12,7 +12,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+		console.log("订单支付：",options);
+		var item = JSON.parse(options.item);
+
+  var info = wx.getSystemInfoSync();
+console.log(info);
+	this.setData({
+		windowWidth: info.windowWidth,
+		windowHeight: info.windowHeight,
+		bgImageHeight: info.windowWidth*0.4173,
+		order:item
+	});
+	this.setData({
+
+	})
   },
 
   /**
@@ -62,5 +75,11 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+	/** 
+	 * 调起 微信支付
+	 */
+	bindWxPay: function(){
+
+	}
 })

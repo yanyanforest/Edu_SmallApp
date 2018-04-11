@@ -23,3 +23,12 @@ module.exports = {
           <text class='price free'>免费</text>
 </block>
 </template>
+
+<template name="price—pay">
+<block wx:if="{{ price > 0}}"><text class="price point" style='font-size:30rpx'>￥</text>
+<text class="price unit"style='font-size:40rpx'>{{parsePrice.parse(price,'integer')}}</text><text class="price point" style='font-size:30rpx'>{{parsePrice.parse(price)}}</text>
+</block>
+<block wx:else>
+          <text class='price free'>免费</text>
+</block>
+</template>

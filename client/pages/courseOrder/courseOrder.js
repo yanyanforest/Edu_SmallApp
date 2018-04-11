@@ -204,11 +204,18 @@ var appHeight = this.data.appHeight;
 			url: '../order/order?detail=' + JSON.stringify(item),
 		})
 	},
-	toComment: function (res) {
+	bindComment: function (res) {
 		console.log(res);
 		wx.navigateTo({
 			url: '../orderComment/comment?item=' + JSON.stringify(res.currentTarget.dataset.id),
 		});
+	},
+	bindPay:function(res){
+		console.log("去支付", );
+
+		wx.navigateTo({
+			url: '../payOrder/payOrder?item=' + JSON.stringify(res.currentTarget.dataset.id),
+		})
 	}
 
 })

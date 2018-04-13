@@ -418,20 +418,40 @@
 	 line-height: 44px; 
 	 background: #f7f7f7;
 display: flex;
+flex-direction: row;
+ height: 100%;
+
 }
 .detail_footer .price .image_text{
+  flex: 1;
   flex-direction: column;
-	position: relative;
-		-moz-box-orient: vertical;
+	-moz-box-orient: vertical;
+ justify-content: center;
+height: 100%;
+align-content: center;
+align-items: center;/* 子元素垂直居中 */
+align-self: center;
+ vertical-align: middle;
+ text-align:center;
+
+line-height: 44px;
 
 }
 .detail_footer .price .image_text image{
  width: 30rpx;
  height: 30rpx;
+  position: fi;
+ padding-top: 5px;
+ align-content: center;
+ /* display:inline-block;  */
+ vertical-align:middle;
 }
 .detail_footer .price .image_text text{
 font-size: 24rpx;
+text-align: center;
+/* padding-top: 10px; */
 }
+
 .detail_footer  .study {
   flex: 1;
 	 line-height: 44px; 

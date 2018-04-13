@@ -193,9 +193,10 @@
   <view class='detail_footer'>
      <view class='price'>
       <!-- <template is="price" data="{{price:course.price}}" /> -->
-			<view class='image_text' bindtap='bindShare'>
+			<view class='image_text' style=' background: red;' bindtap='bindShare'>
 			<image src='../../images/detail/detail_share.png'></image>
-			<text> 分享给好友</text></view>
+			<text> 分享给好友</text>
+			</view>
 			<block wx:if="{{course.hasFavorited}}">
 			<view class='image_text' bindtap='bindCancelFavorite'><image src='../../images/detail/detail_favorite.png'></image>
 			<text>取消收藏</text></view>

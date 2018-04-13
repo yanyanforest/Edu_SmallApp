@@ -1,6 +1,6 @@
 // pages/courseOrder/courseOrder.js
 var url_base = getApp().data.url_server_base;
-
+var utils = require('../../utils/util.js');
 Page({
   /**
    * 页面的初始数据
@@ -12,12 +12,12 @@ Page({
 			{
 				id: 0,
 				name: "全部",
-				params:{}
+				params: {}
 			},
 			{
 				id: 1,
 				name: "待支付",
-				params: { status:"created"}
+				params: { status: "created" }
 			},
 			{
 				id: 2,
@@ -26,8 +26,8 @@ Page({
 			}
 		],
 		orderList: [],
-		total:0,
-appHeight:0
+		total: 0,
+		appHeight: 0
 	},
 	loadMore: function (res) {
 		this.onReachBottom();
@@ -39,7 +39,7 @@ appHeight:0
 		var index = parseInt(res.currentTarget.dataset.id);
 		this.setData({
 			selectedIndex: index,
-			orderList:[]
+			orderList: []
 		});
 		var params = this.data.btns[index].params;
 		params['start'] = 0;
@@ -52,49 +52,49 @@ appHeight:0
 	onLoad: function (options) {
 		this.requestOrderList();
 	},
-	requestOrderList:function(params){
-var data = params;
-console.log("请求订单列表参数：",params);
-console.log("请求订单列表参数typeof", typeof params);
+	requestOrderList: function (params) {
+		var data = params;
+		console.log("请求订单列表参数：", params);
+		console.log("请求订单列表参数typeof", typeof params);
 
-if(typeof params == 'undefined'){
-	// data['start'] = 0;
-	data = { start: 0};
-} else if(typeof params.start == 'undefined'){
-	data['start'] = 0;
-}
-
-var token = wx.getStorageSync('token');
-var that = this;
-wx.request({
-	url: url_base + 'me/orders',
-	header: {
-		'content-type': 'application/json',
-		'X-AUTH-TOKEN': token
-	},
-	data:data,
-	success: function (res) {
-		var data = res.data.data;
-		console.log("data:", data);
-		var total = data.total;
-		var list = data.resources;
-		var listTemp = that.data.orderList;
-		for (var i = 0; i < list.length; i++) {
-			var item = list[i];
-			item.statusDesc = that.showOrderItemStatus(item);
-			item.statusWxss = that.showOrderStatusWxss(item);
-			listTemp.push(item);
-
+		if (typeof params == 'undefined') {
+			// data['start'] = 0;
+			data = { start: 0 };
+		} else if (typeof params.start == 'undefined') {
+			data['start'] = 0;
 		}
-		that.setData({
-			orderList: listTemp,
-			total: total,
-		});
-	},
-	fail: function (error) {
-		console.log(error);
-	}
-})
+
+		var token = wx.getStorageSync('token');
+		var that = this;
+		wx.request({
+			url: url_base + 'me/orders',
+			header: {
+				'content-type': 'application/json',
+				'X-AUTH-TOKEN': token
+			},
+			data: data,
+			success: function (res) {
+				var data = res.data.data;
+				console.log("data:", data);
+				var total = data.total;
+				var list = data.resources;
+				var listTemp = that.data.orderList;
+				for (var i = 0; i < list.length; i++) {
+					var item = list[i];
+					item.statusDesc = that.showOrderItemStatus(item);
+					item.statusWxss = that.showOrderStatusWxss(item);
+					listTemp.push(item);
+
+				}
+				that.setData({
+					orderList: listTemp,
+					total: total,
+				});
+			},
+			fail: function (error) {
+				console.log(error);
+			}
+		})
 
 	},
 	showOrderItemStatus: function (item) {
@@ -132,7 +132,7 @@ wx.request({
    * 生命周期函数--监听页面初次渲染完成
    */
 	onReady: function () {
-var appHeight = this.data.appHeight;
+		var appHeight = this.data.appHeight;
 
 	},
 
@@ -210,12 +210,75 @@ var appHeight = this.data.appHeight;
 			url: '../orderComment/comment?item=' + JSON.stringify(res.currentTarget.dataset.id),
 		});
 	},
-	bindPay:function(res){
-		console.log("去支付", );
+	bindPay: function (res) {
+		console.log("去支付",res );
 
 		wx.navigateTo({
 			url: '../payOrder/payOrder?item=' + JSON.stringify(res.currentTarget.dataset.id),
 		})
+	},
+	//  取消订单
+	bindCancleOrder: function (res) {
+		// 取消时，先判断 课程是否删除，若删除那么给出提示。
+		console.log("删除课程", res);
+		if (res.currentTarget.dataset.id.deleted == 1 || typeof res.currentTarget.dataset.id.courses.id == 'undefined') {
+			wx.showToast({
+				title: '抱歉，课程已删除无法购买或学习。如有疑问请咨询客服。',
+			});
+			return;
+		}
+		this.setData({
+			order: res.currentTarget.dataset.id
+		});
+		// 如果没有删除，那么提示 要进行删除操作
+		var that = this;
+		wx.showModal({
+			title: '温馨提示',
+			content: '你确定要取消此订单吗?',
+			showCancel: true,
+			confirmText: "确定",
+			success: function (res) {
+				console.log("取消订单", res);
+				if (res.confirm) {
+					//  确定取消
+					that.cancelOrder();
+					return;
+				}
+				if (res.cancel) {
+					//取消
+
+				}
+			}
+		});
+
+	},
+	cancelOrder: function () {
+		// me/orders/%@/cancel
+		var briefUrl = 'me/orders/' + this.data.order.id + '/cancel';
+		var token = wx.getStorageSync('token');
+		wx.request({
+			url: utils.getRequestUrl(briefUrl),
+			header: {
+				// 'Accept': 'application/json',
+				'content-type': 'application/json',
+				'X-AUTH-TOKEN': token
+			},
+			method: 'POST',
+			success: function (res) {
+				console.log('取消', res);
+				wx.showToast({
+					title: '取消订单成功',
+					mask: true,
+					duration: 2000
+
+				});
+			},
+			fail: function (error) {
+
+			}
+
+		})
 	}
+
 
 })

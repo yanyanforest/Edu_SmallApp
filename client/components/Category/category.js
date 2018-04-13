@@ -26,7 +26,7 @@ Component({
 			type: Object,
 			value: {}
 		},
-		//  现在还不知道属性和 data 之间的优先级，所以和selectFirstCategory分为不同的名字
+		//  现在还不知道属性和 data                                   
 		firstDefaultCategory: {
 			type:Object,
 			value:{},

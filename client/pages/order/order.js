@@ -93,7 +93,7 @@ Page({
 		console.log("购买");
 
     wx.navigateTo({
-			url: '/pages/payOrder/payOrder',
+			url: '/pages/payOrder/payOrder?item='+JSON.stringify(this.data.order),
     })
   },
 	bindComment:function(res){

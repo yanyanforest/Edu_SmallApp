@@ -20,7 +20,7 @@
   <!-- 分类  -->
   <view class="category-grids">
     <block wx:for="{{categoryData}}" wx:key="item">
-      <view class="category-grid" bindtap="">
+      <view class="category-grid" bindtap="bindList" data-item='{{item}}'>
         <image class="category-grid__icon" src="{{item.brief}}"></image>
         <text class='category-grid__label'>{{item.name}}</text>
       </view>

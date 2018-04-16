@@ -33,11 +33,17 @@ Page({
 		var categorys = app.data.allCategorys;
 		var secondSelectedCategory = {};
 		var thirdSelectedCategory = {};
+		console.log("onLoad1---", options);
+
 		var firstSelectedCategory = JSON.parse(options.first);
 		if (options.second != 'undefined') {
+			console.log("onLoad2---", options);
+
 			secondSelectedCategory = JSON.parse(options.second);
 		}
-		if (options.third != 'undefined') {
+		if (typeof options.third != 'undefined') {
+			console.log("onLoad3---", options.third);
+
 			var thirdSelectedCategory = JSON.parse(options.third);
 		}
 		var that = this;

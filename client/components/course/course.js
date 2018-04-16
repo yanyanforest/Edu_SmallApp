@@ -30,5 +30,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
+		_bindDetail:function(res){
+			console.log("详情",res);
+			var course = res.currentTarget.dataset.item
+			wx.navigateTo({
+				url: '../../pages/courseDetail/courseDetail?courseId='+course.id,
+			})
+		}
   }
 })

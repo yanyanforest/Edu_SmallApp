@@ -35,7 +35,7 @@
 
     <block wx:for="{{ courseList }}" wx:key="item">
       <view class="brand_item">
-        <navigator url="../courseDetail/courseDetail?brand={{item.id}}&typeid={{item.typeid}}">
+        <navigator url="../courseDetail/courseDetail?courseId={{item.id}}">
           <image src="{{ item.picture }}" class="pic"></image>
           <view class="right_cont">
             <view>

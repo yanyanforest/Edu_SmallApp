@@ -2,8 +2,7 @@
 <import src="../commons/wxParse/wxParse.wxml" />
 <import src="../commons/lesson_time/lesson_time.wxml" />
 
-<!-- <view class='container'> -->
-<view class='stv-container'>
+ <view class='container'> 
   <!--播放器和选项卡-->
   <view class='flex-item' id='video_h'>
     <view class="section">

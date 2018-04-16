@@ -16,18 +16,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
 	onLoad: function (options) {
-		//   wx.request({
-		// 		url: getApp().data.url_server_base + 'category',
-		// 		header: {
-		// 			'content-type': 'application/json' // 默认值
-		// 		},
-		// 		success:function(res){
-		// console.log('--success',res);
-		// 		},
-		// 		fail:function(error){
-
-		// 		}
-		// 	})
 		var that = this;
 		wx.showLoading({
 			title: '',

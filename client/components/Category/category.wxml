@@ -24,7 +24,7 @@
   </view>
   <!-- 靠右  -->
   <view class="nav_right">
-    <view wx:if="{{selectFirstCategory.id.length > 0}}" class="nav_right_items {{selectSecondCategory.id == selectThirdCategory.id ? 'active' : ''}}" data-id="{{ selectSecondCategory }}" bindtap="_switchThirdFirstTab" hidden="{{selectSecondCategory.children.length <= 0}}">
+    <view wx:if="{{selectFirstCategory.id.length > 0 && selectSecondCategory.children.length > 0}}" class="nav_right_items {{selectSecondCategory.id == selectThirdCategory.id ? 'active' : ''}}" data-id="{{ selectSecondCategory }}" bindtap="_switchThirdFirstTab" hidden="{{selectSecondCategory.children.length <= 0}}">
       全部
     </view>
     <block wx:for="{{ selectSecondCategory.children }}" wx:for-item="thirdItem">

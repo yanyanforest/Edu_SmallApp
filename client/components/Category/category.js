@@ -20,7 +20,9 @@ Component({
 
 		categorys: {
 			type: Array,
-			value: []
+			// value: getApp().data.allCategorys,
+			value: [],
+			observer: '_categorysChange'
 		},
 		selectedCategory: {
 			type: Object,
@@ -78,9 +80,11 @@ Component({
 			}
 
 			try {
-				// var children = e.children;
+
 				if (typeof e.children != 'undefined') {
+
 					let secondItem = e.children.length > 0 ? e.children[0] : { "id": e.id, "name": "全部" };//选中的二级分类
+
 					console.log(" 默认选中的一级分类children:", e.children);
 
 					this.setData({
@@ -89,23 +93,49 @@ Component({
 
 					});
 
+				} else {
+					console.log(" 默认选中的一级分类22222:", this.data.categorys);
+
+
+					if (this.data.categorys != null) {
+						for (var i = 0; i < this.data.categorys.length; i++) {
+							var item = this.data.categorys[i];
+									if (item.id == e.id) {
+										console.log("一级分类---------", item);
+										this.setData({
+											selectFirstCategory: item,
+											selectSecondCategory:{"id":item.id}
+										})
+										return;
+									}
+						}
+					}
 				}
+
 			} catch (error) {
 				console.log('try-catch', error);
 			}
 
 		},
 		_secondCategoryChange: function (e) {
-			this.setData({
-				selectSecondCategory: e
+			if (e != null) {
+				if (typeof e.children != 'undefined') {
+					this.setData({
+						selectSecondCategory: e,
+					});
+				}
+			}
 
-			});
 		},
+
 		_thirdCategoryChange: function (e) {
 			this.setData({
 				selectThirdCategory: e,
 			});
 		},
+		/**
+		 *   下面的方法是按钮对应的操作
+		 */
 		// 选择一级分类的全部
 		_switchAllFirstTab: function (e) {
 			let item = e.target.dataset.id;//选中全部
@@ -122,16 +152,19 @@ Component({
 			this.triggerEvent('categorySelected', e)
 			// this.hideView()
 		},
+
 		_switchFirstTab: function (e) {
 
 			let item = e.target.dataset.id;//选中的一级分类
 			let secondItem = item.children.length > 0 ? item.children[0] : { "id": item.id, "name": "全部" };//选中的二级分类
+			// let thirdItem = secondItem.children.length > 0 ? secondItem.children[0] : { "id": secondItem.id, "name": "全部" };//选中的二级分类
 
 			console.log("selected first item", item);
 
 			this.setData({
 				selectFirstCategory: item,
-				selectSecondCategory: secondItem
+				selectSecondCategory: secondItem,
+				selectThirdCategory: {}
 			})
 
 		},
@@ -182,5 +215,12 @@ Component({
 			this._categorySelected(item);
 
 		},
+	},
+	//  全部分类赋值，那么替换一下，选中的分类状态
+	_categorysChange: function (e) {
+		this.setData({
+			categorys: e
+		});
 	}
+
 })

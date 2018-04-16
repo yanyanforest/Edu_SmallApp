@@ -99,7 +99,7 @@ Page({
 
 			} else {
 				priceAsc = 1;
-				data['sort'] = 'priceDesc';
+				data['sort'] = 'priceAsc';
 
 			}
 		} else {
@@ -110,7 +110,7 @@ Page({
 				delete data['sort'];
 			}
 		}
-
+console.log('按钮点击',data);
 		if (typeof this.data.selectedCategory.id != 'undefined') {
 
 			if (this.data.selectedCategory.id.length > 0) {
@@ -122,6 +122,8 @@ Page({
 			requestParam: data,
 			menuTapCurrent: current
 		});
+		console.log('按钮点击 参数', this.data.requestParam);
+
 		this.requestData(this.data.requestParam)
 		console.log(current);
 	},

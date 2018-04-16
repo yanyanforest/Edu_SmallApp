@@ -1,7 +1,7 @@
 <import src="../../pages/commons/price.wxml" />
 <view class="container">
   <scroll-view class="list" scroll-y>
-    <view class="listContent" bindtap='courseDetail' wx:for="{{courseList}}" wx:key="{{key}}">
+    <view class="listContent" bindtap='_bindDetail' wx:for="{{courseList}}" wx:key="{{key}}" data-item="{{item}}">
       <image src="{{item.picture}}" />
       <view class="listCont">
         <view class="listTitle">{{item.title}}</view>

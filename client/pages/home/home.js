@@ -62,8 +62,9 @@ Page({
 				}
 				//data.category  选中的 category
 				getApp().data.allCategorys = data.categories;
-				console.log("---分类：", getApp().data.allCategorys)
 				rootcategories.push(localdata[4]);
+				console.log("---分类：", rootcategories);
+
 				var total = data.total;
 
 				that.setData({
@@ -138,7 +139,16 @@ Page({
 			},
 		})
 	},
-
+	// 这是
+	bindList:function(e){
+	 console.log('bindList点击一级分类',e.currentTarget.dataset.item);
+	 var item = e.currentTarget.dataset.item
+	 var selectFirstCategory = { "id": item.id, "name": item.name};
+		var selectSecondCategory = { "id": item.id };
+wx.navigateTo({
+	url: '../courseList/courseList?id=' + item.id + '&name=' + item.name + '&first=' + JSON.stringify(selectFirstCategory) + '&second=' + JSON.stringify(selectSecondCategory)
+});
+	},
   /**
    * 生命周期函数--监听页面显示
    */

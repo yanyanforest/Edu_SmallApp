@@ -2,6 +2,44 @@ const base_url = 'https://www.sdkhcm.com/api/';
 var getRequestUrl = function(briefUrl){
 	return base_url + briefUrl;
 }
+// 判断输入字符串 是否为空或者全部都是空格// null undefined
+const testNull = str => {
+	// if (str == null){
+	// 	return true;
+	// }
+// 	if (!str) {
+// return true;
+// 	}
+	if (str == "") return true;
+	var regu = "^[ ]+$";
+	var re = new RegExp(regu);
+	return re.test(str);
+}
+// 存储搜索历史-- key 为关键字
+const storeSearchKey=key=>{
+	var contains = false; 
+	var list = wx.getStorageSync('last_search');
+	for (var i = 0; i < list.length; i++) {
+		var strItem = list[i];
+		if (strItem == key) {
+			contains = true;
+
+			if (i != 0) {
+				list.splice(i, 1);
+				list.splice(0, 0, strItem);
+			}
+		}
+	}
+	if (list.length <= 0) {
+		contains = true;
+		list[0] = key;
+	}
+	if (!contains) {
+		list.splice(0, 0, key);
+	}
+	wx.setStorageSync('last_search', list);
+	return true;
+}
 const formatTime = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -86,7 +124,7 @@ var postRequest = (briefUrl, header, params, succcess, failure) => {
 	});
 }
 
-module.exports = { formatTime, showBusy, showSuccess, showModel, showCourseExpiryDay, getRequestUrl};
+module.exports = { formatTime, showBusy, showSuccess, showModel, showCourseExpiryDay, getRequestUrl, testNull, storeSearchKey};
 //,getRequest, postRequest
 
 //, getRequest, postRequest

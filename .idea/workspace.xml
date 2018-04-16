@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35da441d-258e-4311-81a5-af2624b995fd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/pages/addCgi/addCgi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/pages/addCgi/addCgi.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/pages/addCgi/addCgi.wxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/pages/addCgi/addCgi.wxss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/pages/addCgi/code1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/pages/addCgi/code2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/pages/flex/flexDemo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/pages/flex/flexDemo.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/pages/flex/flexDemo.wxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/pages/flex/flexDemo.wxss" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app.json" afterPath="$PROJECT_DIR$/client/app.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/components/Category/category.js" afterPath="$PROJECT_DIR$/client/components/Category/category.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml" afterPath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxss" afterPath="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js" afterPath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.wxml" afterPath="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.wxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/order/order.js" afterPath="$PROJECT_DIR$/client/pages/order/order.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/app.wxss" afterPath="$PROJECT_DIR$/client/app.wxss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/home/home.js" afterPath="$PROJECT_DIR$/client/pages/home/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/home/home.wxml" afterPath="$PROJECT_DIR$/client/pages/home/home.wxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/pages/payOrder/payOrder.js" afterPath="$PROJECT_DIR$/client/pages/payOrder/payOrder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/utils/util.js" afterPath="$PROJECT_DIR$/client/utils/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.json" afterPath="$PROJECT_DIR$/manifest.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,110 +24,48 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="courseDetail.wxss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="447" column="1" lean-forward="false" selection-start-line="447" selection-start-column="1" selection-end-line="447" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="courseOrder.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="259" column="28" lean-forward="false" selection-start-line="259" selection-start-column="28" selection-end-line="259" selection-end-column="28" />
-              <folding>
-                <marker date="1523511362000" expanded="true" signature="131:5495" ph="{...}" />
-                <marker date="1523511362000" expanded="true" signature="4096:4118" ph="{...}" />
-                <marker date="1523511362000" expanded="true" signature="5025:5491" ph="{...}" />
-                <marker date="1523511362000" expanded="true" signature="5117:5487" ph="{&quot;method&quot;: 'POST'...}" />
-                <marker date="1523511362000" expanded="true" signature="5169:5278" ph="{&quot;Accept&quot;: 'application/json'...}" />
-                <marker date="1523511362000" expanded="true" signature="5326:5447" ph="{...}" />
-                <marker date="1523511362000" expanded="true" signature="5373:5440" ph="{&quot;title&quot;: '取消订单成功'...}" />
-                <marker date="1523511362000" expanded="true" signature="5475:5482" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="util.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/utils/util.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="30" />
+            <state relative-caret-position="75">
+              <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/home/home.js">
+      <file leaf-file-name="search.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/pages/search/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="46" column="32" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+            <state relative-caret-position="284">
+              <caret line="159" column="12" lean-forward="false" selection-start-line="159" selection-start-column="12" selection-end-line="159" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payOrder.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/payOrder/payOrder.wxml">
+      <file leaf-file-name="searchList.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client/pages/searchList/searchList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
-              <folding>
-                <element signature="n#style#0;n#view#1;n#view#0;n#view#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#view#1;n#view#1;n#view#0;n#view#2;n#view#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="78">
+              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courseDetail.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml">
+      <file leaf-file-name="category.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/Category/category.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2985">
-              <caret line="200" column="35" lean-forward="false" selection-start-line="200" selection-start-column="25" selection-end-line="200" selection-end-column="35" />
-              <folding>
-                <marker date="1523431320000" expanded="true" signature="7506:7665" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="7564:7653" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="7736:7825" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="7851:8793" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="7930:8201" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="7973:8067" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="8020:8052" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="8089:8187" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="8139:8171" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="8260:8783" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="8302:8629" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="8385:8487" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="8434:8470" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="8511:8609" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="8563:8592" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="8651:8770" ph="..." />
-                <marker date="1523431320000" expanded="true" signature="8724:8755" ph="..." />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payOrder.wxss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/payOrder/payOrder.wxss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="53" column="22" lean-forward="false" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-              <folding>
-                <element signature="e#373#6192#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="payOrder.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/payOrder/payOrder.json">
+      <file leaf-file-name="category.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/Category/category.wxml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -147,24 +74,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payOrder.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/pages/payOrder/payOrder.js">
+      <file leaf-file-name="category.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/components/Category/category.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settleOrder.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/pages/settleOrder/settleOrder.js">
+      <file leaf-file-name="searchList.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/pages/searchList/searchList.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="94" column="23" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchList.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/pages/searchList/searchList.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="35" column="85" lean-forward="false" selection-start-line="35" selection-start-column="85" selection-end-line="35" selection-end-column="85" />
               <folding>
-                <marker date="1523350792000" expanded="true" signature="1979:1981" ph="{&quot;url&quot;: briefUrl...}" />
+                <element signature="n#style#0;n#view#1;n#view#1;n#view#0;n#view#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#course#0;n#view#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#category#0;n#view#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showdown.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/pages/commons/wxParse/showdown.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="10860">
+              <caret line="724" column="16" lean-forward="false" selection-start-line="724" selection-start-column="16" selection-end-line="724" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -184,6 +133,7 @@
       <find>fb</find>
       <find>footer</find>
       <find>token</find>
+      <find>showView</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/client/images</dir>
@@ -195,9 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/pages/userInfo/userInfo.js" />
-        <option value="$PROJECT_DIR$/client/pages/userDetail/userDetail.wxml" />
-        <option value="$PROJECT_DIR$/client/pages/userDetail/userDetail.wxss" />
         <option value="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.wxss" />
         <option value="$PROJECT_DIR$/client/pages/home/home.js" />
         <option value="$PROJECT_DIR$/client/pages/chooseInterest/chooseInterest.js" />
@@ -246,6 +193,9 @@
         <option value="$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxss" />
         <option value="$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js" />
         <option value="$PROJECT_DIR$/client/pages/payOrder/payOrder.js" />
+        <option value="$PROJECT_DIR$/client/pages/search/search.js" />
+        <option value="$PROJECT_DIR$/client/pages/searchList/searchList.wxml" />
+        <option value="$PROJECT_DIR$/client/pages/searchList/searchList.js" />
       </list>
     </option>
   </component>
@@ -259,8 +209,8 @@
     <handled-path value="$PROJECT_DIR$/server/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="223" />
-    <option name="y" value="581" />
+    <option name="x" value="189" />
+    <option name="y" value="160" />
     <option name="width" value="1660" />
     <option name="height" value="660" />
   </component>
@@ -279,8 +229,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -423,7 +371,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="payOrder" />
+              <option name="myItemId" value="searchList" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -445,7 +393,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
+              <option name="myItemId" value="search" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -463,16 +411,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Edu_SmallApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Edu_SmallApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="courseOrder" />
+              <option name="myItemId" value="client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Category" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -612,14 +580,16 @@
       <workItem from="1523234178097" duration="4533000" />
       <workItem from="1523414804839" duration="3413000" />
       <workItem from="1523495933595" duration="3120000" />
+      <workItem from="1523588249908" duration="4371000" />
+      <workItem from="1523665869324" duration="2773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106409000" />
+    <option name="totallyTimeSpent" value="113553000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="223" y="581" width="1660" height="660" extended-state="0" />
+    <frame x="189" y="160" width="1660" height="660" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21964613" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -656,7 +626,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/pages/payOrder/payOrder.js</url>
           <line>79</line>
-          <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
@@ -665,72 +634,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/client/pages/canvas/canvasTest.js" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="1121" column="24" lean-forward="false" selection-start-line="1121" selection-start-column="0" selection-end-line="1121" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/canvasTest/canvasTest.js" />
-    <entry file="file://$PROJECT_DIR$/client/pages/addCgi/addCgi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="44" lean-forward="false" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/category/category.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/category/category.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/template/coursecell.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/category/category.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/template/coursecell.wxss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -913,15 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="43" column="78" lean-forward="false" selection-start-line="43" selection-start-column="78" selection-end-line="43" selection-end-column="78" />
-          <folding>
-            <marker date="1523493334000" expanded="true" signature="2182:2240" ph="..." />
-            <marker date="1523493334000" expanded="true" signature="2241:2457" ph="..." />
-            <marker date="1523493334000" expanded="true" signature="2282:2344" ph="..." />
-            <marker date="1523493334000" expanded="false" signature="2307:2320" ph="..." />
-            <marker date="1523493334000" expanded="true" signature="2334:2344" ph="..." />
-            <marker date="1523493334000" expanded="true" signature="2388:2409" ph="..." />
-            <marker date="1523493334000" expanded="true" signature="2426:2447" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -929,7 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2205">
           <caret line="147" column="18" lean-forward="false" selection-start-line="147" selection-start-column="18" selection-end-line="147" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -937,7 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" column="26" lean-forward="false" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -945,7 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -953,10 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="597" lean-forward="false" selection-start-line="5" selection-start-column="597" selection-end-line="5" selection-end-column="597" />
-          <folding>
-            <element signature="e#9836#11739#1" expanded="true" />
-            <element signature="e#11827#13530#2" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -964,10 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="67" lean-forward="false" selection-start-line="26" selection-start-column="67" selection-end-line="26" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#view#1;n#view#0;n#view#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#view#1;n#view#1;n#view#0;n#view#2;n#view#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -975,76 +858,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
           <caret line="53" column="22" lean-forward="false" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-          <folding>
-            <element signature="e#373#6192#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2985">
+        <state relative-caret-position="3000">
           <caret line="200" column="35" lean-forward="false" selection-start-line="200" selection-start-column="25" selection-end-line="200" selection-end-column="35" />
-          <folding>
-            <marker date="1523431320000" expanded="true" signature="7506:7665" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="7564:7653" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="7736:7825" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="7851:8793" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="7930:8201" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="7973:8067" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="8020:8052" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="8089:8187" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="8139:8171" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="8260:8783" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="8302:8629" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="8385:8487" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="8434:8470" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="8511:8609" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="8563:8592" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="8651:8770" ph="..." />
-            <marker date="1523431320000" expanded="true" signature="8724:8755" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/courseDetail/courseDetail.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="6705">
           <caret line="447" column="1" lean-forward="false" selection-start-line="447" selection-start-column="1" selection-end-line="447" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pages/home/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="46" column="32" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/courseOrder/courseOrder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
+        <state relative-caret-position="3885">
           <caret line="259" column="28" lean-forward="false" selection-start-line="259" selection-start-column="28" selection-end-line="259" selection-end-column="28" />
           <folding>
-            <marker date="1523511362000" expanded="true" signature="131:5495" ph="{...}" />
             <marker date="1523511362000" expanded="true" signature="4096:4118" ph="{...}" />
             <marker date="1523511362000" expanded="true" signature="5025:5491" ph="{...}" />
-            <marker date="1523511362000" expanded="true" signature="5117:5487" ph="{&quot;method&quot;: 'POST'...}" />
-            <marker date="1523511362000" expanded="true" signature="5169:5278" ph="{&quot;Accept&quot;: 'application/json'...}" />
-            <marker date="1523511362000" expanded="true" signature="5326:5447" ph="{...}" />
-            <marker date="1523511362000" expanded="true" signature="5373:5440" ph="{&quot;title&quot;: '取消订单成功'...}" />
-            <marker date="1523511362000" expanded="true" signature="5475:5482" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/utils/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1058,7 +896,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/settleOrder/settleOrder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
+        <state relative-caret-position="1410">
           <caret line="94" column="23" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
             <marker date="1523350792000" expanded="true" signature="1979:1981" ph="{&quot;url&quot;: briefUrl...}" />
@@ -1068,8 +906,119 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/client/pages/payOrder/payOrder.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/search/search.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523684300000" expanded="true" signature="1357:1393" ph="..." />
+            <marker date="1523684300000" expanded="true" signature="1357:1403" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/home/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/commons/wxParse/showdown.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10860">
+          <caret line="724" column="16" lean-forward="false" selection-start-line="724" selection-start-column="16" selection-end-line="724" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/utils/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="213" column="0" lean-forward="false" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Category/category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Category/category.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/components/Category/category.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/searchList/searchList.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/searchList/searchList.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="35" column="85" lean-forward="false" selection-start-line="35" selection-start-column="85" selection-end-line="35" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#view#1;n#view#1;n#view#0;n#view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#course#0;n#view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#category#0;n#view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="158" column="0" lean-forward="false" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/search/search.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="284">
-          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <caret line="159" column="12" lean-forward="false" selection-start-line="159" selection-start-column="12" selection-end-line="159" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/pages/searchList/searchList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
           <folding />
         </state>
       </provider>

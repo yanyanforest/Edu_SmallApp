@@ -1,0 +1,39 @@
+<!--pages/searchList/searchList.wxml-->
+<view class="container">
+  <view class="header">
+    <view class="searchBar">
+      <view class="search">
+        <icon class="iconfont icon-search"></icon>
+        <input style='color:black' focus="{{focus}}" placeholder='请输入搜索关键字' placeholder-style='color:#a8a8a8' value='{{ inputValue }}' bindinput='bindInput'/>
+      </view>
+      <view class="searchText" bindtap='bindSearch'>搜索</view>
+    </view>
+   <view class="check">
+      <view class='checkVal'>
+        <view class='option {{menuTapCurrent=="0"?"activeOpt":""}}' data-current="0" catchtap="menuTap">
+          <span>综合</span>
+        </view>
+        <view class='option {{menuTapCurrent=="1"?"activeOpt":""}}' data-current="1" catchtap="menuTap">
+          <span>人气</span>
+          <icon class="iconfont icon-arrow-3 arrow"></icon>
+        </view>
+        <view class='option {{menuTapCurrent=="2"?"activeOpt":""}}' data-current="2" catchtap="menuTap">
+          <span>价格</span>
+          <icon class='iconfont icon-plus-select-up {{priceAsc=="1"?"active":""}}'></icon>
+          <icon class='iconfont icon-arrow-3 {{priceAsc=="2"?"active":""}}'></icon>
+        </view>
+      </view>
+      <view class='classification'  style="{{categoryBtn.isSelected?'color:#ff6700;':''}}" bindtap='category_choose'>
+        <span>{{categoryBtn.title}}</span> 
+        <icon class="iconfont icon-arrow-3"></icon>
+      </view>
+
+    </view>
+  </view>
+  <course id="course" style="height:{{height-40}}px" isShowAll="false" courseList="{{ courseList }}">
+
+  </course>
+   <category id="category" style="height:{{height-80}}px" isShowAll="true" categorys="{{ categorys }}" bind:categorySelected="_categorySelected" firstDefaultCategory="{{firstSelectedCategory}}"  secondDefaultCategory="{{secondSelectedCategory}}" thirdDefaultCategory="{{thirdSelectedCategory}}" ></category> 
+
+
+</view>

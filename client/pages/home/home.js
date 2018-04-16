@@ -257,5 +257,12 @@ Page({
 				});
 			}
 		})
+	},
+
+	bindSearch:function(){
+		console.log('去搜索');
+		wx.navigateTo({
+			url: '../search/search',
+		});
 	}
 })

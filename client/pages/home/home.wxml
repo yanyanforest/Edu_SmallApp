@@ -2,7 +2,7 @@
 
 <view class='section'>
 <view class="searchBar">
-  <view class="search">
+  <view class="search" bindtap='bindSearch'>
         <image src="../../images/search.png"/>
        <input focus="{{focus}}" placeholder='输入课程'/>
   </view>

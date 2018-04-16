@@ -95,18 +95,23 @@ Page({
 			method:'POST',
 			success:function(res){
 				console.log("支付结果",res);
+				this.wxPaymentParams(res.data.data);
 			},
 			fail:function(error){
 				console.log('支付失败',error);
 			}
 		});
-		// wx.requestPayment({
-		// 	timeStamp: '',
-		// 	nonceStr: '',
-		// 	package: '',
-		// 	signType: '',
-		// 	paySign: '',
-		// })
-	}
-
+		// wx3dada50face3d34d
+		
+		
+	},
+wxPaymentParams:function(params){
+	wx.requestPayment({
+		timeStamp: params.timestamp,
+		nonceStr: params.noncestr,
+		package: params.package,
+		signType: 'MD5',
+		paySign: '',
+	})
+}
 })

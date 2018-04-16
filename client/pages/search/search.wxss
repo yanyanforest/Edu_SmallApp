@@ -1,0 +1,157 @@
+/* pages/search/search.wxss */
+
+.container{
+  width:100%;
+  margin:0;
+  padding:0;
+}
+/*搜索框*/
+.searchBar {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom:10rpx;
+  border-bottom:2rpx solid #ddd;
+}
+
+.search {
+  width: 618rpx;
+  height: 64rpx;
+  margin:0 30rpx 0 0;
+  background: #f7f7f7;
+  border-radius: 4rpx;
+}
+
+.search .iconfont{
+  width: 32rpx;
+  height: 32rpx;
+  margin: 24rpx 20rpx;
+  float: left;
+  color:#8A8B8E;
+}
+
+.search input {
+  width:500rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 2rpx;
+  font-size: 30rpx;
+  color: #a8a8a8;
+}
+/*搜索文字*/
+.searchText {
+  color: #ff6700;
+  font-size: 30rpx;
+}
+
+/*热门搜索*/
+.hot{
+  width:690rpx;
+  margin:0 30rpx;
+}
+/*搜索标题*/
+.hotTitle{
+  width:100%;
+  font-size:32rpx;
+  color:#a8a8a8;
+   height:45rpx;
+  line-height:45rpx; 
+  margin-top:20rpx;
+  padding:0;
+}
+.hotTitle .iconfont{
+  font-size:32rpx;
+  top:0rpx;
+}
+/*搜索内容*/
+.hot-search{
+  width:100%;
+  padding:0;
+  margin-top:30rpx;
+  font-size:30rpx;
+  color:#2e2e2e;  
+}
+.hot-search .hotOption{
+  display: inline-flex;
+  max-width:690rpx;
+  height:64rpx;
+  line-height:67rpx;
+   background: #f7f7f7; 
+  margin-top:10rpx;
+  margin-right:30rpx;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:10rpx;
+}
+.hot-search .hotOption text{
+  padding:0 30rpx;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/*最近搜索*/
+.last-search{
+  width:690rpx;
+  margin:20rpx 30rpx;
+}
+/* 搜索标题 */
+ .newlyTitle{
+  width:100%;
+  font-size:32rpx;
+  color:#a8a8a8;
+  padding:0;
+  height:45rpx;
+  line-height:45rpx;
+}
+
+.newlyTitle .iconfont{
+  font-size:32rpx;
+  top:0rpx;
+} 
+/*搜索内容*/
+ .newlyContent{
+  width:100%;
+  padding:0;
+  margin-top:40rpx;
+  font-size:30rpx;
+  color:#2e2e2e; 
+}
+.newlyContent .newlyOption{
+  box-sizing: border-box;
+  display: inline-flex;
+  max-width: 690rpx;
+  height:64rpx;
+  line-height:67rpx;
+  background: #f7f7f7;
+  margin-right:30rpx;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom:20rpx;
+}
+.newlyContent .newlyOption text{
+  max-width: 680rpx;
+   padding:0 30rpx;
+     white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.newlyContent .newlyOption .iconfont{
+  font-size:32rpx;
+  position: relative;
+  right:10rpx;
+  top:0;
+}
+/*清除历史记录*/
+.history{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+   margin-top:40rpx; 
+   color:#279af7;
+  font-size:30rpx;
+   justify-content: center;
+}

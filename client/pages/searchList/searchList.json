@@ -1,0 +1,7 @@
+{
+	"navigationBarTitleText": "搜索列表",
+	"usingComponents": {
+		"category": "../../../components/Category/category",
+		"course": "../../../components/course/course"
+	}
+}

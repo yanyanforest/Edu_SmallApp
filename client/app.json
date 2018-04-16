@@ -21,7 +21,10 @@
 		"pages/settings/settings",
     "pages/myCourse/myCourse",
 		"pages/evaluate/evaluate",
-		"pages/demo/demo"
+		"pages/demo/demo",
+		"pages/search/search",
+		"pages/searchList/searchList"
+								
 				
 	],
 	"window": {

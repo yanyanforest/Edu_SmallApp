@@ -1,0 +1,41 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <view class="searchBar">
+    <view class="search">
+      <icon class="iconfont icon-search"></icon>
+      <input style='color:black' value='{{inputValue}}'confirm-type= "search" placeholder='搜索课程' placeholder-style='color:#a8a8a8' bindinput = "bindInput" />
+    </view>
+    <view class="searchText" bindtap='bindSearch' data-item='{{inputValue}}'>搜索</view>
+  </view>
+  <!-- 热门搜索 -->
+  <view class="hot">
+    <view class="hotTitle" >
+      <icon class="iconfont icon-qihuo-remensousuo"></icon>
+      <text>热门搜索</text>
+    </view>
+    <view class="hot-search">
+		<block wx:for="{{hotList}}">
+      <view class="hotOption" bindtap='bindSearch' data-item='{{item.name}}'><text>{{item.name}}</text></view>
+     </block>
+    </view>
+  </view>
+  <view class="last-search">
+    <view class="newlyTitle">
+      <icon class="iconfont icon-zuijinsousuo"></icon>
+      <text>最近搜索</text>
+    </view>
+    <view class="newlyContent">
+     <block wx:for="{{last_list}}">
+      <view class="newlyOption" >
+        <text bindtap='bindSearch' data-item='{{item}}'>{{item}}</text>
+        <icon class="iconfont icon-cuohao" bindtap='bindClearItem' data-item='{{item}}' data-index='{{index}}'></icon> 
+      </view>
+</block>
+    </view>
+  </view>
+	<block wx:if="{{last_list.length > 0}}">
+  <view class="history" bindtap='bindClearHistory'>
+      <text>清除历史记录</text>
+  </view>
+	</block>
+</view>

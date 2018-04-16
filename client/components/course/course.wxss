@@ -1,0 +1,58 @@
+/*数据列表内容*/
+
+.listContent {
+  width: 690rpx;
+  margin: 30rpx auto;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.listContent image {
+  width: 220rpx;
+  height: 110rpx;
+  border-radius: 4rpx;
+}
+
+.listCont {
+  margin-left: 20rpx;
+  margin-top: -5rpx;
+  font-family: SourceHansCN-Normal;
+}
+
+.listCont .listTitle {
+  font-size: 34rpx;
+  color: #2e2e2e;
+  width: 450rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.listCont .listCount {
+  font-size: 26rpx;
+  color: #808080;
+}
+
+/*价格*/
+
+.desc-price {
+  font-size: 34rpx;
+  color: #ef4023;
+}
+
+.desc-price .unit {
+  font-size: 20rpx;
+}
+
+.desc-price .point {
+  font-size: 20rpx;
+}
+
+/* 免费 */
+
+.desc-price .item-free {
+  color: #279af7;
+  font-size: 28rpx;
+}

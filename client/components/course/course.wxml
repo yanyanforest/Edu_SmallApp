@@ -1,0 +1,16 @@
+<import src="../../pages/commons/price.wxml" />
+<view class="container">
+  <scroll-view class="list" scroll-y>
+    <view class="listContent" bindtap='courseDetail' wx:for="{{courseList}}" wx:key="{{key}}">
+      <image src="{{item.picture}}" />
+      <view class="listCont">
+        <view class="listTitle">{{item.title}}</view>
+        <view class="listCount">{{item.num}}人在学</view>
+       <view class="desc-price">
+            <template is="price" data="{{price:item.price}}"/>
+          </view>
+        
+      </view>
+    </view>
+  </scroll-view>
+</view>

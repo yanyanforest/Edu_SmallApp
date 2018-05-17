@@ -142,7 +142,14 @@ Page({
 	// 这是
 	bindList:function(e){
 	 console.log('bindList点击一级分类',e.currentTarget.dataset.item);
-	 var item = e.currentTarget.dataset.item
+
+	 var item = e.currentTarget.dataset.item;
+	 if(item.name == '全部分类' ){
+		 wx.switchTab({
+			 url: '../category/category',
+		 })
+		 return;
+	 }
 	 var selectFirstCategory = { "id": item.id, "name": item.name};
 		var selectSecondCategory = { "id": item.id };
 wx.navigateTo({

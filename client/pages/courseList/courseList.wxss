@@ -52,40 +52,41 @@ page {
 }
 
 .header_left view {
-  width: 166rpx;
+  /* width: 166rpx;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   position: relative;
+	  width: 166rpx; */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+	flex: 1;
 }
-
-.activeOpt {
-  color: #ff6700;
-}
-
-.header_left image {
+.header_left .iconfont{
   display: inline-flex;
   width: 16rpx;
   height: 8rpx;
+  font-size:16rpx;
+   color:#787C7D; 
 }
-
-.garyBottom {
+.icon-plus-select-up
+ {
+  position: absolute;
+  top: 10rpx;
+  left: 112rpx;
+}
+.icon-arrow-3{
   position: absolute;
   top: 20rpx;
-  right: 30rpx;
+  left: 112rpx;
+}
+.header_left .header_active {
+  color: #ff6700;
 }
 
-.bottomGary {
-  position: absolute;
-  top: 16rpx;
-  right: 30rpx;
-}
 
-.topGary {
-  position: absolute;
-  top: 26rpx;
-  right: 30rpx;
-}
 
 .brand_item .pic {
   float: left;
@@ -116,7 +117,7 @@ overflow:hidden;
   color: #939393;
 }
 
-  .right_cont .price {
+.right_cont .price {
   color: #f16236;
 }  
 .header_right {
@@ -127,15 +128,19 @@ overflow:hidden;
   color: #000;
   font-size: 30rpx;
 }
-
-.header_right image {
+.header_right .iconfont{
+  position: relative;
   width: 16rpx;
   height: 8rpx;
-  position: relative;
-  top: 20rpx;
-  left: 8rpx;
+  font-size:16rpx;
+  top: -15rpx;
+  left:10rpx;
+  color:#787C7D;
 }
+
 .header_active {
   color: #ff6700;
-	
+}
+.header_right .header_active {
+  color: #ff6700;
 }

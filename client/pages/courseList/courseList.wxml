@@ -14,15 +14,17 @@
     <view class='header_left'>
        <block wx:for="{{ btns }}" wx:key="{{ item }}" >
         <view class="{{selectedIndex == item.id? 'header_active':''}}" bindtap='leftbtnClick' data-id='{{ item }}' data-index = "{{index}}">{{item.title}}
-				          <image wx:if="{{index==1}}" src="../../images/bottomGray.png" class="garyBottom"></image>
-<image wx:if="{{index==2}}" src="../../images/topGray.png" class="bottomGary"></image>
-          <image wx:if="{{index==2}}" src="../../images/bottomGray.png" class="topGary"></image>
+									          <icon wx:if="{{index==1}}" class="iconfont icon-arrow-3 arrow {{selectedIndex == 1? 'header_active':''}}"></icon>
+
+									    <icon wx:if="{{index==2}}" class='iconfont icon-plus-select-up {{priceAsc==1?"header_active":""}}'></icon>
+          <icon wx:if="{{index==2}}" class="iconfont icon-arrow-3 {{priceAsc==2? 'header_active':''}}"></icon>
 					</view>
       </block> 
     </view>
     <view class="header_right {{categoryBtn.isSelected? 'header_active':''}}" bindtap='category_choose'>
      {{ categoryBtn.title }} 
-     <image src="{{categoryBtn.isSelected? '../../images/bottomGray.png':'../../images/bottomGray.png'}}" class="topGary"></image>
+		 <icon class="iconfont icon-arrow-3 arrow {{categoryBtn.isSelected? 'header_active':''}}"></icon>
+
     </view>
     <category style="top:44px" id="category" isShowAll="true" categorys="{{ categorys }}" bind:categorySelected="_categorySelected" firstDefaultCategory="{{firstSelectedCategory}}" secondDefaultCategory="{{secondSelectedCategory}}" thirdDefaultCategory="{{thirdSelectedCategory}}"></category>
 

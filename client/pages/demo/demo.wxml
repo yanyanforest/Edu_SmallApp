@@ -1,2 +1,8 @@
 <!--pages/demo/demo.wxml-->
-<text>pages/demo/demo.wxml</text>
+
+<view class='container'>
+	  <!-- <nodata buttonTitle='【去选课】' title='暂无课程订单,现在'></nodata> -->
+	  <nodata buttonTitle='【去选课】' title='暂无课程订单,快去下单吧。。。。.....,现在'></nodata>
+
+  <!-- <nodata></nodata> -->
+</view>

@@ -2,57 +2,68 @@
 <import src="../commons/price.wxml" />
 
 <!-- <import src="../../template/courseordercell/ordercell.wxml"></import> -->
-	<view class='orders'>
+<view class='orders'>
 
- <view class="orders-header">
- <block wx:for="{{btns}}" wx:for-item="item" wx:key="item">
-    <lable class="orders-header__item {{selectedIndex==index?'active':''}}" bindtap='bindTab' data-id='{{index}}'> {{item.name}}</lable>
-   
-		</block>
+  <view class="orders-header">
+    <block wx:for="{{btns}}" wx:for-item="item" wx:key="item">
+      <lable class="orders-header__item {{selectedIndex==index?'active':''}}" bindtap='bindTab' data-id='{{index}}'> {{item.name}}</lable>
+
+    </block>
   </view>
-			  <scroll-view class="orders-list" scroll-y> 
-			 <block wx:if="{{ orderList.length > 0 }}">
-    <block wx:for="{{ orderList }}" wx:for-item="item" wx:key="item" >
-		<view class="orders-list__item">
-      <view class="orders-list__item-hd">
-        <view class="orders-list__item-sn">订单号：{{ item.sn }}</view>
-        <!-- <view class="orders-list__item-status orders-list__item-status__paying  ">待支付</view> -->
-         <view class="orders-list__item-status {{ item.statusWxss }} ">{{ item.statusDesc }}</view> 
-      </view>
-      <view class="orders-list__item-bd" bindtap='showOrderDetail' data-id='{{item}}'>
-        <image class="orders-list__item-image" src="{{item.courses.picture}}"/>
-        <view class="orders-list__item-desc">
-          <label class="desc-title">{{item.title}}</label>
-          <label class="desc-teacher">授课老师：{{item.courses.teacher}}</label>
-       <!-- <label class="desc-price">￥{{item.courses.price}}</label> -->
-						       <label class="desc-price"><template is="price" data="{{price:item.courses.price}}"/></label>
-			            
+  <block wx:if="{{ orderList.length > 0 }}">
 
+    <scroll-view class="orders-list" scroll-y>
+      <block wx:for="{{ orderList }}" wx:for-item="item" wx:key="item">
+        <view class="orders-list__item">
+          <view class="orders-list__item-hd">
+            <view class="orders-list__item-sn">订单号：{{ item.sn }}</view>
+            <!-- <view class="orders-list__item-status orders-list__item-status__paying  ">待支付</view> -->
+            <view class="orders-list__item-status {{ item.statusWxss }} ">{{ item.statusDesc }}</view>
+          </view>
+          <view class="orders-list__item-bd" bindtap='showOrderDetail' data-id='{{item}}'>
+            <image class="orders-list__item-image" src="{{item.courses.picture}}" />
+            <view class="orders-list__item-desc">
+              <label class="desc-title">{{item.title}}</label>
+              <label class="desc-teacher">授课老师：{{item.courses.teacher}}</label>
+              <!-- <label class="desc-price">￥{{item.courses.price}}</label> -->
+              <label class="desc-price">
+                <template is="price" data="{{price:item.courses.price}}" />
+              </label>
+
+
+            </view>
+          </view>
+          <view class="orders-list__item-ft">
+            <lable class="action-price">合计：￥{{item.totalPrice}}</lable>
+
+            <button wx:if="{{item.statusDesc == '待支付'}}" class="action-button action-cancel" bindtap='bindCancleOrder' data-id='{{item}}'>取消订单</button>
+            <button wx:if="{{item.statusDesc == '待支付'}}" class="action-button action-pay" plain="true" bindtap='bindPay' data-id='{{item}}'>立即支付</button>
+            <button wx:if="{{item.statusDesc == '待评价'}}" class="action-button action-comment" plain="true" bindtap='bindComment' data-id='{{item}}'>去评价</button>
+          </view>
         </view>
-      </view>
-      <view class="orders-list__item-ft">
-        <lable class="action-price">合计：￥{{item.totalPrice}}</lable>
-			
-        <button wx:if="{{item.statusDesc == '待支付'}}" class="action-button action-cancel" bindtap='bindCancleOrder' data-id='{{item}}'>取消订单</button>
-        <button wx:if="{{item.statusDesc == '待支付'}}" class="action-button action-pay" plain="true" bindtap='bindPay' data-id='{{item}}'>立即支付</button>
-        <button wx:if="{{item.statusDesc == '待评价'}}" class="action-button action-comment" plain="true" bindtap='bindComment' data-id='{{item}}'>去评价</button>
-      </view>
-			</view>
-		</block>
-		</block>
-		<block>
-		<view style='width:100%;height:100%;text-align: center;color:lightgrey;'>
-		<block wx:if="{{selectedIndex == 0}}">
-	暂无课程订单,现在<text style='color:#FF6700'>【去选课】</text>
-		</block>
-			<block wx:elif="{{selectedIndex == 1}}">
-暂无待支付课程订单
-		</block>
-	<block wx:else>
-暂无已支付课程订单
-		</block>
-		</view>
-		</block>
-		 </scroll-view> 
-  
+      </block>
+
+    </scroll-view>
+  </block>
+  <block wx:else>
+    <view style='width:100%;height:100%;text-align: center;color:lightgrey;'>
+      <block wx:if="{{selectedIndex == 0}}">
+        <!-- 暂无课程订单,现在<text style='color:#FF6700'>【去选课】</text> -->
+        <nodata buttonTitle='【去选课】' title='暂无课程订单,现在'></nodata>
+
+      </block>
+      <block wx:elif="{{selectedIndex == 1}}">
+        <nodata buttonTitle='' title='暂无待支付课程订单'></nodata>
+
+
+      </block>
+      <block wx:else>
+        <nodata buttonTitle='' title='暂无已支付课程订单'></nodata>
+
+
+      </block>
+    </view>
+  </block>
+
+
 </view>

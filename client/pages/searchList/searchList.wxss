@@ -125,9 +125,6 @@ page {
   display: inline-flex;
   justify-content: center;
   font-family: SourceHansCN-Normal;
-  /* color: #000; */
-		  /* color: #ff6700; */
-
   font-size: 30rpx;
 }
 .classification .header_active{

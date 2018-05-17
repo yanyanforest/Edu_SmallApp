@@ -3,17 +3,22 @@
 <import src="../commons/lesson_time/lesson_time.wxml" />
 
  <view class='container'> 
-  <!--播放器和选项卡-->
-  <view class='flex-item' id='video_h'>
-    <view class="section">
-      <video class='video' src="{{src}}" controls></video>
-    </view>
-
+  <!--播放器-->
+  <view class='flex-item' >
+      <video class='video' src="{{src}}" controls >
+			<cover-view class="controls">
+<cover-image class="img"  src="{{course.middlePicture}}" />
+</cover-view>
+			</video>
+</view>
+<!--选项卡  -->
     <view class='course-tab'>
       <view class='ul'>
         <block wx:for="{{ titleBtns }}" wx:key="item">
           <view class="li {{selectedIndex == index?'active':''}}" bindtap="changeTab" data-index='{{ index }}'>
-            <view class='tab'>{{item}}</view>
+					           {{item}}
+
+            <!-- <view class='tab'>{{item}}</view> -->
           </view>
         </block>
       </view>
@@ -21,7 +26,7 @@
       <view class='line' style="left:{{stv.windowWidth / 3.0 *selectedIndex + 50}}px"></view>
 
     </view>
-  </view>
+
   <!-- 可滑动切换  -->
   <view class="scroll-view">
     <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel"  bindtouchend="handlerEnd" class="scroll-view-wrapper {{!stv.tStart? 'withAnimate': ''}}" style="left: -{{stv.offset}}px">

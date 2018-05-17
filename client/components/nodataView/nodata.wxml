@@ -1,0 +1,8 @@
+<!--components/nodataView/nodata.wxml-->
+<view class='container'>
+<view class='nodata_container'>
+<view class='image_container'><view class= "no_data_image" ></view>
+</view>
+<view class='nodata_text'>{{title}}<text class="nodata_button" bindtap='_bindClick'>{{buttonTitle}}</text></view>
+</view>
+</view>
